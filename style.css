@@ -133,6 +133,7 @@ header label {
    background-color: green;
    grid-column-start: 1;
    grid-column-end: 4;
+  
    background-image: url(assets/images/BANNER-MARVEL-1400x700.png);
  
   background-size: cover;
@@ -184,7 +185,7 @@ header label {
  .grid-item:nth-child(7){
   grid-column-start: 3;
   grid-column-end: 5;
-  background-image: url(asseimages/BANNER-DC-1400x700.png);
+  background-image: url(assets/images/BANNER-DC-1400x700.png);
   background-size:cover;
   background-position:center;
  }
