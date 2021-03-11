@@ -133,7 +133,7 @@ header label {
    background-color: green;
    grid-column-start: 1;
    grid-column-end: 4;
-   background-image: url(../assets/images/BANNER-MARVEL-1400x700.png);
+   background-image: url(assets/images/BANNER-MARVEL-1400x700.png);
  
   background-size: cover;
  
@@ -142,7 +142,7 @@ header label {
 
   grid-column-start: 4;
   grid-column-end: 7;
-  background-image: url(../assets/images/BANNERS-FUNKO2-1400x700.png);
+  background-image: url(assets/images/BANNERS-FUNKO2-1400x700.png);
   background-size: cover;
 
  }
@@ -150,7 +150,7 @@ header label {
  .grid-item:nth-child(3){
   grid-column-start: 1;
   grid-column-end: 3;
-  background-image: url(../assets/images/BANNER-STAR-WARS-1400x700.png);
+  background-image: url(assets/images/BANNER-STAR-WARS-1400x700.png);
   background-size:cover;
   background-position:center;
   /* grid-column-start: 3;
@@ -160,14 +160,14 @@ header label {
  .grid-item:nth-child(4){
   grid-column-start: 3;
   grid-column-end: 5;
-  background-image: url(../assets/images/BANNER-RICK-AND-MORTY-1400x700.png);
+  background-image: url(assets/images/BANNER-RICK-AND-MORTY-1400x700.png);
   background-size: cover;
 
  }
  .grid-item:nth-child(5){
   grid-column-start: 5;
   grid-column-end: 7;
-  background-image: url(../assets/images/BANNER-GOT-1400x700.png);
+  background-image: url(assets/images/BANNER-GOT-1400x700.png);
   background-size: cover;
   background-position:center;
 
@@ -175,7 +175,7 @@ header label {
  .grid-item:nth-child(6){
   grid-column-start: 1;
   grid-column-end: 3;
-  background-image: url(../assets/images/BANNER-DISNEY-1400x700.png);
+  background-image: url(assets/images/BANNER-DISNEY-1400x700.png);
   background-size: cover;
   background-position: center;
 
@@ -184,7 +184,7 @@ header label {
  .grid-item:nth-child(7){
   grid-column-start: 3;
   grid-column-end: 5;
-  background-image: url(assets/images/BANNER-DC-1400x700.png);
+  background-image: url(asseimages/BANNER-DC-1400x700.png);
   background-size:cover;
   background-position:center;
  }
@@ -199,7 +199,7 @@ header label {
  .grid-item:nth-child(9){
   grid-column-start: 1;
   grid-column-end: 3;
-  background-image: url(../assets/images/deadpool.jpg);
+  background-image: url(assets/images/deadpool.jpg);
   background-size:cover;
   background-position:center;
 
@@ -207,7 +207,7 @@ header label {
  .grid-item:nth-child(10){
   grid-column-start: 3;
   grid-column-end: 5;
-  background-image: url(../assets/images/spiderman.jpg);
+  background-image: url(assets/images/spiderman.jpg);
   background-size:cover;
   background-position:center;
 
@@ -215,7 +215,7 @@ header label {
  .grid-item:nth-child(11){
   grid-column-start: 5;
   grid-column-end: 7;
-  background-image: url(../assets/images/HARRY-POTTER-BANNER-1400x700.png);
+  background-image: url(assets/images/HARRY-POTTER-BANNER-1400x700.png);
   background-size:cover;
   background-position:center;
 
