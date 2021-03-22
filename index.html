@@ -13,30 +13,41 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="envios"><p>Envios a todo El salvador</p></div>
+    <div class="envios">
+       <a href="#">Quienes Somos</a>
+       <a href="#">Contactanos</a>
+        
+
+      </div>
     <div class="busqueda">
       <img src="assets/images/logo.png" alt="" />
-      <input type="search" name="" id="" />
+      <div class="busqueda-div">
+        <input  type="search" name="" id="" placeholder="Busqueda en el catalogo" />
+        <span class="icon-search-1"></span>
+      </div>
+     
+      
+      
     </div>
-    <header  id="menu" >
-      <input type="checkbox" id="boton-menu" />
+    <header  id="menu"  >
+      <input type="checkbox"  id="boton-menu" />
       <label for="boton-menu" class="icon-menu"></label>
-      <nav class="menu" id="menu" >
-        <ul>
-          <li><a href="#">NUEVOS</a></li>
+      <nav class="menu"  >
+        <ul id="menus" class="menu-x">
+          <li  id="menu-ul"><a href="#">NUEVOS</a></li>
           <li><a href="#">OFERTAS</a></li>
 
-          <li class="submenu">
+          <li class="submenu" id="submenu" >
             <a href="#">ACCESORIOS <span class="icon-down-open"></span></a>
-            <ul>
-              <li><a href="#">sub-Item 1</a></li>
+            <ul id="sub-menu" id="sub-menu">
+              <li><a href="# ">sub-Item 1  </a></li>
               <li><a href="#">sub-Item 2</a></li>
               <li><a href="#">sub-Item 3</a></li>
               <li><a href="#">sub-Item 4</a></li>
               <li><a href="#">sub-Item 5</a></li>
             </ul>
           </li>
-          <li class="submenu">
+          <li class="submenu"id="submenu">
             <a href="#">COLLECTIBLES <span class="icon-down-open"></span></a>
             <ul>
               <li><a href="#">sub-Item 1</a></li>
@@ -46,7 +57,7 @@
               <li><a href="#">sub-Item 5</a></li>
             </ul>
           </li>
-          <li class="submenu">
+          <li class="submenu"id="submenu">
             <a href="#">HOGAR <span class="icon-down-open"></span></a>
             <ul>
               <li><a href="#">sub-Item 1</a></li>
@@ -56,7 +67,7 @@
               <li><a href="#">sub-Item 5</a></li>
             </ul>
           </li>
-          <li class="submenu">
+          <li class="submenu"id="submenu">
             <a href="#">JUEGOS DE VIDEO <span class="icon-down-open"></span></a>
             <ul>
               <li><a href="#">sub-Item 1</a></li>
@@ -66,7 +77,7 @@
               <li><a href="#">sub-Item 5</a></li>
             </ul>
           </li>
-          <li class="submenu">
+          <li class="submenu"id="submenu">
             <a href="#">PELICULAS Y SERIES <span class="icon-down-open"></span></a>
             <ul>
               <li><a href="#">sub-Item 1</a></li>
@@ -103,5 +114,6 @@
 
    
     <script src="scripts.js"></script>
+    <script src="scriptJs.js"></script>
   </body>
 </html>
