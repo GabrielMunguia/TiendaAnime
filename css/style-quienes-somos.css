@@ -1,7 +1,7 @@
 body{
     /* background-image: url(assets/images/f4.jpg); */
  
-    background-image: url(/assets/images/f7.gif);
+    background-image: url(../assets/images/f7.gif);
    background-size:cover;
    background-repeat:no-repeat;
    background-color: black ;
@@ -18,7 +18,7 @@ body{
     position: relative;
     width: 15em;
     height: 15em;
-    background-image: url(/assets/images/logo3.jpg);
+    background-image: url(../assets/images/logo3.jpg);
     background-size: contain;
     border-radius: 100%;
     left: center;
@@ -58,6 +58,7 @@ body{
     
 }
 .footer{
+    /* display: flex; */
     position: absolute;
     background-color: black;
     width: 100%;
