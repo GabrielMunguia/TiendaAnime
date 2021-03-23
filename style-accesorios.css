@@ -71,29 +71,29 @@
   }
 
   .grid-item:nth-child(1){
-      background-image: url(/assets/images/llavero.jpg);
+      background-image: url(assets/images/llavero.jpg);
       background-size: contain;
   }
 
   .grid-item:nth-child(2){
-      background-image: url(/assets/images/pulseras.jpg);
+      background-image: url(assets/images/pulseras.jpg);
       background-size: contain;
   }
   .grid-item:nth-child(3){
-    background-image: url(/assets/images/anillos.webp);
+    background-image: url(assets/images/anillos.webp);
     background-size: contain;
   }
   .grid-item:nth-child(4){
-    background-image: url(/assets/images/collares.jpg);
+    background-image: url(assets/images/collares.jpg);
     background-size: contain;
   }
   .grid-item:nth-child(5){
-    background-image: url(/assets/images/reloj.jpg);
+    background-image: url(assets/images/reloj.jpg);
     background-size: cover;
     
   }
   .grid-item:nth-child(6){
-    background-image: url(/assets/images/billeteras.jpg);
+    background-image: url(assets/images/billeteras.jpg);
     background-size: cover;
     background-position-y: -2em;
   }
