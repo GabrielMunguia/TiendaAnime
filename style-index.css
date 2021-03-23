@@ -5,111 +5,41 @@
   font-family: sans-serif;
 }
 
-header {
-  height: 50px;
-  background-color: black;
-  color: white;
-  display: flex;
-  justify-content: center;
-  transition: height 0.3s;
-  align-items: center;
+.cambios{
+  /* background-color: chocolate; */
+  /* position: fixed; */
+  position: sticky;
+  top:0;
+  
+  transform: scaleZ(2);
+  transition:   transform 2s;
   
 }
-.envios {
-  background-color: black;
-  width: 100%;
-  height: 3em;
-  font-size: 16px;
-  display: flex;
-  color: white;
-  justify-content: center;
-  align-items: center;
-}
-.busqueda {
-  width: 100%;
-  display: flex;
-  height: 120px;
-}
-.busqueda input {
-  position: absolute;
-  width: 30em;
-  height: 2em;
-  left: 35em;
-  margin-top: 3em;
-}
-.busqueda img {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  width: 16em;
-  height: 12em;
-  left: 10em;
-  top: 1em;
-}
 
-#boton-menu {
-  display: none;
-}
-header label {
-  font-size: 30px;
-  cursor: pointer;
-  display: none;
-  
-}
-.menu{
-    z-index: 1000;
-}
-.menu ul {
-  background-color: black;
-  display: flex;
-  list-style: none;
-  font-size: 13px;
-  
-}
-.menu ul ul {
-  display: none;
-
-}
-.menu a {
-  
-  display: block;
-  padding: 15px 20px;
-  color: white;
-  text-decoration: none;
-}
-.menu ul ul a{
-    color:black;
-}
-.menu a:hover {
-   
-  background: rgba(0, 0, 0, 0.3);
-
-  }
-.menu a span {
-  margin-left: 10px;
-}
-
-.menu ul li:hover ul {
-  display: block;
-  position: absolute;
-  width: 13em;
-  top:16.6em;
+.cambiosSub{
   
   background-color: white;
-  border-radius: 2px;
+  position: relative;
+  width: 13em;
 
+  top:-7.99em;
   
 }
 
+.changes{
+  background-color: red;
+}
+
+
 .cambio {
-  background: red;
+  background-color: red;
 }
 .grid-container{
-   padding: 1em;
+   padding: 0.6em;
    /* background-color: blue; */
    display: grid;
    
-    grid-template-columns: 19.0em 19.0em  19.0em 19.0em 19.0em 19.0em;
+    grid-template-columns: 18.9em 19.0em  18.9em 18.9em 18.9em 18.9em;
     grid-template-rows: 23em  23em 23em 23em;
     grid-gap: .8em;
     
@@ -129,11 +59,18 @@ header label {
 
  }
 
+ .grid-item a{
+  /* background-color: red;  */
+   width: 100%;
+   height: 100%;
+ }
+
  .grid-item:first-child{
    background-color: green;
    grid-column-start: 1;
    grid-column-end: 4;
-   background-image: url(../assets/images/BANNER-MARVEL-1400x700.png);
+  
+   background-image: url(assets/images/BANNER-MARVEL-1400x700.png);
  
   background-size: cover;
  
@@ -142,7 +79,7 @@ header label {
 
   grid-column-start: 4;
   grid-column-end: 7;
-  background-image: url(../assets/images/BANNERS-FUNKO2-1400x700.png);
+  background-image: url(assets/images/BANNERS-FUNKO2-1400x700.png);
   background-size: cover;
 
  }
@@ -150,7 +87,7 @@ header label {
  .grid-item:nth-child(3){
   grid-column-start: 1;
   grid-column-end: 3;
-  background-image: url(../assets/images/BANNER-STAR-WARS-1400x700.png);
+  background-image: url(assets/images/BANNER-STAR-WARS-1400x700.png);
   background-size:cover;
   background-position:center;
   /* grid-column-start: 3;
@@ -160,14 +97,14 @@ header label {
  .grid-item:nth-child(4){
   grid-column-start: 3;
   grid-column-end: 5;
-  background-image: url(../assets/images/BANNER-RICK-AND-MORTY-1400x700.png);
+  background-image: url(assets/images/BANNER-RICK-AND-MORTY-1400x700.png);
   background-size: cover;
 
  }
  .grid-item:nth-child(5){
   grid-column-start: 5;
   grid-column-end: 7;
-  background-image: url(../assets/images/BANNER-GOT-1400x700.png);
+  background-image: url(assets/images/BANNER-GOT-1400x700.png);
   background-size: cover;
   background-position:center;
 
@@ -175,7 +112,7 @@ header label {
  .grid-item:nth-child(6){
   grid-column-start: 1;
   grid-column-end: 3;
-  background-image: url(../assets/images/BANNER-DISNEY-1400x700.png);
+  background-image: url(assets/images/BANNER-DISNEY-1400x700.png);
   background-size: cover;
   background-position: center;
 
@@ -199,7 +136,7 @@ header label {
  .grid-item:nth-child(9){
   grid-column-start: 1;
   grid-column-end: 3;
-  background-image: url(../assets/images/deadpool.jpg);
+  background-image: url(assets/images/deadpool.jpg);
   background-size:cover;
   background-position:center;
 
@@ -207,7 +144,7 @@ header label {
  .grid-item:nth-child(10){
   grid-column-start: 3;
   grid-column-end: 5;
-  background-image: url(../assets/images/spiderman.jpg);
+  background-image: url(assets/images/spiderman.jpg);
   background-size:cover;
   background-position:center;
 
@@ -215,7 +152,7 @@ header label {
  .grid-item:nth-child(11){
   grid-column-start: 5;
   grid-column-end: 7;
-  background-image: url(../assets/images/HARRY-POTTER-BANNER-1400x700.png);
+  background-image: url(assets/images/HARRY-POTTER-BANNER-1400x700.png);
   background-size:cover;
   background-position:center;
 
@@ -226,77 +163,7 @@ header label {
  transition: filter .1s;
  }
 @media (max-width: 768px) {
-  header label {
-    display: block;
-  }
-  header {
-    justify-content: flex-end;
-  }
-  .menu {
-    position: absolute;
-    left: 0;
-    top: 194px;
-    width: 100%;
-
-    transform: translateX(-100%);
-    transition: all 0.3s;
-  }
-
-  .menu ul {
-    flex-direction: column;
-    background-color: #555;
-  }
-  .menu ul li:hover ul {
-    display: none;
-    position: static;
-  }
-
-  .menu a span {
-    position: absolute;
-    right: 0;
-  }
-
-  #boton-menu:checked ~ .menu {
-    transform: translateX(0);
-  }
-  .menu ul ul {
-    background-color: rgba(0, 0, 0, 0.4);
-   
-  }
-  .menu ul ul a {
-    padding: 15px 40px;
-    color: white;
-  }
-  .busqueda {
-    height: 6em;
-  }
-  .busqueda img {
-    top: 2em;
-    left: 1em;
-    width: 5em;
-    height: 6em;
-  }
-  .busqueda input {
-    position: absolute;
-    width: 14em;
-    height: 2em;
-    left: 7em;
-    margin-top: 2em;
-  }
-
-  .fixed {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-  }
-
-  .menu ul li:hover ul {
-   
-    background-color: rgba(0, 0, 0, 0.4);
-    width: 100%;
-    
-  }
+ 
   
 .grid-container{
 

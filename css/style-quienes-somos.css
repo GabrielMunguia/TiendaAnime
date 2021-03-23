@@ -1,0 +1,56 @@
+body{
+    background-image: url(/assets/images/f4.jpg);
+   background-size:cover;
+   background-repeat:no-repeat;
+   background-color: black ;
+   padding: 0;
+   margin: 0; 
+
+   
+ 
+  
+}
+
+.logo-tienda{
+    position: relative;
+    width: 15em;
+    height: 15em;
+    background-image: url(/assets/images/logo-anime.png);
+    background-size: cover;
+    border-radius: 100%;
+    left: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+    top:4em;
+    background-size: contain;
+    
+
+    
+}
+
+.texto-anime{
+   
+
+    position: relative;
+    width: 20em;
+    height: 10em;
+    left: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(14, 13, 13, 0.5);
+    box-shadow: 1px 1px 10px rgba(14, 13, 13, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top:5em;
+    
+    
+  
+}
+.texto-anime h2 , p {
+    color:white;
+    
+    
+}
