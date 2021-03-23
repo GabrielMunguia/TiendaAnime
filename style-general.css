@@ -207,21 +207,21 @@
   .facebook{
       position:relative;
       display: inline-block;
-      background-image: url(/assets/images/facebook.png);
+      background-image: url(assets/images/facebook.png);
       background-size: cover;
       
   }
   .instagram{
     position:relative;
     display: inline-block;
-    background-image: url(/assets/images/instagram.png);
+    background-image: url(assets/images/instagram.png);
     background-size: cover;
  
   }
   .whatsapp{
     position:relative;
     display: inline-block;
-    background-image: url(/assets/images/whatsapp.png);
+    background-image: url(assets/images/whatsapp.png);
     background-size: cover;
     
   }
