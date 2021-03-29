@@ -1,0 +1,119 @@
+button{
+  border:0px;
+  outline:none;
+  }
+.grid-container {
+    position: relative;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 0.6em;
+    display: grid;
+    grid-template-columns: 18em 18em 18em 18em;
+    grid-template-rows: 25em 25em 25em;
+    grid-gap: 5em;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+  
+    /* background-color: blueviolet; */
+    
+  }
+  
+  .grid-item {
+    /* border-radius: 5px; */
+    
+    padding: 1rem 1.5rem;
+    font-size: 2rem;
+    background-color: white;
+    align-items: flex-end;
+    margin: 0;
+    padding: 0;
+    box-shadow: 1px 1px 3px 1px #3d3d3d;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+  }
+
+  .prod-detalles-img{
+    position: relative;
+    color:red;
+    /* background-color: rgb(0, 217, 255); */
+    background-size: contain;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     
+   }
+   .prod-detalles-img img{
+     width:auto;
+     height: 100%;
+   }
+   .prod-detalles{
+     
+    /* background-color: yellow; */
+     position: relative;
+     height: 90%;
+     width: 100%;
+   
+     
+ 
+   }
+  .prod-detalles-descripcion{
+    position: relative;
+    /* background-color: rgb(7, 194, 47); */
+    height: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .prod-detalles a{
+    justify-content: center;
+    text-align: center;
+    font-size:14px;
+    color:black;
+    text-decoration: none;
+    font-style: none;
+
+
+  }
+  .prod-detalles-precio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(165, 8, 8); */
+    height:15%;
+  }
+  .prod-detalles-precio span{
+    color:red;
+    font-size: 2em;
+  }
+  
+  
+
+  .prod-boton{
+
+    position: relative;
+    width: 100%;
+    height: 10%;
+    background-color: rgba(248, 248, 248, 0);
+    
+  }
+  .prod-boton button{
+    position: relative;
+   background-color: rgba(54, 54, 54, 0.993);
+    width: 100%;
+    height: 100%;
+    font-size:20px;
+    color:white
+    
+  }
+
+  .prod-boton:hover button{
+   background-color: red;
+   transition:  background 1s;
+  }
+ 

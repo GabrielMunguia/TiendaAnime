@@ -12,9 +12,9 @@ const script =()=>{
         if (top > 40 && window.screen.width>800) {
           nav.classList.add("cambios");
          
-          console.log(n1);
+          // console.log(n1);
           for (let i = 0; i < n1.length; i++) {
-            console.log(`hola ${n1[i].textContent}`);
+            // console.log(`hola ${n1[i].textContent}`);
       
             n1[i].classList.add("cambiosSub");
           }
@@ -44,11 +44,15 @@ if(ancho>768){
 // AQUI QUITO EL LINK DE LOS ENLACES PARA QUE EL MENU MOVIL FUNCIONE BIEN
 else {
   let x=Array.from(enlaces);
-  x[0].href="#";
+  for(let i=0;i<x.length;i++){
+    x[i].href="#";
   console.log(x[0].href)
+  }
+  
   
 }
-
+let ancho2= window.innerWidth;
+ console.log(ancho2);
 
 window.onresize = resize;
 
@@ -56,9 +60,11 @@ function resize()
 { 
   let ancho2= window.innerWidth;
  console.log(ancho2);
+ 
  if(ancho2>768){
   window.location.reload(); 
   script();
+  console.log(ancho2);
   
 }
 // AQUI QUITO EL LINK DE LOS ENLACES PARA QUE EL MENU MOVIL FUNCIONE BIEN

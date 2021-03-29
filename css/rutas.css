@@ -1,0 +1,18 @@
+.rutas {
+    color: black;
+    background-color: rgba(231, 14, 61, 0.89);
+    height: 4em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .rutas a {
+    text-decoration: none;
+    color: white;
+  }
+  .rutas span {
+    margin: 10px;
+  }
+  

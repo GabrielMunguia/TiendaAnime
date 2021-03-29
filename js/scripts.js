@@ -1,5 +1,5 @@
 
-var resolucion = $(window).width();
+let resolucion = $(window).width();
 if( resolucion<=769)
  {
 
