@@ -5,52 +5,46 @@
   font-family: sans-serif;
 }
 
-.cambios{
+.cambios {
   /* background-color: chocolate; */
   /* position: fixed; */
   position: sticky;
-  top:0;
-  
+  top: 0;
+
   transform: scaleZ(2);
-  transition:   transform 2s;
-  
+  transition: transform 2s;
 }
 
-.cambiosSub{
-  
+.cambiosSub {
   background-color: white;
   position: relative;
   width: 13em;
 
-  top:-7.99em;
-  
+  top: -7.99em;
 }
 
-.changes{
+.changes {
   background-color: red;
 }
-
 
 .cambio {
   background-color: red;
 }
-.grid-container{
-   padding: 0.6em;
-   /* background-color: blue; */
-   display: grid;
-   
-    grid-template-columns: 18.9em 19.0em  18.9em 18.9em 18.9em 18.9em;
-    grid-template-rows: 23em  23em 23em 23em;
-    grid-gap: .8em;
-    
-    width: 100%;
-    
-    margin-bottom: -5em;
-    margin-bottom: 1em;
-    position: relative;
- }
- 
- .grid-item {
+.grid-container {
+  padding: 0.6em;
+  /* background-color: blue; */
+  display: grid;
+  
+  grid-template-columns: 18.9em 19em 18.9em 18.9em 18.9em 18.9em;
+  grid-template-rows: 23em 23em 23em 23em;
+  grid-gap: 0.8em;
+
+  width: 100%;
+
+  position: relative;
+}
+
+.grid-item {
   /* border: 1px solid green; */
   border-radius: 5px;
   display: flex;
@@ -58,146 +52,130 @@
   justify-content: center;
   padding: 1rem 1.5rem;
   font-size: 2rem;
- background-color: red;
+  background-color: red;
+}
 
- }
-
- .grid-item a{
+.grid-item a {
   /* background-color: red;  */
-   width: 100%;
-   height: 100%;
- }
+  width: 100%;
+  height: 100%;
+}
 
- .grid-item:first-child{
-   background-color: green;
-   grid-column-start: 1;
-   grid-column-end: 4;
-  
-   background-image: url(../assets/img/BANNER-MARVEL-1400x700.png);
- 
+.grid-item:first-child {
+  background-color: green;
+  grid-column-start: 1;
+  grid-column-end: 4;
+
+  background-image: url(../assets/img/BANNER-MARVEL-1400x700.png);
+
   background-size: cover;
- 
- }
- .grid-item:nth-child(2){
-
+}
+.grid-item:nth-child(2) {
   grid-column-start: 4;
   grid-column-end: 7;
   background-image: url(../assets/img/BANNERS-FUNKO2-1400x700.png);
   background-size: cover;
+}
 
- }
-
- .grid-item:nth-child(3){
+.grid-item:nth-child(3) {
   grid-column-start: 1;
   grid-column-end: 3;
   background-image: url(../assets/img/BANNER-STAR-WARS-1400x700.png);
-  background-size:cover;
-  background-position:center;
+  background-size: cover;
+  background-position: center;
   /* grid-column-start: 3;
   grid-column-end: 5; */
-
- }
- .grid-item:nth-child(4){
+}
+.grid-item:nth-child(4) {
   grid-column-start: 3;
   grid-column-end: 5;
   background-image: url(../assets/img/BANNER-RICK-AND-MORTY-1400x700.png);
   background-size: cover;
-
- }
- .grid-item:nth-child(5){
+}
+.grid-item:nth-child(5) {
   grid-column-start: 5;
   grid-column-end: 7;
   background-image: url(../assets/img/BANNER-GOT-1400x700.png);
   background-size: cover;
-  background-position:center;
-
- }
- .grid-item:nth-child(6){
+  background-position: center;
+}
+.grid-item:nth-child(6) {
   grid-column-start: 1;
   grid-column-end: 3;
   background-image: url(../assets/img/BANNER-DISNEY-1400x700.png);
   background-size: cover;
   background-position: center;
-
-
- }
- .grid-item:nth-child(7){
+}
+.grid-item:nth-child(7) {
   grid-column-start: 3;
   grid-column-end: 5;
   background-image: url(../assets/img/BANNER-DC-1400x700.png);
-  background-size:cover;
-  background-position:center;
- }
- .grid-item:nth-child(8){
+  background-size: cover;
+  background-position: center;
+}
+.grid-item:nth-child(8) {
   grid-column-start: 5;
   grid-column-end: 7;
   background-image: url(../assets/img/BANNER-ANIME-1400x700.png);
-  background-size:cover;
-  background-position:center;
-
- }
- .grid-item:nth-child(9){
+  background-size: cover;
+  background-position: center;
+}
+.grid-item:nth-child(9) {
   grid-column-start: 1;
   grid-column-end: 3;
   background-image: url(../assets/img/deadpool.jpg);
-  background-size:cover;
-  background-position:center;
-
- }
- .grid-item:nth-child(10){
+  background-size: cover;
+  background-position: center;
+}
+.grid-item:nth-child(10) {
   grid-column-start: 3;
   grid-column-end: 5;
   background-image: url(../assets/img/spiderman.jpg);
-  background-size:cover;
-  background-position:center;
-
- }
- .grid-item:nth-child(11){
+  background-size: cover;
+  background-position: center;
+}
+.grid-item:nth-child(11) {
   grid-column-start: 5;
   grid-column-end: 7;
   background-image: url(../assets/img/HARRY-POTTER-BANNER-1400x700.png);
-  background-size:cover;
-  background-position:center;
+  background-size: cover;
+  background-position: center;
+}
 
- }
-
- .grid-item:hover{
-
- transition: filter .1s;
- }
+.grid-item:hover {
+  transition: filter 0.1s;
+}
 @media (max-width: 768px) {
- 
-  
-.grid-container{
+  .grid-container {
+    display: grid;
+    padding-top: 10px;
+    /* background-color: blue; */
+    display: grid;
 
-  display: grid;
- padding-top:10px;
-  /* background-color: blue; */
-  display: grid;
-   grid-template-columns: 25em;
-   justify-content: center;
-   grid-template-rows: 10.5em  10.5em 10.5em 10.5em 10.5em  10.5em 10.5em 10.5em 10.5em  10.5em 10.5em 10.5em;
-   grid-gap: .8em;
-   width: 100%;
-   height: 125em;
-  margin-bottom: 2em;
-}
+    grid-template-columns: 9em;
+    justify-content: center;
+    grid-template-rows: 10.5em 10.5em 10.5em 10.5em 10.5em 10.5em 10.5em 10.5em 10.5em 10.5em 10.5em 10.5em;
+    grid-gap: 0.8em;
+    width: 100%;
+    height: 125em;
+    margin-bottom: 2em;
+  }
 
-.buscar-icono {
-  display: none;
-}
-.grid-item {
-  border: 1px solid green;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 1.5rem;
-  font-size: 2rem;
- /* background-color: red; */
-
- }
-
+  .buscar-icono {
+    display: none;
+  }
+  .grid-item {
+    background-color: lightcoral;
+    border: 1px solid green;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    font-size: 2rem;
+    /* background-color: red; */
+  }
+  /* 
  .grid-item:first-child{
    grid-column-start: 1;
    grid-column-end: 2;
@@ -242,23 +220,22 @@
 .grid-item:nth-child(11){
   grid-column-start: 1;
   grid-column-end: 2;
+} */
+
+  /* .footer{
+  position: absolute;
+  bottom: 0;
+} */
 }
 
-  
-}
-
-@media (max-width: 1366px){
-  .grid-container{
+@media (max-width: 1366px) {
+  .grid-container {
     /* background-color: red; */
     display: grid;
     grid-template-columns: 15em;
-   height: 76em;
-    grid-template-rows: 16em  16em 16em 16em 16em  16em 16em 16em 16em  16em 16em 16em;
-   
-   /* margin-bottom: -19em;  */
-    
+    height: 76em;
+    grid-template-rows: 16em 16em 16em 16em 16em 16em 16em 16em 16em 16em 16em 16em;
+
+    /* margin-bottom: -19em;  */
   }
-
-  
 }
-
