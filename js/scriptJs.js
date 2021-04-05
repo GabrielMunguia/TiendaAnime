@@ -52,7 +52,7 @@ else {
   
 }
 let ancho2= window.innerWidth;
- console.log(ancho2);
+//  console.log(ancho2);
 
 window.onresize = resize;
 

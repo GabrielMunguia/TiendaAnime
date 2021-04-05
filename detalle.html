@@ -5,10 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="app/component/navbar.js"></script>
+    <script src="app/component/footer.js"></script>
+    <link rel="stylesheet" href="css/detalle.css">
+    <link rel="stylesheet" href="css/style-general.css">
 </head>
 <body>
-    <img  id="img"src="" alt="">
+    <menu-opc></menu-opc>
+    <div class="container">
+        
+        <div class="img">
+            <img  id="prod-img" src="assets/img/accesorios/anillos/ANILLO-HYRULE-510x510 (2).png" alt="">
+        </div>
+        <div class="detalles">
+            <div class="Descripcion">
+                <h1 id='titulo-prod'></h1>
+                <p id='descripcion-prod'></p>
 
+            </div>
+            <div class="precio">
+                <span id='precio-prod'></span>
+
+            </div>
+            <div class="agg-carrito">
+                <button type="submit" id="botonAggProd">Agregar Carrito</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    
+    
+    <footer-f></footer-f>
 
     <script src="js/detalle.js"></script>
     

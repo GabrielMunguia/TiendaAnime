@@ -67,6 +67,7 @@ button{
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size:14px;
     justify-content: center;
   }
 
@@ -77,15 +78,19 @@ button{
     color:black;
     text-decoration: none;
     font-style: none;
+   
+
 
 
   }
+ 
   .prod-detalles-precio{
     display: flex;
     justify-content: center;
     align-items: center;
     /* background-color: rgb(165, 8, 8); */
     height:15%;
+    font-size:14px;
   }
   .prod-detalles-precio span{
     color:red;
@@ -117,3 +122,10 @@ button{
    transition:  background 1s;
   }
  
+  .link-prod{
+    background-color: red;
+    position: relative;
+    z-index: 12312;
+    width: 10em;
+    height: 12em;
+  }

@@ -72,7 +72,7 @@ class menu extends HTMLElement{
                    <ul>
                      <li><a href="#">Tazas</a></li>
                      <li><a href="#">Lamparas</a></li>
-                     
+      
                    </ul>
                  </li>
                  <li class="submenu" id="submenu">

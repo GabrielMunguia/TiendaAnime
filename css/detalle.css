@@ -1,0 +1,82 @@
+.container{
+    position: relative;
+    /* background-color: red; */
+    display: flex;
+    height: 43.7em;
+   display: flex;
+   justify-content: center;
+}
+
+.img{
+    /* background-color: lightgreen; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    position: relative;
+    
+}
+.img img{
+    border: 1px solid black;
+    position: relative;
+    /* background-color: rgb(255, 255, 255); */
+    width: 30em;
+    max-width: 30em;
+    max-height: 30em;
+    bottom:3em;
+   
+}
+
+.detalles{
+    width: 25%;
+    background-color: rgb(255, 255, 255);
+    
+}
+.Descripcion h1{
+    margin-bottom: 2em;
+    text-align: center;
+}
+.Descripcion{
+    position: relative;
+    /* background-color: darkcyan; */
+    top:5em;
+    text-align: center;
+    width: 75%;
+    height: 12em;
+}
+.precio{
+    /* background-color: lightpink; */
+    position: relative;
+    top: 4em;
+    width: 75%;
+    text-align: center;
+    color:red;
+    font-size: 2.5em;
+}
+
+.agg-carrito{
+    position: relative;
+    top:15em;
+   /* background-color: rgb(44, 44, 44); */
+   width: 75%;
+   height: 9%;
+   display: flex;
+ 
+   justify-content: center;
+}
+.agg-carrito button{
+    background-color:red;
+    border: none;
+    outline: none;
+  font-size: 20px;
+    width: 15em;
+    color:white;
+    border-radius:45px;
+
+}
+.agg-carrito button:hover{
+    background-color: rgb(160, 5, 5);
+   
+}
+
+
