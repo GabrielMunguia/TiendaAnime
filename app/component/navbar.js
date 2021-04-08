@@ -9,7 +9,8 @@ class menu extends HTMLElement{
          <meta charset="UTF-8">
          <meta http-equiv="X-UA-Compatible" content="IE=edge">
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <link rel="stylesheet" href="css/style-general.css">
+         <link rel="stylesheet" href="css/fontello.css" />
+         <link rel="stylesheet" href="../../css/style-general.css">
          <title>Document</title>
      </head>
      <body>
@@ -19,22 +20,45 @@ class menu extends HTMLElement{
            </div>
            <div class="busqueda">
              <div class="logo">
-               <!-- <img src="assets/images/logo.png" alt="" /> -->
+              
                <a class="logo-a" href="index.html"></a>
              </div>
        
              <div class="busqueda-div">
-               <input
-                 type="search"
-                 name=""
-                 id=""
-                 placeholder="Busqueda en el catalogo"
-               />
+               <input type="search"  name="" id="" placeholder="Busqueda en el catalogo"/>
                <span class="icon-search-1"></span>
              </div>
-       
-             
+     
+             <div class="contenedorCarrito">
+               <img src="assets/img/carrito.svg" alt="">
+               <div class="contenedorLista">
+               <table id="listaProductos">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th></th>
+                    </tr>
+                   
+                </thead>
+                <tbody>
+                
+                </tbody>
+            </table>
+      
+            <a href="#" id="vaciar-carrito" class="vaciarCarrito">Vaciar Carrito</a>
+          </div>
+            
+         
            </div>
+            
+     </div>
+     </li>
+     </ul>
+            </div>
+     
            <header id="menu">
              <input type="checkbox" id="boton-menu" />
              <label for="boton-menu" class="icon-menu"></label>
@@ -104,6 +128,7 @@ class menu extends HTMLElement{
                  </li>
                </ul>
              </nav>
+             
            </header>
          
      </body>
