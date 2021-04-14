@@ -25,9 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
   borrarDatosAntiguos();
   agregarProductos();
 });
-// console.log(contLista)
+console.log(contLista)
 
 contLista.addEventListener("click", eliminarProd);
+
 
 // console.log(vaciarCarrito)
 
@@ -118,6 +119,7 @@ function agregarProductos() {
       
           <th><input prod-id=${id}  type="number" value=${cantidad}  min=1 class='inputCarritoCantidad'></th>
           <th><a href="#" prod-id=${id}> <span class="borrarItem">X</span></a></th>
+         
        </tr>
        `;
 
@@ -139,10 +141,11 @@ function agregarProductos() {
    
        <th>$ <span>${precio}</span></th>
        <th><input prod-id=${id}  type="number" value=${cantidad} min=1 class='inputCarritoCantidad'></th>
-       <th>$xxx</th>
-       <th>  <button   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-</svg> </button> </th>
+       <th></th>
+       <th><a class='eliminarProd2' href="#" prod-id=${id}> <span  >X</span></a></th>
+       
+       </tr>
+      
      
    </tr>
           `;
@@ -355,6 +358,22 @@ if(carritoDetalle){
     
     document.addEventListener("DOMContentLoaded",()=>{
       calcularTotal()
+      const eliminarLink=document.querySelectorAll('.eliminarProd2')
+      eliminarLink.forEach((eliminar)=>{
+        eliminar.addEventListener('click',(e)=>{
+          
+            e.preventDefault();
+            
+            const id = e.target.parentElement.attributes[2].value
+
+      
+            listaProductos = listaProductos.filter((prod) => prod.id !== id);
+            agregarProductos();
+          
+          
+        })
+      })
+      
     })
 
 
