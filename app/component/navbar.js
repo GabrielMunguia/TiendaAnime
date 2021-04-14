@@ -73,7 +73,7 @@ class menu extends HTMLElement{
                    ></a>
                    <ul id="sub-menu">
                      <li><a href="llaveros.html ">LLAVEROS </a></li>
-                     <li><a href="pulseras.html">PULSERAS</a></li>
+                     <li><a href="billeteras.html">BILLETERAS</a></li>
                      <li><a href="anillos.html">ANILLOS</a></li>
                      <li><a href="collares.html">COLLARES</a></li>
                      <li><a href="relojes.html">RELOJES</a></li>

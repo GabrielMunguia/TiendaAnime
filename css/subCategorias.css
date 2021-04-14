@@ -16,7 +16,7 @@
 
   position: relative;
  
-  background-color: red;
+  /* background-color: red; */
 }
 
 .grid-item-link {
@@ -27,7 +27,7 @@
 }
 
 .grid-item-link-img {
-  background-color: limegreen;
+  /* background-color: limegreen; */
   width: 100%;
   height: 85%;
 }
@@ -60,7 +60,7 @@
   }
   .grid-item {
     /* border: 2px solid black; */
-    background-color: red;
+    /* background-color: red; */
     margin-left: 1px;
     margin-bottom: 0;
     margin: 0;

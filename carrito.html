@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app/component/navbar.js"></script>
+    <script src="app/component/footer.js"></script>
+    <link rel="stylesheet" href="css/carrito.css">
+    <link rel="stylesheet" href="css/style-general.css">
+</head>
+<body>
+    <menu-opc></menu-opc>
+    
+    
+    <div class="carrito-detalles">
+ 
+
+        
+        
+        <table id="tabla-carrito">
+           
+            <thead>
+                <tr>
+                    <td colspan="5"><div></div></td>
+                </tr>
+               
+                <tr>
+                    <td>Detalle</td>
+                
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                    <th><img src="assets/img/trash.svg" alt=""></th>
+                    
+                </tr>
+                
+               
+            </thead>
+
+            
+           
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="carrito-detalle-img">
+                         <img src="assets/img/accesorios/anillos/ANILLO-KONOHA 7.99 (2).png" alt="">
+
+                        </div>
+                        <div class="carrito-detalle-descripcion">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laborum
+
+                        </div>
+
+                    </td>
+                
+                    <th>$9.99</th>
+                    <th>2</th>
+                    <th>$19.99</th>
+                    <th></th>
+                  
+                </tr>
+               
+                   
+
+              
+
+            
+            </tbody>
+
+            <tfoot>
+             <tr class="tfoot-tr-1">
+                <td colspan="3"></td>
+                <td colspan="2" >
+                  <div>
+                    <p><span>Sub Total :</span>$ 9.99</p>
+                    <p><span>Costo envio :</span>$ 9.99</p>
+                    <p><span>Total</span>$ 9.99</p>
+
+                
+                  </div>
+                </td>
+                
+             </tr>
+             <tr>
+            
+                <td colspan="5" >
+        
+                    <div class="pagar">
+                       <button id='pagar'><span>Pagar</span></button>
+                    </div>
+
+                
+                  
+                </td>
+                
+             </tr>
+            </tfoot>
+            
+        </table>
+       
+       
+    </div>
+   
+   
+   
+
+    
+    
+    <footer-f></footer-f>
+
+    <script src="js/detalle.js"></script>
+    <script src="js/productos.js"></script>
+    
+</body>
+</html>

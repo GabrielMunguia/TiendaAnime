@@ -59,12 +59,12 @@ window.onresize = resize;
 function resize()
 { 
   let ancho2= window.innerWidth;
- console.log(ancho2);
+//  console.log(ancho2);
  
  if(ancho2>768){
   window.location.reload(); 
   script();
-  console.log(ancho2);
+  // console.log(ancho2);
   
 }
 // AQUI QUITO EL LINK DE LOS ENLACES PARA QUE EL MENU MOVIL FUNCIONE BIEN

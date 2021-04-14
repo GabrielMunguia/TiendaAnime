@@ -6,6 +6,7 @@
   
 }
 
+
 header {
   height: 50px;
   /* background-color: #509410; */
@@ -115,18 +116,20 @@ header {
   align-items: center;
   justify-self: center;
   position: relative;
-}
-table tr{
-  display: table;
-  border-bottom: 1px solid rgb(63, 63, 63);
+  font-size: 13px;
+ 
+  
 }
 
-table tr:last-child{
+
+.contenedorLista table tr:last-child{
+  
   border:none
 }
 .contenedorCarrito img {
   display: block;
   width: 2.4em;
+  cursor: pointer;
 }
 
 .contenedorLista img {
@@ -137,10 +140,11 @@ table tr:last-child{
 .contenedorCarrito table tr th {
   padding: 12px 20px;
   /* background-color: red; */
-  width:6em;;
+  width:6em;
   text-align: center;
   max-width: 6em;
   outline: none;
+  
 
 }
 
@@ -155,8 +159,8 @@ table tr:last-child{
 .borrarItem {
   display: block;
   background-color: rgb(255, 0, 0);
-  font-size: 20px;
-  
+ font-size: 13px;
+  z-index: 1000;
   width:40px;
   height: 35px;
   text-align: center;
@@ -179,12 +183,18 @@ table tr:last-child{
   color: black;
 }
 .contenedorLista {
+  
   position: relative;
   background-color: rgb(255, 255, 255);
   /* border: 1px solid black; */
   visibility: hidden;
   padding: 10px;
 }
+.contenedorLista input{
+  font-size: 18px;
+}
+
+
 
 .contenedorCarrito img:hover + .contenedorLista {
   display: block;
@@ -327,6 +337,22 @@ header label {
 .footer-item-texto {
   text-align: center;
 }
+
+
+
+.contenedorLista table tbody{
+  display: inline-block;
+
+  overflow-y: scroll;
+ 
+  max-height:20em;
+}
+
+.contenedorLista table{
+
+  display: block;
+}
+
 
 @media (max-width: 768px) {
   header label {

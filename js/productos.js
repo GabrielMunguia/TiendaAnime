@@ -2,6 +2,8 @@
 const listaProductosBtns = document.querySelectorAll(".boton");
 let listaProductos = [];
 const carrito = document.querySelector("#listaProductos tbody");
+const carritoDetalle=document.querySelector("#tabla-carrito tbody");
+console.log(carritoDetalle)
 // contenedor lista
 const contLista = document.querySelector(".contenedorLista");
 // enlaces para eliminar item
@@ -16,6 +18,9 @@ listaProductosBtns.forEach((producto) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   listaProductos = JSON.parse(localStorage.getItem("carrito")) || [];
+  calcularTotal()
+
+  
 
   borrarDatosAntiguos();
   agregarProductos();
@@ -28,6 +33,7 @@ contLista.addEventListener("click", eliminarProd);
 
 vaciarCarrito.addEventListener("click", (e) => {
   listaProductos = [];
+  localStorage.removeItem('carrito')
   agregarProductos();
 });
 
@@ -99,24 +105,73 @@ function agregarProductos() {
   //agregando al carrito
   listaProductos.forEach((producto) => {
     const { titulo, descripcion, precio, imagen, id, cantidad } = producto;
+
+
+
     const row = document.createElement("tr");
+    
     row.innerHTML = `
        <tr>
           <th><img src=${imagen} alt=""></th>
           <th>${titulo}</th>
           <th>$ ${precio}</th>
-          <th  class='carrito-prod-cantidad'> ${cantidad}</th>
+      
+          <th><input prod-id=${id}  type="number" value=${cantidad}  min=1 class='inputCarritoCantidad'></th>
           <th><a href="#" prod-id=${id}> <span class="borrarItem">X</span></a></th>
        </tr>
        `;
 
+       if(carritoDetalle){
+         const row2 = document.createElement("tr");
+    
+       row2.innerHTML = `
+       <tr>
+       <td>
+           <div class="carrito-detalle-img">
+            <img src=${imagen} alt="">
+
+           </div>
+           <div class="carrito-detalle-descripcion">
+               ${descripcion}
+           </div>
+
+       </td>
+   
+       <th>$ <span>${precio}</span></th>
+       <th><input prod-id=${id}  type="number" value=${cantidad} min=1 class='inputCarritoCantidad'></th>
+       <th>$xxx</th>
+       <th>  <button   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg> </button> </th>
+     
+   </tr>
+          `;
+       
+   
+
+       
+     carritoDetalle.appendChild(row2);
+       }
+
+       
     carrito.appendChild(row);
+  
+    
+  
+
+
+
   });
 
   agregaProdLocalStorage();
+  
+  
+ 
 }
 
 function borrarDatosAntiguos() {
+
+ 
   while (carrito.firstChild) {
     carrito.removeChild(carrito.firstChild);
   }
@@ -124,6 +179,7 @@ function borrarDatosAntiguos() {
 
 function agregaProdLocalStorage() {
   localStorage.setItem("carrito", JSON.stringify(listaProductos));
+  
 }
 
 //Con este codigo  agrego la informacion del producto del cual se quiere ver a detalle
@@ -154,7 +210,7 @@ detalleProductos.forEach((prod) => {
 //  Fin
 
 const botonAgregarProd = document.querySelectorAll("#botonAggProd");
-console.log(botonAgregarProd);
+// console.log(botonAgregarProd);
 
 //Evento agregar al carrito
 
@@ -169,6 +225,9 @@ botonAgregarProd[0].addEventListener("click", (e) => {
     if(contadorCantida.value==0){
         contadorCantida.value=1;
      
+  }
+  else if(contadorCantida.value<0){
+    contadorCantida.value=1;
   }
     const producto2 = {
       titulo: informacion["titulo"],
@@ -185,6 +244,8 @@ botonAgregarProd[0].addEventListener("click", (e) => {
       const lstProductos = listaProductos.map((prod) => {
         if (prod.id == producto2.id) {
           prod.cantidad+= producto2.cantidad;
+          producto2.cantidad=1;
+       
           return prod;
         } else {
           return prod;
@@ -202,35 +263,132 @@ botonAgregarProd[0].addEventListener("click", (e) => {
 
 // detecto si la cantidad del producto se modifico desde el carrito
 
+let inputCarrito;
+function actualizarDatos(){
+  inputCarrito=document.querySelectorAll('.inputCarritoCantidad')
+  return inputCarrito
+}
+ 
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     const cantidades=document.querySelectorAll('.carrito-prod-cantidad')
-//    console.log(cantidades)
-//    const valoresAceptados = /(\d+)/;
-   
-// //    /(\d+)/
-
-//    cantidades.forEach((cantidad)=>{
-//        cantidad.addEventListener('blur',(e)=>{
-//            const dato=e.target.textContent;
-//           if(dato.match(valoresAceptados)){
-//               console.log("pasoo")
-//           }
-//           else{
-//               console.log("no paso")
-//           }
+function modificarCantidadCarrito(){
+  let input=actualizarDatos()
+   inputCarrito.forEach((inputCarrito) => {
+     inputCarrito.addEventListener('blur',(e)=>{
+       
         
-          
-//        })
-//    })
-//   });
+         
+          const id=e.target.attributes[0].value 
+      
+       
+        
+     
+       const existe = listaProductos.some((producto) => producto.id ==id);
+      
+       if (existe) {
+         const lstProductos = listaProductos.map((prod) => {
+           if (prod.id == id) {
+            // console.log(inputCarrito.value)
+            if(inputCarrito.value<=0){
+              inputCarrito.value=1;
+            }
+             prod.cantidad=parseInt( inputCarrito.value);
+            
+             return prod;
+           } else {
+             return prod;
+           }
 
+          
+         });
+         listaProductos = [...lstProductos];
+       }
+       agregarProductos();
+       calcularTotal()
+      //  console.log(listaProductos)
+     })
+
+      if(carritoDetalle){
+          calcularTotal()
+          console.log('dasdsa')
+         }
+   })
+  
+}
+
+modificarCantidadCarrito();
 
 // contenteditable=true
 
 
+
+
+
+
 const btnCarrito=document.querySelector('.contenedorCarrito').firstElementChild;
 
-btnCarrito.addEventListener('click',(e)=>{
-  console.log('click carrtio')
+btnCarrito.addEventListener('mouseenter',(e)=>{
+
+  actualizarDatos()
+  modificarCantidadCarrito();
+
 })
+
+btnCarrito.addEventListener('mouseenter',(e)=>{
+
+  actualizarDatos()
+  modificarCantidadCarrito();
+
+})
+if(carritoDetalle){
+
+
+  carritoDetalle.addEventListener('mouseenter',(e)=>{
+
+    actualizarDatos()
+    
+    modificarCantidadCarrito();
+    
+    })
+    
+    document.addEventListener("DOMContentLoaded",()=>{
+      calcularTotal()
+    })
+
+
+   
+
+    
+  }
+      
+
+  
+
+
+
+
+
+
+
+btnCarrito.addEventListener('click',(e)=>{
+  console.log('click')
+  location.href ="../carrito.html";
+})
+
+
+//calculo el   total de los productos
+function  calcularTotal(){
+  carritoDetalle.querySelectorAll('.inputCarritoCantidad').forEach((cantidad)=>{
+     let total=cantidad.parentElement.nextElementSibling;
+     let  precio=cantidad.parentElement.previousElementSibling.children[0].textContent;
+     precio=Number(precio);
+     let cantidadProd= cantidad.value 
+     const totalValor= cantidadProd*precio;
+      total.textContent=`${totalValor}`
+   
+    
+    
+  })
+}
+
+
+
