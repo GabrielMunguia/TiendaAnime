@@ -18,12 +18,14 @@ listaProductosBtns.forEach((producto) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   listaProductos = JSON.parse(localStorage.getItem("carrito")) || [];
+  borrarDatosAntiguos();
+  agregarProductos();
   calcularTotal()
+  
 
   
 
-  borrarDatosAntiguos();
-  agregarProductos();
+ 
 });
 console.log(contLista)
 
@@ -168,6 +170,7 @@ function agregarProductos() {
 
   agregaProdLocalStorage();
   calcularTotal();
+  agregarEliminarLink()
   
   
  
@@ -356,30 +359,30 @@ if(carritoDetalle){
     
     })
     
-    document.addEventListener("DOMContentLoaded",()=>{
-      calcularTotal()
-      const eliminarLink=document.querySelectorAll('.eliminarProd2')
-      eliminarLink.forEach((eliminar)=>{
-        eliminar.addEventListener('click',(e)=>{
-          
-            e.preventDefault();
-            
-            const id = e.target.parentElement.attributes[2].value
-
-      
-            listaProductos = listaProductos.filter((prod) => prod.id !== id);
-            agregarProductos();
-          
-          
-        })
-      })
-      
-    })
+   
 
 
    
 
     
+  }
+
+  function agregarEliminarLink(){
+    const eliminarLink=document.querySelectorAll('.eliminarProd2')
+    eliminarLink.forEach((eliminar)=>{
+      eliminar.addEventListener('click',(e)=>{
+        
+          e.preventDefault();
+          
+          const id = e.target.parentElement.attributes[2].value
+
+    
+          listaProductos = listaProductos.filter((prod) => prod.id !== id);
+          agregarProductos();
+        
+        
+      })
+    })
   }
       
 
@@ -406,6 +409,10 @@ function  calcularTotal(){
      let cantidadProd= cantidad.value 
      const totalValor= cantidadProd*precio;
       total.textContent=`${totalValor}`
+
+      const detallesCompra=document.querySelector('tfoot :nth-child(2)')
+      
+      console.log()
    
     
     

@@ -6,7 +6,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  min-height: 39.2em;
+  min-height: 47.2em;
   font-size: 14px;
 
 }
@@ -197,5 +197,7 @@ border-radius:5px;
 .informacion-adicional div span{
   font-weight: bolder;
 }
+
+
 
 
