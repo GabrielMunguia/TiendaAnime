@@ -164,6 +164,7 @@ function agregarProductos() {
   });
 
   agregaProdLocalStorage();
+  calcularTotal();
   
   
  
@@ -171,10 +172,15 @@ function agregarProductos() {
 
 function borrarDatosAntiguos() {
 
- 
+  if(carritoDetalle){
+    while (carritoDetalle.firstChild) {
+      carritoDetalle.removeChild(carritoDetalle.firstChild);
+    }
+  }
   while (carrito.firstChild) {
     carrito.removeChild(carrito.firstChild);
   }
+ 
 }
 
 function agregaProdLocalStorage() {
@@ -271,6 +277,7 @@ function actualizarDatos(){
  
 
 function modificarCantidadCarrito(){
+  
   let input=actualizarDatos()
    inputCarrito.forEach((inputCarrito) => {
      inputCarrito.addEventListener('blur',(e)=>{
@@ -312,6 +319,7 @@ function modificarCantidadCarrito(){
           console.log('dasdsa')
          }
    })
+   actualizarDatos()
   
 }
 
@@ -333,12 +341,7 @@ btnCarrito.addEventListener('mouseenter',(e)=>{
 
 })
 
-btnCarrito.addEventListener('mouseenter',(e)=>{
-
-  actualizarDatos()
-  modificarCantidadCarrito();
-
-})
+// 
 if(carritoDetalle){
 
 
