@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/fontello.css" />
+    <link rel="stylesheet" href="css/style-general.css" />
+    <link rel="stylesheet" href="css/targetas-prod.css" />
+    <link rel="stylesheet" href="css/rutas.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="app/component/navbar.js"></script>
+    <script src="app/component/footer.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <menu-opc></menu-opc>
+    
+    <div class="rutas">
+      <a href="index.html">INICIO</a>
+      <span> /</span>
+      <a href="accesorios.html">ACCESORIOS</a>
+      <span> / </span>
+      <span>BILLETERAS</span>
+    </div>
+
+    <main>
+      <div class='filtro'>
+      
+        <ul>
+          <li>  <h2>Precio</h2></li>
+     
+          <li>
+            <label for="minimo">Minimo</label>
+            <div id="minimo"></div>
+            <input type="range" id='InputMinimo' name="minimo" min=0  max=0  >
+            
+          
+          </li>
+          <li>
+            <label for="maximo">Maximo</label>
+            <div id="maximo"></div>
+            <input type="range" id='Inputmaximo' name="maximo" min=0 max=0  >
+          </li>
+          <li>
+
+            <button id="Limpiar" type="submit">Limpiar</button>
+            <button id="Filtrar" type="submit">Filtrar</button>
+          </li>
+       
+        </ul>
+    </div>
+      <div class="grid-container">
+        
+      </div>
+    </main>
+
+     <footer-f></footer-f>
+    <script src="js/scripts.js"></script>
+    <script src='js/bD.js'></script>
+     <script src='js/anillos.js'></script>
+    <script src="js/scriptJs.js"></script>
+    <script src='js/productos.js'></script>
+    <script src='js/filtro.js'></script>
+
+  </body>
+</html>

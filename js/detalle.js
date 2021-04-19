@@ -2,7 +2,7 @@
 
 const img =document.getElementById('prod-img')
 const informacion=JSON.parse(localStorage.getItem('detalle')) ;
-img.src=informacion['img']
+img.src=informacion['img'];
 const titulo=document.getElementById('titulo-prod')
 // console.log(informacion)
 titulo.textContent=informacion['titulo']

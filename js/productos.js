@@ -1,9 +1,14 @@
+//Esta variable comprueba si  ya se agrego un producto al carrito
+
+
 // agrego todos los botones a la variable
+
+
 const listaProductosBtns = document.querySelectorAll(".boton");
 let listaProductos = [];
 const carrito = document.querySelector("#listaProductos tbody");
 const carritoDetalle=document.querySelector("#tabla-carrito tbody");
-console.log(carritoDetalle)
+
 // contenedor lista
 const contLista = document.querySelector(".contenedorLista");
 // enlaces para eliminar item
@@ -21,13 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
   borrarDatosAntiguos();
   agregarProductos();
   calcularTotal()
+  detalleProducto();
   
 
   
 
  
 });
-console.log(contLista)
+
 
 contLista.addEventListener("click", eliminarProd);
 
@@ -59,24 +65,24 @@ function eliminarProd(e) {
 
 function leerProducto(producto) {
   //contenedor de producto
+
+  console.log(producto.target.parentElement.parentElement.parentElement.parentElement)
   const contenedorProducto = producto.target.parentElement.parentElement;
+  console.log(  contenedorProducto.children[1].firstElementChild.children[0].firstElementChild.src)
 
   const productoDetalle = {
     titulo:
-      contenedorProducto.children[0].firstElementChild.children[1]
-        .firstElementChild.textContent,
+    contenedorProducto.children[1].firstElementChild.children[1].firstElementChild.textContent,
     descripcion:
-      contenedorProducto.children[0].firstElementChild.children[1].children[1]
-        .textContent,
+    contenedorProducto.children[1].firstElementChild.children[1].children[1].textContent,
     precio: parseFloat(
-      contenedorProducto.children[0].firstElementChild.children[2].firstElementChild.textContent.replace(
+      contenedorProducto.children[1].firstElementChild.children[2].firstElementChild.textContent.replace(
         "$",
         ""
       )
     ),
     imagen:
-      contenedorProducto.children[0].firstElementChild.children[0]
-        .firstElementChild.src,
+    contenedorProducto.children[1].firstElementChild.children[0].firstElementChild.src,
     id: producto.target.attributes["id-prod"].value,
     cantidad: 1,
   };
@@ -110,13 +116,27 @@ function agregarProductos() {
     const { titulo, descripcion, precio, imagen, id, cantidad } = producto;
 
 
+    let auxTitulo='';
+    let max=titulo.split(' ').length;
+    if(max<3){
+      max=2;
+    }
+    else{
+      max=3
+    }
+    for(let i=0;i<max;i++){
+      auxTitulo+=titulo.split(' ')[i]+' ';
+    }
+  
+ 
+    
 
     const row = document.createElement("tr");
     
     row.innerHTML = `
        <tr>
           <th><img src=${imagen} alt=""></th>
-          <th>${titulo}</th>
+          <th>${auxTitulo}</th>
           <th>$ ${precio}</th>
       
           <th><input prod-id=${id}  type="number" value=${cantidad}  min=1 class='inputCarritoCantidad'></th>
@@ -196,22 +216,30 @@ function agregaProdLocalStorage() {
 
 //Con este codigo  agrego la informacion del producto del cual se quiere ver a detalle
 
-const detalleProductos = document.querySelectorAll(".link-prod");
+function detalleProducto(){
+  
+  const detalleProductos = document.querySelectorAll(".link-prod");
 
 detalleProductos.forEach((prod) => {
   prod.addEventListener("click", (e) => {
+  
     // event.preventDefault();
+    // console.log(prod.parentElement.parentElement.children[2].firstElementChild.attributes[2].value)
     
     const producto = {
       img: prod.children[0].firstElementChild.src,
       titulo: prod.children[1].children[0].textContent,
       descripcion: prod.children[1].children[1].textContent,
-      id:prod.parentElement.parentElement.children[1].children[0].attributes[2].value,
+      id:prod.parentElement.parentElement.children[2].firstElementChild.attributes[2].value,
       precio: parseFloat(
         prod.children[2].children[0].textContent.replace("$", "")
+      
       ),
+    
      
     };
+
+    console.log(producto)
 
   
 
@@ -219,6 +247,7 @@ detalleProductos.forEach((prod) => {
     // console.log(producto.img)
   });
 });
+}
 //  Fin
 
 const botonAgregarProd = document.querySelectorAll("#botonAggProd");
@@ -243,14 +272,14 @@ botonAgregarProd[0].addEventListener("click", (e) => {
   }
     const producto2 = {
       titulo: informacion["titulo"],
-      descripcion: document.getElementById("descripcion-prod"),
+      descripcion:informacion['descripcion'],
   
       precio: informacion["precio"],
       imagen: informacion["img"],
       id: informacion["id"],
       cantidad: parseFloat(contadorCantida.value)
     };
-    console.log(informacion['id']);
+    console.log(informacion);
     const existe = listaProductos.some((producto) => producto.id == producto2.id);
     if (existe) {
       const lstProductos = listaProductos.map((prod) => {
@@ -322,7 +351,7 @@ function modificarCantidadCarrito(){
 
       if(carritoDetalle){
           calcularTotal()
-          console.log('dasdsa')
+          
          }
    })
    actualizarDatos()
@@ -379,6 +408,9 @@ if(carritoDetalle){
     
           listaProductos = listaProductos.filter((prod) => prod.id !== id);
           agregarProductos();
+
+         
+         
         
         
       })
@@ -396,28 +428,59 @@ if(carritoDetalle){
 
 btnCarrito.addEventListener('click',(e)=>{
   console.log('click')
-  location.href ="../carrito.html";
+    location.href ="../carrito.html";
+
+ 
+  
 })
 
 
 //calculo el   total de los productos
 function  calcularTotal(){
-  carritoDetalle.querySelectorAll('.inputCarritoCantidad').forEach((cantidad)=>{
-     let total=cantidad.parentElement.nextElementSibling;
-     let  precio=cantidad.parentElement.previousElementSibling.children[0].textContent;
-     precio=Number(precio);
-     let cantidadProd= cantidad.value 
-     const totalValor= cantidadProd*precio;
-      total.textContent=`${totalValor}`
-
-      const detallesCompra=document.querySelector('tfoot :nth-child(2)')
+  
+  // comprobarProductosCarrito()
+ 
+   let subTotal=0;
+   if(carritoDetalle){
+    carritoDetalle.querySelectorAll('.inputCarritoCantidad').forEach((cantidad)=>{
+    
+      let total=cantidad.parentElement.nextElementSibling;
+      let  precio=cantidad.parentElement.previousElementSibling.children[0].textContent;
+      precio=Number(precio);
+      let cantidadProd= cantidad.value 
+      let totalValor= cantidadProd*precio;
       
-      console.log()
-   
     
-    
-  })
+       total.textContent=`${totalValor.toFixed(2)}`
+       subTotal+=totalValor;
+ 
+     
+   })
+   document.querySelector("#tabla-carrito > tfoot > tr.tfoot-tr-1 > td:nth-child(2) > div > p:nth-child(1) > span").textContent= subTotal.toFixed(2);
+   document.querySelector("#tabla-carrito > tfoot > tr.tfoot-tr-1 > td:nth-child(2) > div > p:nth-child(2) > span").textContent=(subTotal/4).toFixed(2);
+   document.querySelector("#tabla-carrito > tfoot > tr.tfoot-tr-1 > td:nth-child(2) > div > p:nth-child(3) > span").textContent=((subTotal)+(subTotal/2)).toFixed(2);
+   }
+
+
+ 
+
+  
 }
+
+
+function comprobarProductosCarrito(){
+  let boolCompra;
+    if(listaProductos.length>0){
+      boolCompra=true;
+    }else{
+      boolCompra=false;
+     
+    }
+
+    return boolCompra;
+
+}
+
 
 
 

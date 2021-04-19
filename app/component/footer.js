@@ -16,14 +16,7 @@ class footer extends HTMLElement{
          <footer>
              <div class="footer">
                <div class="footer-item">
-                 <div class="targeta"></div>
-                 <div class="footer-item-texto">
-                   <h3>Geek Store</h3>
-                   <p>
-                     Se aceptan pagos con targeta de credito y por medio de
-                     tranferencia bancaria
-                   </p>
-                 </div>
+                 
                </div>
        
                <ul>
