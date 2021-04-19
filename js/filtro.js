@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     minimo.textContent=inputMinimo.value;
    })     
    inputMaximo.addEventListener('change',()=>{
+       
     maximo.textContent=inputMaximo.value;
    }) 
 btnLimpiar.addEventListener('click',()=>{
