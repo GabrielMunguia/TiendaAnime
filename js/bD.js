@@ -166,7 +166,7 @@ const productos = [
         cantidad:15,
         categoria:'collares',
         subcategoria:'anime',
-        img:'COLLAR-BLEACH.png',
+        img:'assets/img/productos/accesorios/collares/COLLAR-BLEACH.png',
 	},
     {
 		id:18,
@@ -176,7 +176,7 @@ const productos = [
         cantidad:12,
         categoria:'collares',
         subcategoria:'anime',
-        img:'COLLAR-DEATHN.png',
+        img:'assets/img/productos/accesorios/collares/l.png',
 	},
     {
 		id:19,
@@ -186,7 +186,7 @@ const productos = [
         cantidad:7,
         categoria:'collares',
         subcategoria:'cf',
-        img:'COLLAR-GIRATIEMPO-HARRY.png',
+        img:'assets/img/productos/accesorios/collares/COLLAR-GIRATIEMPO-HARRY.png',
 	},
     {
 		id:20,
@@ -196,7 +196,7 @@ const productos = [
         cantidad:8,
         categoria:'collares',
         subcategoria:'cf',
-        img:'COLLAR-GRAVITY.png',
+        img:'assets/img/productos/accesorios/collares/COLLAR-GRAVITY.png',
 	},
     {
 		id:21,
@@ -206,7 +206,7 @@ const productos = [
         cantidad:4,
         categoria:'collares',
         subcategoria:'anime',
-        img:'COLLAR-NARUTO.png',
+        img:'assets/img/productos/accesorios/collares/COLLAR-NARUTO.png',
 	},
     {
 		id:22,
@@ -216,7 +216,7 @@ const productos = [
         cantidad:8,
         categoria:'collares',
         subcategoria:'cf',
-        img:'COLLAR-RELIQUIAS-HARRY.png',
+        img:'assets/img/productos/accesorios/collares/COLLAR-RELIQUIAS-HARRY.png',
 	},
     {
 		id:23,
@@ -226,7 +226,7 @@ const productos = [
         cantidad:8,
         categoria:'collares',
         subcategoria:'anime',
-        img:'COLLAR-SAILOR.png',
+        img:'assets/img/productos/accesorios/collares/COLLAR-SAILOR.png',
 	},
     {
 		id:24,
@@ -236,11 +236,11 @@ const productos = [
         cantidad:14,
         categoria:'collares',
         subcategoria:'anime',
-        img:'COLLAR-SNK.png',
+        img:'assets/img/productos/accesorios/collares/COLLAR-SNK.png',
 	},
     {
 		id:25,
-        titulo:'LLavero corazon - The Legend of Zelda',
+        titulo:'Corazon - The Legend of Zelda',
         descripcio:'LLavero de aleación de zinc',
         precio:10,
         cantidad:6,
@@ -250,7 +250,7 @@ const productos = [
 	},
     {
 		id:26,
-        titulo:'Llavero Hyrule - The Legend of Zelda',
+        titulo:'The Legend of Zelda',
         descripcio:'LLavero de esmalte - aleación de zinc',
         precio:8,
         cantidad:10,
@@ -260,7 +260,7 @@ const productos = [
 	},
     {
 		id:27,
-        titulo:'Llavero Kirby',
+        titulo:'Kirby',
         descripcio:'LLavero de esmalte - aleación de zinc',
         precio:8,
         cantidad:4,
@@ -270,7 +270,7 @@ const productos = [
 	},
     {
 		id:28,
-        titulo:'Llavero Espada Meliodas - Nanatsu No Taizai',
+        titulo:'Espada Meliodas - Nanatsu No Taizai',
         descripcio:'LLavero de aleación de zinc',
         precio:1,
         cantidad:8,
@@ -280,7 +280,7 @@ const productos = [
 	},
     {
 		id:29,
-        titulo:'Llavero One Piece',
+        titulo:'One Piece llavero',
         descripcio:'LLavero de esmalte - aleación de zinc',
         precio:10,
         cantidad:14,
@@ -290,7 +290,7 @@ const productos = [
 	},
     {
 		id:30,
-        titulo:'Llavero Radar del Dragon - Dragon Ball',
+        titulo:'Radar del Dragon - Dragon Ball',
         descripcio:'Llavero con luz y sonido - plástico',
         precio:20,
         cantidad:4,
@@ -300,7 +300,7 @@ const productos = [
 	},
     {
 		id:31,
-        titulo:'Llavero Llave Estrella - Sakura Card Captor',
+        titulo:'Llave Estrella - Sakura Card Captor',
         descripcio:'LLavero de aleación de zinc',
         precio:8,
         cantidad:8,
@@ -310,7 +310,7 @@ const productos = [
 	},
     {
 		id:32,
-        titulo:'LLavero Snitch Dorada - Harry Potter',
+        titulo:'Snitch Dorada - Harry Potter',
         descripcio:'LLavero de aleación de zinc',
         precio:15,
         cantidad:10,
@@ -320,7 +320,7 @@ const productos = [
 	},
     {
 		id:33,
-        titulo:'LLavero Alas de la Libertad - Shingeki No Kyojin',
+        titulo:'Alas de la Libertad - Shingeki No Kyojin',
         descripcio:'LLavero de aleación de zinc',
         precio:8,
         cantidad:15,
@@ -330,7 +330,7 @@ const productos = [
 	},
     {
 		id:34,
-        titulo:'Llavero Halcón Milenario - Star Wars',
+        titulo:'Halcón Milenario - Star Wars',
         descripcio:'LLavero de aleación de zinc',
         precio:12,
         cantidad:10,
@@ -346,7 +346,7 @@ const productos = [
         cantidad:10,
         categoria:'relojes',
         subcategoria:'comic',
-        img:'RELOJ-BLACKP.png',
+        img:'assets/img/productos/accesorios/relojes/RELOJ-BLACKP.png',
 	},
     {
 		id:36,
@@ -356,7 +356,7 @@ const productos = [
         cantidad:12,
         categoria:'relojes',
         subcategoria:'anime',
-        img:'RELOJ-FULLM.png',
+        img:'assets/img/productos/accesorios/relojes/RELOJ-FULLM.png',
 	},
     {
 		id:37,
@@ -366,7 +366,7 @@ const productos = [
         cantidad:12,
         categoria:'relojes',
         subcategoria:'comic',
-        img:'RELOJ-IRONM.png',
+        img:'assets/img/productos/accesorios/relojes/RELOJ-IRONM.png',
 	},
     {
 		id:38,
@@ -376,7 +376,7 @@ const productos = [
         cantidad:8,
         categoria:'relojes',
         subcategoria:'anime',
-        img:'RELOJ-SAILOR.png',
+        img:'assets/img/productos/accesorios/relojes/RELOJ-SAILOR.png',
 	},
     {
 		id:39,
@@ -386,7 +386,7 @@ const productos = [
         cantidad:10,
         categoria:'relojes',
         subcategoria:'anime',
-        img:'RELOJ-SAINT.png',
+        img:'assets/img/productos/accesorios/relojes/RELOJ-SAINT.png',
 	},
     {
 		id:40,
@@ -396,7 +396,7 @@ const productos = [
         cantidad:8,
         categoria:'relojes',
         subcategoria:'comic',
-        img:'RELOJ-SPIDERMAN.png',
+        img:'assets/img/productos/accesorios/relojes/RELOJ-SPIDERMAN.png',
 	},
     {
 		id:41,

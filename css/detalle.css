@@ -14,6 +14,7 @@
     justify-content: center;
     width: 30%;
     position: relative;
+   
     
 }
 .img img{
@@ -24,6 +25,7 @@
     max-width: 30em;
     max-height: 40em;
     bottom:3em;
+    border:1px solid black
    
 }
 
@@ -60,7 +62,7 @@
 .agg-carrito{
     position: relative;
     top:10em;
-   /* background-color: rgb(101, 19, 255); */
+   
    width: 75%;
    height: 20%;
    display: flex;
@@ -111,5 +113,107 @@
     background-color: rgb(160, 5, 5);
    
 }
+
+@media (max-width: 768px) {
+ 
+    .container{
+        position: relative;
+    
+        display: flex;
+        height: auto;
+        flex-direction: column;
+       display: flex;
+       justify-content: center;
+    }
+    
+    .img{
+    
+        width: 100%;
+        height: auto;
+        padding: 3em;
+        position: relative;
+       
+        
+    }
+    .img img{
+        width: 100%;
+          border: none;
+        margin-top: 2em;
+        padding: 2em;
+        height: 100%;
+       
+    }
+    
+    .detalles{
+        
+        width: 100%;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+        
+        
+    }
+    .Descripcion{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .Descripcion p{
+        font-size: 20px;
+    }
+    .Descripcion{
+        position: relative;
+        
+         
+        top:0em;
+        text-align: center;
+        width: 80%;
+        height: 10em;
+        
+    }
+    .precio{
+    
+        position: relative;
+        top: 0em;
+        margin-top: 10px;
+        width:80%;
+       
+    }
+    
+    .agg-carrito{
+        position: relative;
+        top:0em;
+      
+       width: 80%;
+       height: auto;
+      
+      
+     
+    }
+    
+    
+    
+    .agg-carrito button{
+     
+      height: 2em;
+      margin-bottom: 1em;
+      width: 100%;
+      left: 0;
+     
+    
+    }
+    .agg-carrito button:hover{
+        background-color: rgb(160, 5, 5);
+       
+    }
+
+
+    
+    
+ 
+}
+
 
 

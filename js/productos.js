@@ -112,8 +112,10 @@ function agregarProductos() {
   //Limpio la informacion antigua
   borrarDatosAntiguos();
   //agregando al carrito
+  
   listaProductos.forEach((producto) => {
     const { titulo, descripcion, precio, imagen, id, cantidad } = producto;
+  
 
 
     let auxTitulo='';
@@ -367,7 +369,7 @@ modificarCantidadCarrito();
 
 
 
-const btnCarrito=document.querySelector('.contenedorCarrito').firstElementChild;
+const btnCarrito=document.querySelector('#carritoImg');
 
 btnCarrito.addEventListener('mouseenter',(e)=>{
 
@@ -428,7 +430,7 @@ if(carritoDetalle){
 
 btnCarrito.addEventListener('click',(e)=>{
   console.log('click')
-    location.href ="../carrito.html";
+    location.href ="/carrito.html";
 
  
   
@@ -480,6 +482,13 @@ function comprobarProductosCarrito(){
     return boolCompra;
 
 }
+
+
+//ORDENAR PRODUCTOS
+
+
+
+
 
 
 
