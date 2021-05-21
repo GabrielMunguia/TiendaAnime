@@ -1,8 +1,8 @@
-
+const categoria=document.querySelector('.grid-container').attributes[1].value;
 
 productos.forEach((producto)=>{
 
-    if(producto.categoria=='relojes'){
+    if(producto.categoria==categoria){
         
       
 

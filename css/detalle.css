@@ -24,7 +24,7 @@
 .img >div{
 
     width: 70%;
-    height: 90%;
+    height: 70%;
 
     display: flex;
   
@@ -127,7 +127,7 @@
 }
 .agg-carrito button{
     position: relative;
-    background-color:red;
+    background-color:royalblue;
     border: none;
     outline: none;
     font-size: 20px;
@@ -135,11 +135,12 @@
     height: 60%;
     left:25%;
     color:white;
-    border-radius:45px;
+    border-radius:10px;
 
 }
 .agg-carrito button:hover{
-    background-color: rgb(160, 5, 5);
+    background-color: rgb(78, 78, 78);
+    transition: all 1s;
    
 }
 

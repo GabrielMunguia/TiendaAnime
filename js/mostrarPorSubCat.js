@@ -1,8 +1,9 @@
-
+const subCategoria= localStorage.getItem("subCategoria");
+console.log(subCategoria)
 
 productos.forEach((producto)=>{
 
-    if(producto.categoria=='collares'){
+    if(producto.subcategoria==subCategoria){
         
       
 
@@ -41,9 +42,23 @@ productos.forEach((producto)=>{
   
 })
 
+//verifico si la subcategoria es cf para cambiar el dato
+const subTitulo=document.querySelector("body > main > div.filtro-ordenar > div:nth-child(1) > h3");
+const ubicacion= document.querySelector('#ubicacion');
+if(subCategoria=='cf'){
+   
+subTitulo.textContent='Ficcion';
+ubicacion.textContent='FICCION';
+}
+else{
+    subTitulo.textContent=subCategoria;
+    ubicacion.textContent=`${subCategoria.toUpperCase()}`;
+    
+}
+
 
 function comprobarDisponible(producto){
-    console.log(producto.cantidad)
+    
    if(producto.cantidad<1){
        return 'prodNoDisponible'
    }

@@ -1,4 +1,4 @@
-const listaProductosBtns = document.querySelectorAll(".boton");
+
 let listaProductos = [];
 const carrito = document.querySelector("#listaProductos tbody");
 const carritoDetalle=document.querySelector("#tabla-carrito tbody");
@@ -8,11 +8,6 @@ const eliminarItem = document.querySelectorAll(".borrarItem");
 const vaciarCarrito = document.querySelector("#vaciar-carrito");
 
 
-//Le agrego un evento a cada boton de las targetas de los productos , ("Agregar al carrito");
-listaProductosBtns.forEach((producto) => {
-
-  producto.addEventListener("click", leerProducto);
-});
 
 
 
@@ -30,6 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
   borrarDatosAntiguos();
   agregarProductos();
   calcularTotal()
+  
+//Le agrego un evento a cada boton de las targetas de los productos , ("Agregar al carrito");
+const listaProductosBtns = document.querySelectorAll(".boton");
+listaProductosBtns.forEach((producto) => {
+
+  producto.addEventListener("click", leerProducto);
+});
   detalleProducto();
   
 
@@ -38,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //Esta funcion captura todos los datos del producto agregandolos a un objeto
 function leerProducto(producto) {
+  console.log('click')
     //Esta variable se ubica desde el contenedor principal del producto("Grid-Item")
     const contenedorProducto = producto.target.parentElement.parentElement;
 
@@ -480,8 +483,8 @@ function  calcularTotal(){
      
    })
    document.querySelector("#tabla-carrito > tfoot > tr.tfoot-tr-1 > td:nth-child(2) > div > p:nth-child(1) > span").textContent= subTotal.toFixed(2);
-   document.querySelector("#tabla-carrito > tfoot > tr.tfoot-tr-1 > td:nth-child(2) > div > p:nth-child(2) > span").textContent=(subTotal/4).toFixed(2);
-   document.querySelector("#tabla-carrito > tfoot > tr.tfoot-tr-1 > td:nth-child(2) > div > p:nth-child(3) > span").textContent=((subTotal)+(subTotal/2)).toFixed(2);
+   document.querySelector("#tabla-carrito > tfoot > tr.tfoot-tr-1 > td:nth-child(2) > div > p:nth-child(2) > span").textContent=10;
+   document.querySelector("#tabla-carrito > tfoot > tr.tfoot-tr-1 > td:nth-child(2) > div > p:nth-child(3) > span").textContent=((subTotal)+(10)).toFixed(2);
    }
 
 

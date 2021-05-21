@@ -1,6 +1,6 @@
 
   const menu=document.querySelector('#header');
-  console.log('hola')
+ 
 
 menu.innerHTML=` <div class="envios">
 <a href="/html/quienes-somos.html">Quienes Somos</a>
@@ -82,29 +82,28 @@ menu.innerHTML=` <div class="envios">
   <li class="submenu">
     <a class="link" href="#">COLLECTIBLES <span class="icon-down-open"></span></a>
     <ul class="subMenu-M">
-      <li><a href="#">Bandai Banpresto</a></li>
-      <li><a href="#">Funko pop</a></li>
-      <li><a href="#">Good smile company</a></li>
+      <li><a href="/html/bandai.html">Bandai Banpresto</a></li>
+      <li><a href="/html/funko.html">Funko pop</a></li>
+      <li><a href="/html/goodsmile.html">Good smile company</a></li>
     </ul>
   </li>
   <li class="submenu">
     <a class="link" href="llaveros.html">HOGAR <span class="icon-down-open"></span></a>
     <ul>
-      <li><a href="#">Tazas</a></li>
-      <li><a href="#">Lamparas</a></li>
+      <li><a href="/html/tazas.html">Tazas</a></li>
+      <li><a href="/html/lamparas.html">Lamparas</a></li>
 
     </ul>
   </li>
-  <li class="submenu  " id="submenu">
-    <a class="link" href="#">JUEGOS DE VIDEO <span class="icon-down-open"></span></a>
-    <ul class="subMenu-M">
-      <li><a href="#">sub-Item 1</a></li>
-      <li><a href="#" sub->Item 2</a></li>
-      <li><a href="#">sub-Item 3</a></li>
-      <li><a href="#">sub-Item 4</a></li>
-      <li><a href="#">sub-Item 5</a></li>
-    </ul>
-  </li>
+  <li class="submenu">
+  <a class="link" href="#">Ropa<span class="icon-down-open"></span></a>
+  <ul class="subMenu-M">
+    <li><a href="/html/camisas.html">Camisas</a></li>
+    <li><a href="/html/sudaderas.html">Sudaderas</a></li>
+  
+  </ul>
+</li>
+ 
   <li class="link" class="submenu" ubmenu">
     <a href="#">PELICULAS Y SERIES <span class="icon-down-open"></span></a>
     <ul class="subMenu-M">
@@ -116,8 +115,9 @@ menu.innerHTML=` <div class="envios">
     </ul>
   </li>
   <li>
-    <a href="#">ROPA</a>
-  </li>
+  <a class="link" href="#">JUEGOS DE VIDEO </a>
+</li>
+ 
 </ul>
 </nav>`
 

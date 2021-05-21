@@ -135,7 +135,7 @@ function ordenar(e){
     let auxLista;
     let listaProdAux=[...document.querySelectorAll('.grid-item')];
   
-    console.log(ordenarBtn.value)
+
     switch(ordenarBtn.value){
         case 'nombreAsc':{
            
