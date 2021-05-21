@@ -58,15 +58,26 @@ main{
     width: 10em;
     margin-left: 20%;
     display: flex;
-    border-bottom: 3px solid royalblue;
+  
   }
 
-  .filtro-ordenar >div:last-child{
+  .filtro-ordenar>:first-child h3{
+    padding: 3px;
+    border-bottom: 3px solid royalblue;
+  
+   
+   }
+   .filtro-ordenar >div:last-child{
     font-size: 1em;
     margin-left: 47%;
     padding: 10px;
-    border-bottom: 3px solid royalblue
+   
   }
+
+ 
+ 
+
+
 .grid-container {
 
     position: relative;
@@ -74,7 +85,8 @@ main{
     margin-bottom: 2em;
     padding: 0.6em;
     display: grid;
-    grid-template-columns:repeat(4,17em);
+    grid-template-columns:repeat(auto-fill,17em);
+
     grid-auto-rows: minmax(24em, 24em);
     grid-gap: 5em;
     justify-content: center;
@@ -226,6 +238,17 @@ main{
     width: 10em;
     height: 12em;
   }
+  .sinResultados{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    width:40%;
+    border-bottom:1px solid royalblue;
+    margin-top: 10em;
+    margin-left: -19em;;
+  
+  }
 
   @media (max-width: 1366px) {
 
@@ -242,16 +265,16 @@ main{
   @media (max-width: 1024px) {
    
        .filtro {
-     
+       
          display: none;
        }
        .grid-container {
         margin-top: 4em;
-       
+ 
         width: 100%;
 
-        grid-template-columns:repeat(1, 20em);
-        grid-template-rows: repeat(auto-fit,28em);
+        grid-template-columns:repeat(2, max(20 em));
+        grid-template-rows: repeat(min(1),28em);
       
       }
 
@@ -275,8 +298,10 @@ main{
         width: 50%;
         margin-left: 3%;
         display: flex;
-        border-bottom: 3px solid royalblue;
+       
       }
+    
+      
     
       .filtro-ordenar >div:last-child{
       

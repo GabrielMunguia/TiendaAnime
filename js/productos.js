@@ -1,26 +1,30 @@
-//Esta variable comprueba si  ya se agrego un producto al carrito
-
-
-// agrego todos los botones a la variable
-
-
 const listaProductosBtns = document.querySelectorAll(".boton");
 let listaProductos = [];
 const carrito = document.querySelector("#listaProductos tbody");
 const carritoDetalle=document.querySelector("#tabla-carrito tbody");
+const contLista=document.querySelector('.contenedorLista');
 
-// contenedor lista
-const contLista = document.querySelector(".contenedorLista");
-// enlaces para eliminar item
 const eliminarItem = document.querySelectorAll(".borrarItem");
 const vaciarCarrito = document.querySelector("#vaciar-carrito");
-// console.log(contLista)
 
-//Agregando algunos eventos
+
+//Le agrego un evento a cada boton de las targetas de los productos , ("Agregar al carrito");
 listaProductosBtns.forEach((producto) => {
+
   producto.addEventListener("click", leerProducto);
 });
 
+
+
+// con esta funcion limpio el carrito de su array y desde el local storage
+vaciarCarrito.addEventListener("click", (e) => {
+  listaProductos = [];
+  localStorage.removeItem('carrito')
+  agregarProductos();
+});
+
+
+//Al cargar todo el documento se ejecutan algunas funciones y se le da
 document.addEventListener("DOMContentLoaded", () => {
   listaProductos = JSON.parse(localStorage.getItem("carrito")) || [];
   borrarDatosAntiguos();
@@ -29,97 +33,83 @@ document.addEventListener("DOMContentLoaded", () => {
   detalleProducto();
   
 
-  
-
- 
 });
 
 
-contLista.addEventListener("click", eliminarProd);
-
-
-// console.log(vaciarCarrito)
-
-vaciarCarrito.addEventListener("click", (e) => {
-  listaProductos = [];
-  localStorage.removeItem('carrito')
-  agregarProductos();
-});
-
-// funciones
-
-function eliminarProd(e) {
-  event.stopPropagation();
-  e.preventDefault();
-
-  if (e.target.classList.contains("borrarItem")) {
-    const id = e.target.parentElement.attributes[1].value;
-    console.log(id);
-    listaProductos = listaProductos.filter((prod) => prod.id !== id);
-    agregarProductos();
-    console.log(listaProductos);
-  }
-}
-
-//capturo los datos del producto
-
+//Esta funcion captura todos los datos del producto agregandolos a un objeto
 function leerProducto(producto) {
-  //contenedor de producto
+    //Esta variable se ubica desde el contenedor principal del producto("Grid-Item")
+    const contenedorProducto = producto.target.parentElement.parentElement;
 
-  console.log(producto.target.parentElement.parentElement.parentElement.parentElement)
-  const contenedorProducto = producto.target.parentElement.parentElement;
-  console.log(  contenedorProducto.children[1].firstElementChild.children[0].firstElementChild.src)
-
-  const productoDetalle = {
-    titulo:
-    contenedorProducto.children[1].firstElementChild.children[1].firstElementChild.textContent,
-    descripcion:
-    contenedorProducto.children[1].firstElementChild.children[1].children[1].textContent,
-    precio: parseFloat(
-      contenedorProducto.children[1].firstElementChild.children[2].firstElementChild.textContent.replace(
-        "$",
-        ""
-      )
-    ),
-    imagen:
-    contenedorProducto.children[1].firstElementChild.children[0].firstElementChild.src,
-    id: producto.target.attributes["id-prod"].value,
-    cantidad: 1,
+    const productoDetalle = {
+       titulo:
+          contenedorProducto.querySelector('.prod-detalles-descripcion h2').textContent,
+       descripcion:
+          contenedorProducto.querySelector('.prod-detalles-descripcion p').textContent,
+       precio: 
+          parseFloat(
+             contenedorProducto.querySelector('.prod-detalles-precio span').textContent.replace("$", "" )
+          ),
+       imagen:
+          contenedorProducto.querySelector('.prod-detalles-img img').src,
+       id:
+          producto.target.attributes["id-prod"].value,
+       cantidad: 1,
   };
 
-  const existe = listaProductos.some(
-    (producto) => producto.id == productoDetalle.id
-  );
-  if (existe) {
-    const lstProductos = listaProductos.map((prod) => {
-      if (prod.id == productoDetalle.id) {
-        prod.cantidad++;
-        return prod;
-      } else {
-        return prod;
-      }
+ 
+   // verifico si el producto ya se encontraba en el carrito
+
+
+    const existe = listaProductos.some(
+       (producto) => producto.id == productoDetalle.id
+    );
+
+
+    //si se encuentra solo modifico su cantidad y la aumento en uno
+    if (existe) {
+       const lstProductos = listaProductos.map((prod) => {
+
+       if (prod.id == productoDetalle.id) {
+           prod.cantidad++;
+           return prod;
+       }else {
+           return prod;
+       }
     });
-    listaProductos = [...lstProductos];
-  } else {
-    listaProductos = [...listaProductos, productoDetalle];
+
+    //actualizo la listaProductos
+
+       listaProductos = [...lstProductos];
+
+    } else {
+       // si no se encontraba en listaProductos se lo agrego
+       listaProductos = [...listaProductos, productoDetalle];
   }
 
+  //Llamo la siguiente funcion
   agregarProductos();
-  //  console.log(listaProductos)
+
 }
-//agrego los productos al carrito
+
+
+
+//agrego los productos al carrito y tambien los agrega al local storage
 function agregarProductos() {
   //Limpio la informacion antigua
   borrarDatosAntiguos();
+
+
   //agregando al carrito
-  
   listaProductos.forEach((producto) => {
+
+   //De esta forma saco los datos del producto, como se llaman igual  no es necesario especificar las varibles
     const { titulo, descripcion, precio, imagen, id, cantidad } = producto;
-  
-
-
+ 
     let auxTitulo='';
     let max=titulo.split(' ').length;
+
+    //Con esto redusco el titulo para agregarlo al carrito para que al mostrarlo no sea demasiado largo
     if(max<3){
       max=2;
     }
@@ -129,12 +119,44 @@ function agregarProductos() {
     for(let i=0;i<max;i++){
       auxTitulo+=titulo.split(' ')[i]+' ';
     }
-  
- 
-    
+     
 
-    const row = document.createElement("tr");
+    if(carritoDetalle){
+      const row2 = document.createElement("tr");
+ 
+    row2.innerHTML = `
+    <tr>
+    <td>
+        <div class="carrito-detalle-img">
+         <img src=${imagen} alt="">
+
+        </div>
+        <div class="carrito-detalle-descripcion">
+            ${descripcion}
+        </div>
+
+    </td>
+
+    <th>$ <span>${precio}</span></th>
+    <th><input prod-id=${id}  type="number" value=${cantidad} min=1 class='inputCarritoCantidad'></th>
+    <th></th>
+    <th><a class='eliminarProd2' href="#" prod-id=${id}> <span  >X</span></a></th>
     
+    </tr>
+   
+  
+</tr>
+       `;
+  carritoDetalle.appendChild(row2);
+
+   calcularTotal();
+  agregarEliminarLink()
+
+    }
+
+
+    //Creo un tr y se lo agrego a la tabla del carrito de compras
+    const row = document.createElement("tr");
     row.innerHTML = `
        <tr>
           <th><img src=${imagen} alt=""></th>
@@ -146,163 +168,69 @@ function agregarProductos() {
          
        </tr>
        `;
-
-       if(carritoDetalle){
-         const row2 = document.createElement("tr");
-    
-       row2.innerHTML = `
-       <tr>
-       <td>
-           <div class="carrito-detalle-img">
-            <img src=${imagen} alt="">
-
-           </div>
-           <div class="carrito-detalle-descripcion">
-               ${descripcion}
-           </div>
-
-       </td>
-   
-       <th>$ <span>${precio}</span></th>
-       <th><input prod-id=${id}  type="number" value=${cantidad} min=1 class='inputCarritoCantidad'></th>
-       <th></th>
-       <th><a class='eliminarProd2' href="#" prod-id=${id}> <span  >X</span></a></th>
-       
-       </tr>
-      
-     
-   </tr>
-          `;
-       
-   
-
-       
-     carritoDetalle.appendChild(row2);
-       }
-
-       
     carrito.appendChild(row);
-  
-    
-  
-
 
 
   });
-
+  
+ 
   agregaProdLocalStorage();
-  calcularTotal();
-  agregarEliminarLink()
-  
-  
+
+}
+
+ //Agrego la lista de productos al local storage
+function agregaProdLocalStorage() {
+  localStorage.setItem("carrito", JSON.stringify(listaProductos));
+}
+
+
+
+
+
+//Esta funcion sirve para eliminar los productos tanto del carrito como del localstorage;
+
+contLista.addEventListener('click',eliminarProd)
+
+
+function eliminarProd() {
+  const eliminarProdCarrito=document.querySelectorAll('.borrarItem');
+   eliminarProdCarrito.forEach((btn=>{
+
+
+    btn.addEventListener('click',eliminarProdLista)
+   }))
+ 
  
 }
 
-function borrarDatosAntiguos() {
 
+function eliminarProdLista(e){
+  const id=e.target.parentElement.attributes[1].value
+
+    listaProductos = listaProductos.filter((prod) => prod.id !== id);
+    agregarProductos();
+    
+  }
+
+
+
+
+
+
+//Con esta funcion Limpio todos los datos de la tabla de carrito
+function borrarDatosAntiguos() {
   if(carritoDetalle){
     while (carritoDetalle.firstChild) {
       carritoDetalle.removeChild(carritoDetalle.firstChild);
     }
   }
+ 
   while (carrito.firstChild) {
     carrito.removeChild(carrito.firstChild);
   }
  
 }
 
-function agregaProdLocalStorage() {
-  localStorage.setItem("carrito", JSON.stringify(listaProductos));
-  
-}
-
-//Con este codigo  agrego la informacion del producto del cual se quiere ver a detalle
-
-function detalleProducto(){
-  
-  const detalleProductos = document.querySelectorAll(".link-prod");
-
-detalleProductos.forEach((prod) => {
-  prod.addEventListener("click", (e) => {
-  
-    // event.preventDefault();
-    // console.log(prod.parentElement.parentElement.children[2].firstElementChild.attributes[2].value)
-    
-    const producto = {
-      img: prod.children[0].firstElementChild.src,
-      titulo: prod.children[1].children[0].textContent,
-      descripcion: prod.children[1].children[1].textContent,
-      id:prod.parentElement.parentElement.children[2].firstElementChild.attributes[2].value,
-      precio: parseFloat(
-        prod.children[2].children[0].textContent.replace("$", "")
-      
-      ),
-    
-     
-    };
-
-    console.log(producto)
-
-  
-
-    localStorage.setItem("detalle", JSON.stringify(producto));
-    // console.log(producto.img)
-  });
-});
-}
-//  Fin
-
-const botonAgregarProd = document.querySelectorAll("#botonAggProd");
-// console.log(botonAgregarProd);
-
-//Evento agregar al carrito
-
-if(botonAgregarProd.length>0){
-    
-botonAgregarProd[0].addEventListener("click", (e) => {
-   
-
-    const informacion = JSON.parse(localStorage.getItem("detalle"));
-    
-    let contadorCantida = document.querySelector("#contadorProd");
-    if(contadorCantida.value==0){
-        contadorCantida.value=1;
-     
-  }
-  else if(contadorCantida.value<0){
-    contadorCantida.value=1;
-  }
-    const producto2 = {
-      titulo: informacion["titulo"],
-      descripcion:informacion['descripcion'],
-  
-      precio: informacion["precio"],
-      imagen: informacion["img"],
-      id: informacion["id"],
-      cantidad: parseFloat(contadorCantida.value)
-    };
-    console.log(informacion);
-    const existe = listaProductos.some((producto) => producto.id == producto2.id);
-    if (existe) {
-      const lstProductos = listaProductos.map((prod) => {
-        if (prod.id == producto2.id) {
-          prod.cantidad+= producto2.cantidad;
-          producto2.cantidad=1;
-       
-          return prod;
-        } else {
-          return prod;
-        }
-      });
-      listaProductos = [...lstProductos];
-    } else {
-      listaProductos = [...listaProductos, producto2];
-    }
-    agregarProductos();
-  
-  //   console.log(listaProductos);
-  });
-}
 
 // detecto si la cantidad del producto se modifico desde el carrito
 
@@ -391,10 +319,6 @@ if(carritoDetalle){
     })
     
    
-
-
-   
-
     
   }
 
@@ -430,11 +354,108 @@ if(carritoDetalle){
 
 btnCarrito.addEventListener('click',(e)=>{
   console.log('click')
-    location.href ="/carrito.html";
+    location ="/html/carrito.html";
 
  
   
 })
+
+
+//Con este codigo  agrego la informacion del producto del cual se quiere ver a detalle
+
+function detalleProducto(){
+   const detalleProductos = document.querySelectorAll(".link-prod");
+   detalleProductos.forEach((prod) => { 
+      prod.addEventListener("click", () => {
+       
+         const producto = {
+            img: prod.querySelector('.prod-detalles-img img').src,
+            titulo: prod.querySelector('.prod-detalles-descripcion h2').textContent,
+            descripcion: prod.querySelector('.prod-detalles-descripcion p').textContent,
+            id:prod.parentElement.parentElement.querySelector('.boton').attributes["id-prod"].value,
+            precio: parseFloat(
+            prod.querySelector('.prod-detalles-precio span').textContent.replace("$", "")
+            )
+         };
+          //Agrego la informacion al localstorage para poderlo mostrar en la pagina de detalles
+          localStorage.setItem("detalle", JSON.stringify(producto));
+       }
+      );
+   });
+}
+
+//EL SIGUIENTE CODIGO SIRVE EN EL PARA EL APARTADO DE DETALLES , POR EL MOMENTO LO EH DEJADO ASI 
+//SI EL TIEMPO NOS FAVORECE  PASARE EL PROYECTO A MODULOS PARA PODER REUTILIZAR EL CODIGO Y SEPARAR MAS LAS FUNCIONES SEGUN SE NECESITEN
+
+const validarPaginaDetalle=document.querySelector('.pagDetalles');
+if(validarPaginaDetalle){
+   // Muestro los datos del local Storage al html
+
+   const img =document.getElementById('prod-img')
+   const informacion=JSON.parse(localStorage.getItem('detalle')) ;
+   const titulo=document.getElementById('titulo-prod')
+   const descripcion=document.getElementById('descripcion-prod');
+   const precio=document.getElementById('precio-prod')
+
+   img.src=informacion['img'];
+   titulo.textContent=informacion['titulo']
+   descripcion.textContent=informacion['descripcion'];
+   precio.textContent=`$ ${informacion['precio']}`
+
+
+   //Detecto cuando se dio click al boton agregar al carrito
+
+
+
+   document.addEventListener('DOMContentLoaded',()=>{
+       agregarProductoAlCarrito();
+   })
+    
+   function agregarProductoAlCarrito(){
+       const botonAgregarProd = document.querySelector("#botonAggProd");
+       botonAgregarProd.addEventListener('click',()=>{
+          let contadorCantida = document.querySelector("#contadorProd");
+          if(contadorCantida.value<=0){
+             contadorCantida.value=1;
+          }
+          const producto2 = {
+           titulo: informacion["titulo"],
+           descripcion:informacion['descripcion'],
+           precio: informacion["precio"],
+           imagen: informacion["img"],
+           id: informacion["id"],
+           cantidad: parseFloat(contadorCantida.value)
+         };
+         console.log(informacion);
+         const existe = listaProductos.some((producto) => producto.id == producto2.id);
+         if (existe) {
+           const lstProductos = listaProductos.map((prod) => {
+             if (prod.id == producto2.id) {
+               prod.cantidad+= producto2.cantidad;
+               producto2.cantidad=1;
+               return prod;
+             }else {
+               return prod;
+             }
+           });
+           listaProductos = [...lstProductos];
+         } else {
+           listaProductos = [...listaProductos, producto2];
+         }
+         agregarProductos();
+       })
+
+   }
+
+   
+
+    
+  
+
+
+
+}
+
 
 
 //calculo el   total de los productos
@@ -470,24 +491,10 @@ function  calcularTotal(){
 }
 
 
-function comprobarProductosCarrito(){
-  let boolCompra;
-    if(listaProductos.length>0){
-      boolCompra=true;
-    }else{
-      boolCompra=false;
-     
-    }
-
-    return boolCompra;
-
-}
-
-
-//ORDENAR PRODUCTOS
 
 
 
+///En esta parte se agrega el codigo para que al darle click en pagar nos lleve a otro formulario
 
 
 

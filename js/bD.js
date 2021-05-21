@@ -7,7 +7,7 @@ const productos = [
         cantidad:20,
         categoria:'anillos',
         subcategoria:'videojuegos',
-        img:'assets/img/productos/accesorios/anillos/ANILLO-HYRULE.png',
+        img:'/assets/img/productos/accesorios/anillos/ANILLO-HYRULE.png',
 	},	{
 		id:2,
         titulo:'Anillo Konoha - Naruto',
@@ -16,7 +16,7 @@ const productos = [
         cantidad:20,
         categoria:'anillos',
         subcategoria:'anime',
-        img:'assets/img/productos/accesorios/anillos/ANILLO-KONOHA.png',
+        img:'/assets/img/productos/accesorios/anillos/ANILLO-KONOHA.png',
 	},
     {
 		id:3,
@@ -26,7 +26,7 @@ const productos = [
         cantidad:20,
         categoria:'anillos',
         subcategoria:'cf',
-        img:'assets/img/productos/accesorios/anillos/ANILLO-LENTES-HARRY.png',
+        img:'/assets/img/productos/accesorios/anillos/ANILLO-LENTES-HARRY.png',
 	},
     {
 		id:4,
@@ -36,7 +36,7 @@ const productos = [
         cantidad:15,
         categoria:'anillos',
         subcategoria:'cf',
-        img:'assets/img/productos/accesorios/anillos/ANILLO-RELIQUIAS-HARRY.png',
+        img:'/assets/img/productos/accesorios/anillos/ANILLO-RELIQUIAS-HARRY.png',
 	},
     {
 		id:5,
@@ -46,7 +46,7 @@ const productos = [
         cantidad:15,
         categoria:'anillos',
         subcategoria:'anime',
-        img:'assets/img/productos/accesorios/anillos/ANILLO-SHARINGAN-NARUTO.png',
+        img:'/assets/img/productos/accesorios/anillos/ANILLO-SHARINGAN-NARUTO.png',
 	},
     {
 		id:6,
@@ -56,7 +56,7 @@ const productos = [
         cantidad:17,
         categoria:'anillos',
         subcategoria:'anime',
-        img:'assets/img/productos/accesorios/anillos/ANILLO-SNK.png',
+        img:'/assets/img/productos/accesorios/anillos/ANILLO-SNK.png',
 	},
     {
 		id:7,
@@ -66,7 +66,7 @@ const productos = [
         cantidad:10,
         categoria:'billeteras',
         subcategoria:'comic',
-        img:'assets/img/productos/accesorios/billeteras/BILLETERA-BATMAN.png',
+        img:'/assets/img/productos/accesorios/billeteras/BILLETERA-BATMAN.png',
 	},
     {
 		id:8,
@@ -76,7 +76,7 @@ const productos = [
         cantidad:8,
         categoria:'billeteras',
         subcategoria:'anime',
-        img:'assets/img/productos/accesorios/billeteras/BILLETERA-BOKUNH.png',
+        img:'/assets/img/productos/accesorios/billeteras/BILLETERA-BOKUNH.png',
 	},
     {
 		id:9,
@@ -86,7 +86,7 @@ const productos = [
         cantidad:14,
         categoria:'billeteras',
         subcategoria:'comic',
-        img:'assets/img/productos/accesorios/billeteras/BILLETERA-DEADPOOL.png',
+        img:'/assets/img/productos/accesorios/billeteras/BILLETERA-DEADPOOL.png',
 	},
     {
 		id:10,
@@ -96,7 +96,7 @@ const productos = [
         cantidad:15,
         categoria:'billeteras',
         subcategoria:'cf',
-        img:'assets/img/productos/accesorios/billeteras/BILLETERA-HARRY.png',
+        img:'/assets/img/productos/accesorios/billeteras/BILLETERA-HARRY.png',
 	},
     {
 		id:11,
@@ -106,7 +106,7 @@ const productos = [
         cantidad:12,
         categoria:'billeteras',
         subcategoria:'anime',
-        img:'assets/img/productos/accesorios/billeteras/BILLETERA-ONEP.png',
+        img:'/assets/img/productos/accesorios/billeteras/BILLETERA-ONEP.png',
 	},
     {
 		id:12,
@@ -116,7 +116,7 @@ const productos = [
         cantidad:16,
         categoria:'billeteras',
         subcategoria:'videojuegos',
-        img:'assets/img/productos/accesorios/billeteras/BILLETERA-PS.png',
+        img:'/assets/img/productos/accesorios/billeteras/BILLETERA-PS.png',
 	},
     {
 		id:13,
@@ -126,7 +126,7 @@ const productos = [
         cantidad:8,
         categoria:'billeteras',
         subcategoria:'anime',
-        img:'assets/img/productos/accesorios/billeteras/BILLETERA-SAILOR.png',
+        img:'/assets/img/productos/accesorios/billeteras/BILLETERA-SAILOR.png',
 	},
     {
 		id:14,
@@ -136,7 +136,7 @@ const productos = [
         cantidad:12,
         categoria:'billeteras',
         subcategoria:'anime',
-        img:'assets/img/productos/accesorios/billeteras/BILLETERA-SAKURA.png',
+        img:'/assets/img/productos/accesorios/billeteras/BILLETERA-SAKURA.png',
 	},
     {
 		id:15,
@@ -146,7 +146,7 @@ const productos = [
         cantidad:10,
         categoria:'billeteras',
         subcategoria:'videojuegos',
-        img:'assets/img/productos/accesorios/billeteras/BILLETERA-ZELDA.png',
+        img:'/assets/img/productos/accesorios/billeteras/BILLETERA-ZELDA.png',
 	},
     {
 		id:16,
@@ -156,7 +156,7 @@ const productos = [
         cantidad:8,
         categoria:'billeteras',
         subcategoria:'anime',
-        img:'assets/img/productos/accesorios/billeteras/MONEDERO-NARUTO.png',
+        img:'/assets/img/productos/accesorios/billeteras/MONEDERO-NARUTO.png',
 	},
     {
 		id:17,
@@ -166,7 +166,7 @@ const productos = [
         cantidad:15,
         categoria:'collares',
         subcategoria:'anime',
-        img:'assets/img/productos/accesorios/collares/COLLAR-BLEACH.png',
+        img:'/assets/img/productos/accesorios/collares/COLLAR-BLEACH.png',
 	},
     {
 		id:18,
@@ -176,7 +176,7 @@ const productos = [
         cantidad:12,
         categoria:'collares',
         subcategoria:'anime',
-        img:'assets/img/productos/accesorios/collares/l.png',
+        img:'/assets/img/productos/accesorios/collares/l.png',
 	},
     {
 		id:19,
@@ -186,7 +186,7 @@ const productos = [
         cantidad:7,
         categoria:'collares',
         subcategoria:'cf',
-        img:'assets/img/productos/accesorios/collares/COLLAR-GIRATIEMPO-HARRY.png',
+        img:'/assets/img/productos/accesorios/collares/COLLAR-GIRATIEMPO-HARRY.png',
 	},
     {
 		id:20,
@@ -196,7 +196,7 @@ const productos = [
         cantidad:8,
         categoria:'collares',
         subcategoria:'cf',
-        img:'assets/img/productos/accesorios/collares/COLLAR-GRAVITY.png',
+        img:'/assets/img/productos/accesorios/collares/COLLAR-GRAVITY.png',
 	},
     {
 		id:21,
@@ -206,7 +206,7 @@ const productos = [
         cantidad:4,
         categoria:'collares',
         subcategoria:'anime',
-        img:'assets/img/productos/accesorios/collares/COLLAR-NARUTO.png',
+        img:'/assets/img/productos/accesorios/collares/COLLAR-NARUTO.png',
 	},
     {
 		id:22,
@@ -216,7 +216,7 @@ const productos = [
         cantidad:8,
         categoria:'collares',
         subcategoria:'cf',
-        img:'assets/img/productos/accesorios/collares/COLLAR-RELIQUIAS-HARRY.png',
+        img:'/assets/img/productos/accesorios/collares/COLLAR-RELIQUIAS-HARRY.png',
 	},
     {
 		id:23,
@@ -226,7 +226,7 @@ const productos = [
         cantidad:8,
         categoria:'collares',
         subcategoria:'anime',
-        img:'assets/img/productos/accesorios/collares/COLLAR-SAILOR.png',
+        img:'/assets/img/productos/accesorios/collares/COLLAR-SAILOR.png',
 	},
     {
 		id:24,
@@ -236,7 +236,7 @@ const productos = [
         cantidad:14,
         categoria:'collares',
         subcategoria:'anime',
-        img:'assets/img/productos/accesorios/collares/COLLAR-SNK.png',
+        img:'/assets/img/productos/accesorios/collares/COLLAR-SNK.png',
 	},
     {
 		id:25,
@@ -246,7 +246,7 @@ const productos = [
         cantidad:6,
         categoria:'llaveros',
         subcategoria:'videojuegos',
-        img:'assets/img/productos/accesorios/llaveros/LLAVERO-CORAZON-ZELDA.png',
+        img:'/assets/img/productos/accesorios/llaveros/LLAVERO-CORAZON-ZELDA.png',
 	},
     {
 		id:26,
@@ -256,7 +256,7 @@ const productos = [
         cantidad:10,
         categoria:'llaveros',
         subcategoria:'videojuegos',
-        img:'assets/img/productos/accesorios/llaveros/LLAVERO-HYRULE-ZELDA.png',
+        img:'/assets/img/productos/accesorios/llaveros/LLAVERO-HYRULE-ZELDA.png',
 	},
     {
 		id:27,
@@ -266,7 +266,7 @@ const productos = [
         cantidad:4,
         categoria:'llaveros',
         subcategoria:'videojuegos',
-        img:'assets/img/productos/accesorios/llaveros/LLAVERO-KIRBY.png',
+        img:'/assets/img/productos/accesorios/llaveros/LLAVERO-KIRBY.png',
 	},
     {
 		id:28,
@@ -276,7 +276,7 @@ const productos = [
         cantidad:8,
         categoria:'llaveros',
         subcategoria:'anime',
-        img:'assets/img/productos/accesorios/llaveros/LLAVERO-NANATSU.png',
+        img:'/assets/img/productos/accesorios/llaveros/LLAVERO-NANATSU.png',
 	},
     {
 		id:29,
@@ -286,7 +286,7 @@ const productos = [
         cantidad:14,
         categoria:'llaveros',
         subcategoria:'anime',
-        img:'assets/img/productos/accesorios/llaveros/LLAVERO-ONEP.png',
+        img:'/assets/img/productos/accesorios/llaveros/LLAVERO-ONEP.png',
 	},
     {
 		id:30,
@@ -296,7 +296,7 @@ const productos = [
         cantidad:4,
         categoria:'llaveros',
         subcategoria:'anime',
-        img:'assets/img/productos/accesorios/llaveros/LLAVERO-RADAR-DBZ.png',
+        img:'/assets/img/productos/accesorios/llaveros/LLAVERO-RADAR-DBZ.png',
 	},
     {
 		id:31,
@@ -306,7 +306,7 @@ const productos = [
         cantidad:8,
         categoria:'llaveros',
         subcategoria:'anime',
-        img:'assets/img/productos/accesorios/llaveros/LLAVERO-SAKURA.png',
+        img:'/assets/img/productos/accesorios/llaveros/LLAVERO-SAKURA.png',
 	},
     {
 		id:32,
@@ -316,7 +316,7 @@ const productos = [
         cantidad:10,
         categoria:'llaveros',
         subcategoria:'cf',
-        img:'assets/img/productos/accesorios/llaveros/LLAVERO-SNITCH-HARRY.png',
+        img:'/assets/img/productos/accesorios/llaveros/LLAVERO-SNITCH-HARRY.png',
 	},
     {
 		id:33,
@@ -326,7 +326,7 @@ const productos = [
         cantidad:15,
         categoria:'llaveros',
         subcategoria:'anime',
-        img:'assets/img/productos/accesorios/llaveros/LLAVERO-SNK.png',
+        img:'/assets/img/productos/accesorios/llaveros/LLAVERO-SNK.png',
 	},
     {
 		id:34,
@@ -336,7 +336,7 @@ const productos = [
         cantidad:10,
         categoria:'llaveros',
         subcategoria:'cf',
-        img:'assets/img/productos/accesorios/llaveros/LLAVERO-STARW.png',
+        img:'/assets/img/productos/accesorios/llaveros/LLAVERO-STARW.png',
 	},
     {
 		id:35,
@@ -346,7 +346,7 @@ const productos = [
         cantidad:10,
         categoria:'relojes',
         subcategoria:'comic',
-        img:'assets/img/productos/accesorios/relojes/RELOJ-BLACKP.png',
+        img:'/assets/img/productos/accesorios/relojes/RELOJ-BLACKP.png',
 	},
     {
 		id:36,
@@ -356,7 +356,7 @@ const productos = [
         cantidad:12,
         categoria:'relojes',
         subcategoria:'anime',
-        img:'assets/img/productos/accesorios/relojes/RELOJ-FULLM.png',
+        img:'/assets/img/productos/accesorios/relojes/RELOJ-FULLM.png',
 	},
     {
 		id:37,
@@ -366,7 +366,7 @@ const productos = [
         cantidad:12,
         categoria:'relojes',
         subcategoria:'comic',
-        img:'assets/img/productos/accesorios/relojes/RELOJ-IRONM.png',
+        img:'/assets/img/productos/accesorios/relojes/RELOJ-IRONM.png',
 	},
     {
 		id:38,
@@ -376,7 +376,7 @@ const productos = [
         cantidad:8,
         categoria:'relojes',
         subcategoria:'anime',
-        img:'assets/img/productos/accesorios/relojes/RELOJ-SAILOR.png',
+        img:'/assets/img/productos/accesorios/relojes/RELOJ-SAILOR.png',
 	},
     {
 		id:39,
@@ -386,7 +386,7 @@ const productos = [
         cantidad:10,
         categoria:'relojes',
         subcategoria:'anime',
-        img:'assets/img/productos/accesorios/relojes/RELOJ-SAINT.png',
+        img:'/assets/img/productos/accesorios/relojes/RELOJ-SAINT.png',
 	},
     {
 		id:40,
@@ -396,7 +396,7 @@ const productos = [
         cantidad:8,
         categoria:'relojes',
         subcategoria:'comic',
-        img:'assets/img/productos/accesorios/relojes/RELOJ-SPIDERMAN.png',
+        img:'/assets/img/productos/accesorios/relojes/RELOJ-SPIDERMAN.png',
 	},
     {
 		id:41,
@@ -406,7 +406,7 @@ const productos = [
         cantidad:4,
         categoria:'bandai',
         subcategoria:'anime',
-        img:'FIGURA-DIGIMON.png',
+        img:'/assets/img/productos/coleccionables/bandai-banpresto/FIGURA-DIGIMON.png',
 	},
     {
 		id:42,
@@ -416,7 +416,7 @@ const productos = [
         cantidad:5,
         categoria:'bandai',
         subcategoria:'anime',
-        img:'FIGURA-EVANGELION.png',
+        img:'/assets/img/productos/coleccionables/bandai-banpresto/FIGURA-EVANGELION.png',
 	},
     {
 		id:43,
@@ -426,7 +426,7 @@ const productos = [
         cantidad:7,
         categoria:'bandai',
         subcategoria:'anime',
-        img:'FIGURA-GINTAMA.png',
+        img:'/assets/img/productos/coleccionables/bandai-banpresto/FIGURA-GINTAMA.png',
 	},
     {
 		id:44,
@@ -436,7 +436,7 @@ const productos = [
         cantidad:4,
         categoria:'bandai',
         subcategoria:'anime',
-        img:'FIGURA-GUNDAM.png',
+        img:'/assets/img/productos/coleccionables/bandai-banpresto/FIGURA-GUNDAM.png',
 	},
     {
 		id:45,
@@ -446,7 +446,7 @@ const productos = [
         cantidad:15,
         categoria:'bandai',
         subcategoria:'videojuegos',
-        img:'FIGURA-KIRBY.png',
+        img:'/assets/img/productos/coleccionables/bandai-banpresto/FIGURA-KIRBY.png',
 	},
     {
 		id:46,
@@ -456,7 +456,7 @@ const productos = [
         cantidad:6,
         categoria:'bandai',
         subcategoria:'anime',
-        img:'FIGURA-NARUTO.png',
+        img:'/assets/img/productos/coleccionables/bandai-banpresto/FIGURA-NARUTO.png',
 	},
     {
 		id:47,
@@ -466,7 +466,7 @@ const productos = [
         cantidad:5,
         categoria:'bandai',
         subcategoria:'anime',
-        img:'FIGURA-ONEP.png',
+        img:'/assets/img/productos/coleccionables/bandai-banpresto/FIGURA-ONEP.png',
 	},
     {
 		id:48,
@@ -476,7 +476,7 @@ const productos = [
         cantidad:5,
         categoria:'bandai',
         subcategoria:'anime',
-        img:'FIGURA-SAINT.png',
+        img:'/assets/img/productos/coleccionables/bandai-banpresto/FIGURA-SAINT.png',
 	},
     {
 		id:49,
@@ -486,7 +486,7 @@ const productos = [
         cantidad:8,
         categoria:'bandai',
         subcategoria:'anime',
-        img:'FIGURA-SAKURA.png',
+        img:'/assets/img/productos/coleccionables/bandai-banpresto/FIGURA-SAKURA.png',
 	},
     {
 		id:50,
@@ -496,7 +496,7 @@ const productos = [
         cantidad:8,
         categoria:'bandai',
         subcategoria:'cf',
-        img:'FIGURA-GODZILLA.png',
+        img:'/assets/img/productos/coleccionables/bandai-banpresto/FIGURA-GODZILLA.png',
 	},
     {
 		id:51,
@@ -506,7 +506,7 @@ const productos = [
         cantidad:15,
         categoria:'funko',
         subcategoria:'anime',
-        img:'FUNKO-EVANGELION.png',
+        img:'/assets/img/productos/coleccionables/funko-pop/FUNKO-EVANGELION.png',
 	},
     {
 		id:52,
@@ -516,7 +516,7 @@ const productos = [
         cantidad:12,
         categoria:'funko',
         subcategoria:'comic',
-        img:'FUNKO-FLASH.png',
+        img:'/assets/img/productos/coleccionables/funko-pop/FUNKO-FLASH.png',
 	},
     {
 		id:53,
@@ -526,7 +526,7 @@ const productos = [
         cantidad:8,
         categoria:'funko',
         subcategoria:'videojuegos',
-        img:'FUNKO-GOW.png',
+        img:'/assets/img/productos/coleccionables/funko-pop/FUNKO-GOW.png',
 	},
     {
 		id:54,
@@ -536,7 +536,7 @@ const productos = [
         cantidad:5,
         categoria:'funko',
         subcategoria:'anime',
-        img:'FUNKO-INUYASHA.png',
+        img:'/assets/img/productos/coleccionables/funko-pop/FUNKO-INUYASHA.png',
 	},
     {
 		id:55,
@@ -546,7 +546,7 @@ const productos = [
         cantidad:9,
         categoria:'funko',
         subcategoria:'comic',
-        img:'FUNKO-IRONMAN.png',
+        img:'/assets/img/productos/coleccionables/funko-pop/FUNKO-IRONMAN.png',
 	},
     {
 		id:56,
@@ -556,7 +556,7 @@ const productos = [
         cantidad:12,
         categoria:'funko',
         subcategoria:'comic',
-        img:'FUNKO-JOKER.png',
+        img:'/assets/img/productos/coleccionables/funko-pop/FUNKO-JOKER.png',
 	},
     {
 		id:57,
@@ -566,7 +566,7 @@ const productos = [
         cantidad:15,
         categoria:'funko',
         subcategoria:'anime',
-        img:'FUNKO-SHEN-DBZ.png',
+        img:'/assets/img/productos/coleccionables/funko-pop/FUNKO-SHEN-DBZ.png',
 	},
     {
 		id:58,
@@ -576,7 +576,7 @@ const productos = [
         cantidad:20,
         categoria:'funko',
         subcategoria:'cf',
-        img:'FUNKO-STARW.png',
+        img:'/assets/img/productos/coleccionables/funko-pop/FUNKO-STARW.png',
 	},
     {
 		id:59,
@@ -586,7 +586,7 @@ const productos = [
         cantidad:3,
         categoria:'figma',
         subcategoria:'anime',
-        img:'FIGURA-BOKUNH.png',
+        img:'/assets/img/productos/coleccionables/good-smile-company/figma/FIGURA-BOKUNH.png',
 	},
     {
 		id:60,
@@ -596,7 +596,7 @@ const productos = [
         cantidad:4,
         categoria:'figma',
         subcategoria:'comic',
-        img:'FIGURA-CAPITAN.png',
+        img:'/assets/img/productos/coleccionables/good-smile-company/figma/FIGURA-CAPITAN.png',
 	},
     {
 		id:61,
@@ -606,7 +606,7 @@ const productos = [
         cantidad:2,
         categoria:'figma',
         subcategoria:'anime',
-        img:'FIGURA-CELLS.png',
+        img:'/assets/img/productos/coleccionables/good-smile-company/figma/FIGURA-CELLS.png',
 	},
     {
 		id:62,
@@ -616,7 +616,7 @@ const productos = [
         cantidad:3,
         categoria:'figma',
         subcategoria:'videojuegos',
-        img:'FIGURA-METROID.png',
+        img:'/assets/img/productos/coleccionables/good-smile-company/figma/FIGURA-METROID.png',
 	},
     {
 		id:63,
@@ -626,7 +626,7 @@ const productos = [
         cantidad:5,
         categoria:'figma',
         subcategoria:'anime',
-        img:'FIGURA-ONEPUNCH.png',
+        img:'/assets/img/productos/coleccionables/good-smile-company/figma/FIGURA-ONEPUNCH.png',
 	},
     {
 		id:64,
@@ -636,7 +636,7 @@ const productos = [
         cantidad:4,
         categoria:'figma',
         subcategoria:'videojuegos',
-        img:'FIGURA-OVERWATCH.png',
+        img:'/assets/img/productos/coleccionables/good-smile-company/figma/FIGURA-OVERWATCH.png',
 	},
     {
 		id:65,
@@ -646,7 +646,7 @@ const productos = [
         cantidad:2,
         categoria:'figma',
         subcategoria:'anime',
-        img:'FIGURA-SAO.png',
+        img:'/assets/img/productos/coleccionables/good-smile-company/figma/FIGURA-SAO.png',
 	},
     {
 		id:66,
@@ -656,7 +656,7 @@ const productos = [
         cantidad:2,
         categoria:'figma',
         subcategoria:'anime',
-        img:'FIGURA-SNK.png',
+        img:'/assets/img/productos/coleccionables/good-smile-company/figma/FIGURA-SNK.png',
 	},
     {
 		id:67,
@@ -666,7 +666,7 @@ const productos = [
         cantidad:3,
         categoria:'figma',
         subcategoria:'anime',
-        img:'FIGURA-VOCALOID.png',
+        img:'/assets/img/productos/coleccionables/good-smile-company/figma/FIGURA-VOCALOID.png',
 	},
     {
 		id:68,
@@ -676,7 +676,7 @@ const productos = [
         cantidad:2,
         categoria:'figma',
         subcategoria:'videojuegos',
-        img:'FIGURA-ZELDATWILIGHT.png',
+        img:'/assets/img/productos/coleccionables/good-smile-company/figma/FIGURA-ZELDATWILIGHT.png',
 	},
     {
 		id:69,
@@ -686,7 +686,7 @@ const productos = [
         cantidad:3,
         categoria:'nendoroid',
         subcategoria:'anime',
-        img:'.png',
+        img:'/assets/img/productos/coleccionables/good-smile-company/nendoroid/NENDO-DEATHN.png',
 	},
     {
 		id:70,
@@ -696,7 +696,7 @@ const productos = [
         cantidad:2,
         categoria:'nendoroid',
         subcategoria:'anime',
-        img:'NENDO-FULLM.png',
+        img:'/assets/img/productos/coleccionables/good-smile-company/nendoroid/NENDO-FULLM.png',
 	},
     {
 		id:71,
@@ -706,7 +706,7 @@ const productos = [
         cantidad:4,
         categoria:'nendoroid',
         subcategoria:'anime',
-        img:'NENDO-JOJO.png',
+        img:'/assets/img/productos/coleccionables/good-smile-company/nendoroid/NENDO-JOJO.png',
 	},
     {
 		id:72,
@@ -716,7 +716,7 @@ const productos = [
         cantidad:2,
         categoria:'nendoroid',
         subcategoria:'anime',
-        img:'NENDO-KIMETSU.png',
+        img:'/assets/img/productos/coleccionables/good-smile-company/nendoroid/NENDO-KIMETSU.png',
 	},
     {
 		id:73,
@@ -726,7 +726,7 @@ const productos = [
         cantidad:3,
         categoria:'nendoroid',
         subcategoria:'anime',
-        img:'NENDO-ONEPUNCH.png',
+        img:'/assets/img/productos/coleccionables/good-smile-company/nendoroid/NENDO-ONEPUNCH.png',
 	},
     {
 		id:74,
@@ -736,7 +736,7 @@ const productos = [
         cantidad:2,
         categoria:'nendoroid',
         subcategoria:'anime',
-        img:'NENDO-REZERO.png',
+        img:'/assets/img/productos/coleccionables/good-smile-company/nendoroid/NENDO-REZERO.png',
 	},
     {
 		id:75,
@@ -746,7 +746,7 @@ const productos = [
         cantidad:4,
         categoria:'nendoroid',
         subcategoria:'anime',
-        img:'NENDO-VOCALOID.png',
+        img:'/assets/img/productos/coleccionables/good-smile-company/nendoroid/NENDO-VOCALOID.png',
 	},
     {
 		id:76,
@@ -756,7 +756,7 @@ const productos = [
         cantidad:2,
         categoria:'nendoroid',
         subcategoria:'videojuegos',
-        img:'NENDO-ZELDA.png',
+        img:'/assets/img/productos/coleccionables/good-smile-company/nendoroid/NENDO-ZELDA.png',
 	},
     {
 		id:77,
@@ -766,7 +766,7 @@ const productos = [
         cantidad:5,
         categoria:'lamparas',
         subcategoria:'comic',
-        img:'LAMPARA-BATMAN.png',
+        img:'/assets/img/productos/hogar/Lamparas/LAMPARA-BATMAN.png',
 	},
     {
 		id:78,
@@ -776,7 +776,7 @@ const productos = [
         cantidad:8,
         categoria:'lamparas',
         subcategoria:'videojuegos',
-        img:'LAMPARA-MARIOB.png',
+        img:'/assets/img/productos/hogar/Lamparas/LAMPARA-MARIOB.png',
 	},
     {
 		id:79,
@@ -786,7 +786,7 @@ const productos = [
         cantidad:5,
         categoria:'lamparas',
         subcategoria:'videojuegos',
-        img:'LAMPARA-PACMAN.png',
+        img:'/assets/img/productos/hogar/Lamparas/LAMPARA-PACMAN.png',
 	},
     {
 		id:80,
@@ -796,7 +796,7 @@ const productos = [
         cantidad:10,
         categoria:'lamparas',
         subcategoria:'cf',
-        img:'LAMPARA-STARW.png',
+        img:'/assets/img/productos/hogar/Lamparas/LAMPARA-STARW.png',
 	},
     {
 		id:81,
@@ -806,7 +806,7 @@ const productos = [
         cantidad:7,
         categoria:'lamparas',
         subcategoria:'',
-        img:'LAMPARA-TETRIS.png',
+        img:'/assets/img/productos/hogar/Lamparas/LAMPARA-TETRIS.png',
 	},
     {
 		id:82,
@@ -816,7 +816,7 @@ const productos = [
         cantidad:8,
         categoria:'lamparas',
         subcategoria:'videojuegos',
-        img:'LAMPARA-XBOX.png',
+        img:'/assets/img/productos/hogar/Lamparas/LAMPARA-XBOX.png',
 	},
     {
 		id:83,
@@ -826,7 +826,7 @@ const productos = [
         cantidad:6,
         categoria:'lamparas',
         subcategoria:'comic',
-        img:'LAMPARA-THOR.png',
+        img:'/assets/img/productos/hogar/Lamparas/LAMPARA-THOR.png',
 	},
     {
 		id:84,
@@ -836,7 +836,7 @@ const productos = [
         cantidad:5,
         categoria:'lamparas',
         subcategoria:'videojuegos',
-        img:'LAMPARA-ZELDA.png',
+        img:'/assets/img/productos/hogar/Lamparas/LAMPARA-ZELDA.png',
 	},
     {
 		id:85,
@@ -846,7 +846,7 @@ const productos = [
         cantidad:7,
         categoria:'tazas',
         subcategoria:'videojuegos',
-        img:'.png',
+        img:'/assets/img/productos/hogar/tazas/TAZA-CUPHEAD.png',
 	},
     {
 		id:86,
@@ -856,7 +856,7 @@ const productos = [
         cantidad:5,
         categoria:'tazas',
         subcategoria:'videojuegos',
-        img:'TAZA-DK.png',
+        img:'/assets/img/productos/hogar/tazas/TAZA-DK.png',
 	},
     {
 		id:87,
@@ -866,7 +866,7 @@ const productos = [
         cantidad:5,
         categoria:'tazas',
         subcategoria:'cf',
-        img:'TAZA-DOCTORWHO.png',
+        img:'/assets/img/productos/hogar/tazas/TAZA-DOCTORWHO.png',
 	},
     {
 		id:88,
@@ -876,7 +876,7 @@ const productos = [
         cantidad:11,
         categoria:'tazas',
         subcategoria:'videojuegos',
-        img:'TAZA-GAMEB.png',
+        img:'/assets/img/productos/hogar/tazas/TAZA-GAMEB.png',
 	},
     {
 		id:89,
@@ -886,7 +886,7 @@ const productos = [
         cantidad:10,
         categoria:'tazas',
         subcategoria:'cf',
-        img:'TAZA-HARRY.png',
+        img:'/assets/img/productos/hogar/tazas/TAZA-HARRY.png',
 	},
     {
 		id:90,
@@ -896,7 +896,7 @@ const productos = [
         cantidad:7,
         categoria:'tazas',
         subcategoria:'videojuegos',
-        img:'TAZA-MARIOB.png',
+        img:'/assets/img/productos/hogar/tazas/TAZA-MARIOB.png',
 	},
     {
 		id:91,
@@ -906,7 +906,7 @@ const productos = [
         cantidad:12,
         categoria:'tazas',
         subcategoria:'videojuegos',
-        img:'TAZA-MARIOBLOQUE.png',
+        img:'/assets/img/productos/hogar/tazas/TAZA-MARIOBLOQUE.png',
 	},
     {
 		id:92,
@@ -916,7 +916,7 @@ const productos = [
         cantidad:16,
         categoria:'tazas',
         subcategoria:'videojuegos',
-        img:'TAZA-POKEMON.png',
+        img:'/assets/img/productos/hogar/tazas/TAZA-POKEMON.png',
 	},
     {
 		id:93,
@@ -926,7 +926,7 @@ const productos = [
         cantidad:14,
         categoria:'tazas',
         subcategoria:'videojuegos',
-        img:'TAZA-PS.png',
+        img:'/assets/img/productos/hogar/tazas/TAZA-PS.png',
 	},
     {
 		id:94,
@@ -936,7 +936,7 @@ const productos = [
         cantidad:5,
         categoria:'tazas',
         subcategoria:'videojuegos',
-        img:'TAZA-ZELDA.png',
+        img:'/assets/img/productos/hogar/tazas/TAZA-ZELDA.png',
 	},
     {
 		id:95,
@@ -947,7 +947,7 @@ const productos = [
         categoria:'camisas',
         subcategoria:'anime',
         talla:'s,m,l,xl',
-        img:'CAMISA-BLACKBUTLER.png',
+        img:'/assets/img/productos/Ropa/camisas/CAMISA-BLACKBUTLER.png',
 	},
     {
 		id:96,
@@ -958,7 +958,7 @@ const productos = [
         categoria:'camisas',
         subcategoria:'anime',
         talla:'s,m,l,xl',
-        img:'CAMISA-BOKUNH.png',
+        img:'/assets/img/productos/Ropa/camisas/CAMISA-BOKUNH.png',
 	},
     {
 		id:97,
@@ -969,7 +969,7 @@ const productos = [
         categoria:'camisas',
         subcategoria:'cf',
         talla:'s,m,l,xl',
-        img:'CAMISA-GODZILLA.png',
+        img:'/assets/img/productos/Ropa/camisas/CAMISA-GODZILLA.png',
 	},
     {
 		id:98,
@@ -980,7 +980,7 @@ const productos = [
         categoria:'camisas',
         subcategoria:'cf',
         talla:'s,m,l,xl',
-        img:'CAMISA-GOT.png',
+        img:'/assets/img/productos/Ropa/camisas/CAMISA-GOT.png',
 	},
     {
 		id:99,
@@ -991,7 +991,7 @@ const productos = [
         categoria:'camisas',
         subcategoria:'anime',
         talla:'s,m,l,xl',
-        img:'CAMISA-HUNTER.png',
+        img:'/assets/img/productos/Ropa/camisas/CAMISA-HUNTER.png',
 	},
     {
 		id:100,
@@ -1002,7 +1002,7 @@ const productos = [
         categoria:'camisas',
         subcategoria:'videojuegos',
         talla:'s,m,l,xl',
-        img:'CAMISA-POKEMON.png',
+        img:'/assets/img/productos/Ropa/camisas/CAMISA-POKEMON.png',
 	},
     {
 		id:101,
@@ -1013,7 +1013,7 @@ const productos = [
         categoria:'camisas',
         subcategoria:'videojuegos',
         talla:'s,m,l,xl',
-        img:'CAMISA-RESIDENT.png',
+        img:'/assets/img/productos/Ropa/camisas/CAMISA-RESIDENT.png',
 	},
     {
 		id:102,
@@ -1024,7 +1024,7 @@ const productos = [
         categoria:'camisas',
         subcategoria:'comic',
         talla:'s,m,l,xl',
-        img:'CAMISA-SUPERMAN.png',
+        img:'/assets/img/productos/Ropa/camisas/CAMISA-SUPERMAN.png',
 	},
     {
 		id:103,
@@ -1035,7 +1035,7 @@ const productos = [
         categoria:'camisas',
         subcategoria:'anime',
         talla:'s,m,l,xl',
-        img:'CAMISA-TOTORO.png',
+        img:'/assets/img/productos/Ropa/camisas/CAMISA-TOTORO.png',
 	},
     {
 		id:104,
@@ -1046,7 +1046,7 @@ const productos = [
         categoria:'camisas',
         subcategoria:'cf',
         talla:'s,m,l,xl',
-        img:'CAMISA-HARRY.png',
+        img:'/assets/img/productos/Ropa/camisas/CAMISA-HARRY.png',
 	},
     {
 		id:105,
@@ -1057,7 +1057,7 @@ const productos = [
         categoria:'sudaderas',
         subcategoria:'anime',
         talla:'s,m,l,xl',
-        img:'CHAQUETA-SNK.png',
+        img:'/assets/img/productos/Ropa/sudaderas/CHAQUETA-SNK.png',
 	},
     {
 		id:106,
@@ -1068,7 +1068,7 @@ const productos = [
         categoria:'sudaderas',
         subcategoria:'anime',
         talla:'s,m,l,xl',
-        img:'SUDADERA-AKATSUKI.png',
+        img:'/assets/img/productos/Ropa/sudaderas/SUDADERA-AKATSUKI.png',
 	},
     {
 		id:107,
@@ -1079,7 +1079,7 @@ const productos = [
         categoria:'sudaderas',
         subcategoria:'anime',
         talla:'s,m,l,xl',
-        img:'SUDADERA-BOKUN.png',
+        img:'/assets/img/productos/Ropa/sudaderas/SUDADERA-BOKUN.png',
 	},
     {
 		id:108,
@@ -1090,7 +1090,7 @@ const productos = [
         categoria:'sudaderas',
         subcategoria:'anime',
         talla:'s,m,l,xl',
-        img:'SUDADERA-NARUTO.png',
+        img:'/assets/img/productos/Ropa/sudaderas/SUDADERA-NARUTO.png',
 	},
     {
 		id:109,
@@ -1101,7 +1101,7 @@ const productos = [
         categoria:'sudaderas',
         subcategoria:'anime',
         talla:'s,m,l,xl',
-        img:'SUDADERA-ONEP.png',
+        img:'/assets/img/productos/Ropa/sudaderas/SUDADERA-ONEP.png',
 	},
     {
 		id:110,
@@ -1112,7 +1112,7 @@ const productos = [
         categoria:'sudaderas',
         subcategoria:'videojuegos',
         talla:'s,m,l,xl',
-        img:'SUDADERA-ZELDA.png',
+        img:'/assets/img/productos/Ropa/sudaderas/SUDADERA-ZELDA.png',
 	},
     
 ];

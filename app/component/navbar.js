@@ -3,25 +3,26 @@
   console.log('hola')
 
 menu.innerHTML=` <div class="envios">
-<a href="quienes-somos.html">Quienes Somos</a>
+<a href="/html/quienes-somos.html">Quienes Somos</a>
 <a href="#">Contactanos</a>
 </div>
 
 <div class='busquedaCarrito'>
 
   <div class='logo'>
-     <a class="logo-a" href="index.html"><img src="/assets/img/logo/logo-tienda.png" alt=""></a>
+     <a class="logo-a" href="/index.html"><img src="/assets/img/logo/logo-tienda.png" alt=""></a>
   </div>
 
   
 
   <div class='busqueda'>
      <input type="search" id="inputBusqueda" placeholder='Ingrese su busqueda'>
-     <button  id='busquedaButton'type="submit"><img src="/assets/img/iconos/lupa.png" alt="" ></button>
+      <a id='busquedaButton' href='/html/busqueda.html'><img src="/assets/img/iconos/lupa.png" alt="" ></a>
+     <div id='alerta' class='oculto'> <img src='/assets/img/iconos/alerta.png'> <p></p></div>
   </div>
   <div class="contenedorCarrito">
   <div id='carritoCantidad'></div>
-  <img id='carritoImg' src="assets/img/carrito.svg" alt="">
+  <a href='/html/carrito.html'><img id='carritoImg' src="/assets/img/carrito.svg" alt=""></a>
 
   <div class="contenedorLista">
     <table id="listaProductos">
@@ -71,11 +72,11 @@ menu.innerHTML=` <div class="envios">
   <li class="submenu">
     <a class="link" href="accesorios.html">ACCESORIOS <span class="icon-down-open"></span></a>
     <ul class="subMenu-M">
-      <li><a href="llaveros.html ">LLAVEROS </a></li>
-      <li><a href="billeteras.html">BILLETERAS</a></li>
-      <li><a href="anillos.html">ANILLOS</a></li>
-      <li><a href="collares.html">COLLARES</a></li>
-      <li><a href="relojes.html">RELOJES</a></li>
+      <li><a href="/html/llaveros.html ">LLAVEROS </a></li>
+      <li><a href="/html/billeteras.html">BILLETERAS</a></li>
+      <li><a href="/html/anillos.html">ANILLOS</a></li>
+      <li><a href="/html/collares.html">COLLARES</a></li>
+      <li><a href="/html/relojes.html">RELOJES</a></li>
     </ul>
   </li>
   <li class="submenu">
@@ -119,3 +120,60 @@ menu.innerHTML=` <div class="envios">
   </li>
 </ul>
 </nav>`
+
+
+//EL SIGUIENTE CODIGO CORRESPONDE A LA BARRA DE BUSQUEDA Y A SU RESPECTIVO BOTON
+//GUARDO EL TEXTO EN LOCAL STORAGE Y LUEGO REDIRIJO A LA PAGINA DE BUSQUEDA.HTML CON SU RESPECTIVO SCRIPT
+
+
+const inputBusqueda=document.querySelector('#inputBusqueda');
+const btnBusqueda=document.querySelector('#busquedaButton');
+document.addEventListener('DOMContentLoaded',busqueda());
+
+function busqueda(){
+   
+  //Agrego un evento al boton
+
+  btnBusqueda.addEventListener('click',ValidarInput);
+  inputBusqueda.addEventListener('keyup',validacionEnter);
+  btnBusqueda.addEventListener('search',simularClick);
+ 
+ 
+}
+
+function validacionEnter(e){
+   
+     if(e.code==='Enter'){
+        btnBusqueda.click();
+     }
+}
+
+function simularClick(){
+  btnBusqueda.click();
+}
+function ValidarInput(e){
+ 
+   if(inputBusqueda.value==''){
+      e.preventDefault();
+      mostrarAlertaBusqueda('Rellene este campo');
+    
+      return
+   }
+   localStorage.setItem('busqueda', inputBusqueda.value);
+   location.href ="/html/busqueda.html";
+}
+
+function mostrarAlertaBusqueda(msg){
+   const  alerta=document.querySelector('#alerta')
+
+   alerta.querySelector('p').textContent=msg;
+   alerta.classList.remove('oculto');
+   alerta.classList.add('Alerta');
+   setTimeout(() => {
+      alerta.classList.remove('Alerta')
+      alerta.classList.add('oculto');
+    
+   }, 1500);
+  
+}
+
