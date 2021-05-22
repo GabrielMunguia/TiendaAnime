@@ -10,7 +10,7 @@
 
 .img{
 
-   padding-top: 5rem;
+   padding-top: 1.3rem;
     display: flex;
 
     justify-content: flex-end;
@@ -24,7 +24,8 @@
 .img >div{
 
     width: 70%;
-    height: 70%;
+    height: 80%;
+
 
     display: flex;
   
