@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,73 +9,79 @@
     <link rel="stylesheet" href="/css/fontello.css" />
     <link rel="stylesheet" href="/css/style-general.css" />
     <link rel="stylesheet" href="/css/targetas-prod.css" />
-    <link rel="stylesheet" href="/css/rutas.css" />
+
 
     <title>Llaveros</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div id='header'></div>
-    
+
     <div class="rutas">
-      <a href="/index.html">INICIO</a>
-      <span> /</span>
-      <a href="accesorios.html">ACCESORIOS</a>
-      <span> / </span>
-      <span>RELOJES</span>
+        <a href="/index.html">INICIO</a>
+        <span> /</span>
+        <a href="accesorios.html">ACCESORIOS</a>
+        <span> / </span>
+        <span>RELOJES</span>
     </div>
 
     <main>
-      <div class='filtro'>
-      
-          <ul>
-            <li>  <h2>Precio</h2></li>
-       
-            <li>
-              <label for="minimo">Minimo</label>
-              <div id="minimo"></div>
-              <input type="range" id='InputMinimo' name="minimo" min=0  max=0  >
-              
-            
-            </li>
-            <li>
-              <label for="maximo">Maximo</label>
-              <div id="maximo"></div>
-              <input type="range" id='Inputmaximo' name="maximo" min=0 max=0  >
-            </li>
-            <li>
+        <div class='filtro'>
 
-              <button id="Limpiar" type="submit">Limpiar</button>
-              <button id="Filtrar" type="submit">Filtrar</button>
-            </li>
-         
-          </ul>
-      </div>
+            <ul>
+                <li>
+                    <h2>Precio</h2>
+                </li>
 
-      <div class='filtro-ordenar'>
-        <div><h3>RELOJES</h3></div>
-        <div>
-          <label for="select">Ordenar Por :</label>
-          <select name="select" id='ordenar'>
+                <li>
+                    <label for="minimo">Minimo</label>
+                    <div id="minimo"></div>
+                    <input type="range" id='InputMinimo' name="minimo" min=0 max=0>
+
+
+                </li>
+                <li>
+                    <label for="maximo">Maximo</label>
+                    <div id="maximo"></div>
+                    <input type="range" id='Inputmaximo' name="maximo" min=0 max=0>
+                </li>
+                <li>
+
+                    <button id="Limpiar" type="submit">Limpiar</button>
+                    <button id="Filtrar" type="submit">Filtrar</button>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class='filtro-ordenar'>
+            <div>
+                <h3>RELOJES</h3>
+            </div>
+            <div>
+                <label for="select">Ordenar Por :</label>
+                <select name="select" id='ordenar'>
             <option value="nombreAsc">Nombre(A-Z)</option>
             <option value="nombreDsc" >Nombre(Z-A)</option>
             <option value="precioMayor">Mayor Precio</option>
             <option value="precioMenor">Menor Precio</option>
             
           </select>
-        </div>
+            </div>
 
-      </div>
-      <div class="grid-container" categoria='bandai'> 
-      </div>
+        </div>
+        <div class="grid-container" categoria='bandai'>
+        </div>
     </main>
-    
-     <div id='Footer'></div>
-     <script src="/app/component/navbar.js"></script>
-     <script src="/app/component/footer.js"></script>
-     <script src='/js/bD.js'></script>
-     <script src="/js/mostrarProdCategoria.js"></script>
-     <script src='/js/productos.js'></script>
-     <script src="/js/filtro.js"></script>
-     <script src="/js/menuMovil.js"></script>
-  </body>
+
+    <div id='Footer'></div>
+    <script src="/app/component/navbar.js"></script>
+    <script src="/app/component/footer.js"></script>
+    <script src='/js/bD.js'></script>
+    <script src="/js/mostrarProdCategoria.js"></script>
+    <script src='/js/productos.js'></script>
+    <script src="/js/filtro.js"></script>
+    <script src="/js/menuMovil.js"></script>
+</body>
+
 </html>
