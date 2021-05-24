@@ -52,7 +52,10 @@ inputMaximo.addEventListener('input', () => {
 
 btnLimpiar.addEventListener('click', () => {
     limpiarHtml();
-    talla.value = 'default';
+    if (talla) {
+        talla.value = 'default';
+    }
+
     inputMaximo.value = 0;
     maximo.textContent = 0;
     inputMinimo.value = 0;

@@ -18,7 +18,7 @@
 .contenedor-inicio>div {
     border-radius: 15px;
     margin: 8px;
-    width: 49%;
+    width: 45%;
     height: 22em;
     background-color: rgb(36, 131, 65);
 }
@@ -27,7 +27,7 @@
     height: 100%;
     width: 100%;
     background-color: red;
-    border-radius: 15px;
+    border-radius: 6px;
 }
 
 .contenedor-inicio>div:hover {
