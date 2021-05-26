@@ -6,7 +6,7 @@ const productos = [{
         cantidad: 13,
         categoria: 'anillos',
         subcategoria: 'videojuegos',
-        img: '/assets/img/productos/accesorios/anillos/ANILLO-HYRULE.png',
+        img: '/assets/img/prueba.png',
     }, {
         id: 2,
         titulo: 'Anillo Konoha - Naruto',

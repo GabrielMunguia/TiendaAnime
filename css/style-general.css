@@ -439,6 +439,14 @@ footer a:hover {
     flex: 1;
 }
 
+.r-footer >:nth-child(3) li {
+    margin-bottom: 1em;
+
+   display: flex;
+   align-items: center;
+
+}
+
 .logo-footer {
     flex: 1 0px;
 }
