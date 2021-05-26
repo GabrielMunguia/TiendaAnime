@@ -8,7 +8,7 @@ footer.innerHTML=`
             <li>
                 <h2> Servicio al Cliente</h2>
                 <ul>
-                    <li><a href="#">Contáctenos</a></li>
+                    <li><a href="/html/contactanos.html">Contáctenos</a></li>
                     <li><a href="#">Ubicación</a></li>
                     <li><a href="#">Preguntas Frecuentes</a></li>
                 </ul>
@@ -16,8 +16,8 @@ footer.innerHTML=`
             <li>
                 <h2>Información del sitio</h2>
                 <ul>
-                    <li><a href="#">Política de Privacidad</a></li>
-                    <li><a href="#">Terminos de uso</a></li>
+                    <li><a href="/html/politicas.html">Política de Privacidad</a></li>
+                    <li><a href="/html/terminos.html">Terminos de uso</a></li>
                 </ul>
             </li>
             <li>

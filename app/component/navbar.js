@@ -1,16 +1,15 @@
+const menu = document.querySelector('#header');
 
-  const menu=document.querySelector('#header');
- 
 
-menu.innerHTML=` <div class="envios">
+menu.innerHTML = ` <div class="envios">
 <a href="/html/quienes-somos.html">Quienes Somos</a>
-<a href="#">Contactanos</a>
+<a href="/html/contactanos.html">Contactanos</a>
 </div>
 
 <div class='busquedaCarrito'>
 
   <div class='logo'>
-     <a class="logo-a" href="/index.html"><img src="/assets/img/logo/logo-tienda.png" alt=""></a>
+     <a class="logo-a" href="/index.html"><img src="/assets/img/logo/logov2.png" alt=""></a>
   </div>
 
   
@@ -126,54 +125,54 @@ menu.innerHTML=` <div class="envios">
 //GUARDO EL TEXTO EN LOCAL STORAGE Y LUEGO REDIRIJO A LA PAGINA DE BUSQUEDA.HTML CON SU RESPECTIVO SCRIPT
 
 
-const inputBusqueda=document.querySelector('#inputBusqueda');
-const btnBusqueda=document.querySelector('#busquedaButton');
-document.addEventListener('DOMContentLoaded',busqueda());
+const inputBusqueda = document.querySelector('#inputBusqueda');
+const btnBusqueda = document.querySelector('#busquedaButton');
+document.addEventListener('DOMContentLoaded', busqueda());
 
-function busqueda(){
-   
-  //Agrego un evento al boton
+function busqueda() {
 
-  btnBusqueda.addEventListener('click',ValidarInput);
-  inputBusqueda.addEventListener('keyup',validacionEnter);
-  btnBusqueda.addEventListener('search',simularClick);
- 
- 
+    //Agrego un evento al boton
+
+    btnBusqueda.addEventListener('click', ValidarInput);
+    inputBusqueda.addEventListener('keyup', validacionEnter);
+    btnBusqueda.addEventListener('search', simularClick);
+
+
 }
 
-function validacionEnter(e){
-   
-     if(e.code==='Enter'){
+function validacionEnter(e) {
+
+    if (e.code === 'Enter') {
         btnBusqueda.click();
-     }
+    }
 }
 
-function simularClick(){
-  btnBusqueda.click();
-}
-function ValidarInput(e){
- 
-   if(inputBusqueda.value==''){
-      e.preventDefault();
-      mostrarAlertaBusqueda('Rellene este campo');
-    
-      return
-   }
-   localStorage.setItem('busqueda', inputBusqueda.value);
-   location.href ="/html/busqueda.html";
+function simularClick() {
+    btnBusqueda.click();
 }
 
-function mostrarAlertaBusqueda(msg){
-   const  alerta=document.querySelector('#alerta')
+function ValidarInput(e) {
 
-   alerta.querySelector('p').textContent=msg;
-   alerta.classList.remove('oculto');
-   alerta.classList.add('Alerta');
-   setTimeout(() => {
-      alerta.classList.remove('Alerta')
-      alerta.classList.add('oculto');
-    
-   }, 1500);
-  
+    if (inputBusqueda.value == '') {
+        e.preventDefault();
+        mostrarAlertaBusqueda('Rellene este campo');
+
+        return
+    }
+    localStorage.setItem('busqueda', inputBusqueda.value);
+    location.href = "/html/busqueda.html";
 }
 
+function mostrarAlertaBusqueda(msg) {
+    const alerta = document.querySelector('#alerta')
+
+    alerta.querySelector('p').textContent = msg;
+    alerta.classList.remove('oculto');
+    alerta.classList.add('Alerta');
+    setTimeout(() => {
+        alerta.classList.remove('Alerta')
+        alerta.classList.add('oculto');
+
+    }, 1500);
+
+}

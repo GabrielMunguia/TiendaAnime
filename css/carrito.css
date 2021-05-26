@@ -1,12 +1,12 @@
 .carrito-detalles {
-    margin-top: 5em;
+    margin-top: 3em;
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     min-height: 47.2em;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .carrito-detalles table th {
@@ -156,7 +156,7 @@ tfoot tr td div p span {
 
 .pagar button:hover {
     background-color: black;
-    transition: background 1s;
+    transition: background 0.3s;
 }
 
 .tfoot-tr-1 {
@@ -188,6 +188,12 @@ tfoot tr td div p span {
     font-weight: bolder;
 }
 
+.seleccionado{
+    background-color: #337ab7;
+    border-radius: 5px;
+    color: white;
+}
+
 
 /*Update carrito */
 
@@ -211,34 +217,63 @@ tfoot tr td div p span {
     flex-grow: 1;
 }
 
-input[type=text],
+.items input[type=text],
 [type=email] {
     margin-top: 5px;
     margin-bottom: 5px;
-    height: 25px;
+    height: 2.6em;
     width: 100%;
-    font-size: 16px;
+   
     border-radius: 5px;
     border: 1px solid #ccc;
     border-bottom-width: 2px;
     outline: none;
-    transition: 1s;
+ 
+}
+.infoTransferencia{
+    display: flex;
+    flex-direction: column;
+
+    
 }
 
-input[type=tel] {
+.infoTransferencia >div{
+    margin-top: 1px;
+    display: flex;
+ 
+   
+}
+
+.infoTransferencia >div div{
+  
+    display: flex;
+    flex-direction: column;
+    
+}
+.infoTransferencia input{
+    border:1px solid black;
+    border-radius: 5px;
+    outline: none;
+    width: 30em;
+    margin: 0.3em;
+    height: 2.6em;
+}
+
+
+.items input[type=tel] {
     margin-top: 5px;
     margin-bottom: 5px;
-    height: 25px;
+    height: 2.6em;
     width: 50%;
-    font-size: 16px;
+ 
     border-radius: 5px;
     border: 1px solid #ccc;
     border-bottom-width: 2px;
     outline: none;
-    transition: 1s;
+
 }
 
-input[type=text]:focus,
+.items input[type=text]:focus,
 [type=email]:focus,
 [type=tel]:focus {
     border-color: dodgerBlue;
@@ -258,10 +293,12 @@ fieldset div {
 }
 
 .contenedoropcion {
+  
     display: flex;
     width: 40%;
     justify-content: space-between;
 }
+
 
 span.requerido {
     font-weight: bold;
@@ -273,6 +310,120 @@ hr {
     border: 0;
     height: 3px;
     background-image: linear-gradient(to right, #103c6e, #3d85c4);
+}
+
+
+.advertencia{
+    padding: 14px;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    
+    background-color: #3379b777;
+    color: rgb(9, 9, 82);
+  
+}
+.advertencia h4,p{
+    margin-bottom: 0.1em;
+}
+
+.datosTarjeta{
+ 
+ 
+    display: flex;
+    flex-direction: column;
+    
+}
+.datosTarjeta >:first-child{
+  
+    display: flex;
+    flex-direction: column;
+}
+#comprobarTerminos{
+    margin-bottom: 2em;
+}
+.datosTarjeta input{
+
+    border-radius: 5px;
+    margin-left: 1em;
+  
+    outline: none;
+    border:1px solid black
+}
+.datosTarjeta >:first-child input{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+}
+#formulario{
+    font-size: 15px;
+}
+#formulario > div :focus{
+    border :1px solid royalblue;
+   
+    box-shadow: 0px -2px 11px 0px rgba(65,105,225,0.69);
+}
+
+.datosTarjeta>:nth-child(2){
+ 
+    
+    display: flex;
+    
+}
+
+
+.datosTarjeta input{
+    padding: 10px;
+    width: 20em;
+    height: 2.6em;
+}
+
+.opcionesEntrega{
+    display: flex;
+    flex-direction: column;
+}
+.opcionesEntrega >div{
+    display: flex;
+}
+
+.opcionesEntrega select{
+   
+    width: 30em;
+    height: 2.3em;
+    outline: none;
+    border-radius: 5px;
+
+}
+
+
+
+.opcionesEntrega textarea{
+ 
+    width: 30em;
+    min-height: 10em;
+    resize: none;
+    outline: none;
+}
+
+.transferencia{
+    display: flex;
+    
+}
+
+
+.transferencia input{
+    margin-left: 1em;
+
+    width: auto;
+    height: auto;
+
+}
+.transferencia>div{
+   
+    width: 30%;
+    
+   
+    margin-right: 1em;
 }
 
 @media screen and (max-width:600) {
@@ -287,16 +438,79 @@ hr {
         flex-direction: column;
         width: 100%;
     }
+    .datosTarjeta input{
+        width: 13em;
+        
+    }
+    .infoTransferencia div input{
+    
+        width: 27em;
+    }
+    .infoTransferencia > div {
+  
+        display: flex;
+        flex-direction: column;
+        
+    }
 }
 
 @media (max-width: 1024px) {
+    .infoTransferencia input{
+        width: 23em;
+    }
+    .transferencia{
+       flex-direction: column;
+        
+    }
+    .datosTarjeta div{
+        flex-direction: column;
+       
+    }
+    .datosTarjeta >:nth-child(3){
+       
+        display: flex;
+       flex-direction: column;
+    }
+    .datosTarjeta div input{
+        margin-top: 1em;
+        
+    }
+    .datosTarjeta input{
+        width: 30em;
+        
+    }
     .carrito-detalles table td {
         font-weight: bold;
         text-align: center;
         /* background-color: red; */
         width: 13em;
     }
+    .opcionesEntrega >div{
+        flex-direction: column;
+    }
     tfoot tr td div {
         font-size: 12px;
+    }
+
+    .transferencia input{
+        margin-left: 0em;
+        width: 1em;
+      
+        height: auto;
+    
+    }
+    .transferencia>div{
+      
+       display: flex;
+       flex-direction: row;;
+       
+        width: 100%;
+        display: flex;
+        margin-top: 1em;
+        margin-right: 0em;
+    }
+    .transferencia label{
+     
+        width: 3m;
     }
 }
