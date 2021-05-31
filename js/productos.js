@@ -298,8 +298,8 @@ modificarCantidadCarrito();
 const btnCarrito = document.querySelector('#carritoImg');
 
 btnCarrito.addEventListener('mouseenter', (e) => {
-
-    actualizarDatos()
+    agregarProductos();
+    actualizarDatos();
     modificarCantidadCarrito();
 
 })

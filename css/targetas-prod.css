@@ -1,3 +1,4 @@
+
 button {
     border: 0px;
     outline: none;
@@ -6,6 +7,7 @@ button {
 main {
     display: flex;
 }
+
 
 .filtro {
     margin-top: 2em;

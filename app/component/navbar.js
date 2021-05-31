@@ -65,8 +65,7 @@ menu.innerHTML = ` <div class="envios">
 <nav class="menu">
 
 <ul id="menus " class="menu-x">
-  <li id="menu-ul"><a href="#">NUEVOS</a></li>
-  <li><a href="#">OFERTAS</a></li>
+
 
   <li class="submenu">
     <a class="link" href="accesorios.html">ACCESORIOS <span class="icon-down-open"></span></a>

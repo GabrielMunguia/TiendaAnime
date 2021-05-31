@@ -13,6 +13,7 @@ function mostrarMenu(){
     const auxCerrarMenu=document.querySelector('.trasladarMenu');
     if(auxCerrarMenu){
         menu.classList.remove('trasladarMenu')
+       
     }
     else{
         menu.classList.add('trasladarMenu')
