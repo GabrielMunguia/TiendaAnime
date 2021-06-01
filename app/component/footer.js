@@ -9,8 +9,8 @@ footer.innerHTML=`
                 <h2> Servicio al Cliente</h2>
                 <ul>
                     <li><a href="/html/contactanos.html">Contáctenos</a></li>
-                    <li><a href="#">Ubicación</a></li>
-                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="/html/ubicacion.html">Ubicación</a></li>
+                    <li><a href="/html/preguntas.html">Preguntas Frecuentes</a></li>
                 </ul>
             </li>
             <li>
@@ -23,9 +23,10 @@ footer.innerHTML=`
             <li>
                 <h2>Síganos en</h2>
                 <ul>
-                    <li> <img src="/assets/img/facebook.png" alt=""><a href="#"> Facebook</a></li>
-                    <li> <img src="/assets/img/twitter.png" alt=""><a href="#"> Twitter</a></li>
-                    <li> <img src="/assets/img/instagram.png" alt=""><a href="#"> Instagram</a></li>
+                    <li> <img src="/assets/img/iconos/facebook.png" alt=""><a href="#"> Facebook</a></li>
+                    <li> <img src="/assets/img/iconos/twitter.png" alt=""><a href="#"> Twitter</a></li>
+                    <li> <img src="/assets/img/iconos/instagram.png" alt=""><a href="#"> Instagram</a></li>
+                    <li> <img src="/assets/img/iconos/whatsapp.png" alt=""><a href="https://api.whatsapp.com/send?phone=50360457714&text=GeekParadise%0ATu%20tienda%20preferida%20%20~(%5E-%5E)~"> Whatsapp</a></li>
                 </ul>
             </li>
         </ul>

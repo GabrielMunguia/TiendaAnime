@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas frecuentes</title>
+    <link rel="stylesheet" href="/css/preguntas.css">
+    <link rel="stylesheet" href="/css/style-general.css">
+
+    
+</head>
+<body>
+    <div id='header'></div>
+
+    <div class='preguntas'>
+          <div>
+            <div id="pre1">1.¿Que beneficios tiene adquirir este producto o servicio?</div>
+            <p id="p1">
+                Al adquirir un producto de GEEK PARADISE, nosotros nos encargamos de llevartelo hasta la
+                puerta de tu casa a cualquier punto de Sonsonate y San Salvador sin recargos y sin alteraciones, nos 
+                encargamos de brindarte la mejor atencionn personalizada y tenemos los mejores precios de mercado.
+            </p>
+            <div id="pre2">2 Despues de agotado, El producto estara en existencia nuevamente y en cuanto tiempo?</div>
+            <p id="p2">
+                El producto si estara disponible nuevamente, practicamente los productos agotados tardan al rededor 
+                de 25 dias habiles en ser reincorporados al mercado.
+            </p>
+            <div id="pre3">3.La pagina es confiable?</div>
+            <p id="p3">
+                La pagina GEEK PARADISE es de alta cofiabilidad ya que cuenta con analizadores muy potentes para detectar amenazas 
+                que se quieran infiltrar a los servidores, la honestidad y responsabilidad es la base fundamental de esta pagina 
+                te aseguramos que tu dinero no corre peligro y te invitamos a que veas nuestra <a href="/html/politicas.html">Politica de privacidad</a>
+            </p>
+            <div id="pre4">4.¿Tiene garantia?</div>
+            <p id="p4">
+                El producto de GEEK PARADISE tiene garantia, en algunos casos puede ser extendida, de manera que nos enfocamos en brindar 
+                un producto de la mejor calidad posible y con una garantia justa.
+            </p>
+            <div id="pre5">5.¿ Donde veo el precio del producto?</div>
+            <p id="p5">
+                El producto en la parte inferior contiene su precio, por favor si en algun producto o servicio no encuentra esto, <a href="/html/contactanos.html">contacte con nosotros</a>  
+                ya que nos encargaremos de solucionar este inconveniente.
+            </p>
+            <div id="pre6">6.¿Que metodos de pago aceptan?</div>
+            <p id="p6">
+                GEEK PARADISE acepta pagos con tarjeta de credito o debito, tambien se aceptan pagos mediante transacciones y pagos en fectivo.
+            </p>
+            <div id="pre7">7.¿En cuanto tiempo tendra listo mi producto?</div>
+            <p id="p7">
+                El tiempo promedio en el que usted como cliente obtendra su producto es proporcional a su direccion
+                GEEK PARADISE hace todo lo posible por que su producto este lo mas proto posible, la adquisicion puede tardar de 1 a 3 dias habiles.
+            </p>
+            <div id="pre8">8.¿Que productos estan disponibles y que productos no?</div>
+            <p id="p8">
+                GEEK PARADISE tiene en su sistema incorporado una nota de aviso, por lo tanto si el producto no esta disponible, en la parte superior
+                izquierda aparecera "Agotado", de lo contrario el producto aun esta en existencia.
+            </p>
+        
+          </div>
+    </div>
+
+    <div id='Footer'></div>
+    <script src="/app/component/navbar.js"></script>
+    <script src="/app/component/footer.js"></script>
+    
+    <script src='/js/productos.js'></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $("#p1").hide();
+        $("#p2").hide();
+        $("#p3").hide();
+        $("#p4").hide();
+        $("#p5").hide();
+        $("#p6").hide();
+        $("#p7").hide();
+        $("#p8").hide();
+    $(document).ready(function(){
+        $("#pre1").click(function(){
+            $("#p1").slideToggle(500);
+        });
+        $("#pre2").click(function(){    
+            $("#p2").slideToggle(500);
+        });
+        $("#pre3").click(function(){      
+            $("#p3").slideToggle(500);
+        });
+        $("#pre4").click(function(){      
+            $("#p4").slideToggle(500);
+        }); 
+        $("#pre5").click(function(){      
+            $("#p5").slideToggle(500);
+        }); 
+        $("#pre6").click(function(){      
+            $("#p6").slideToggle(500);
+        }); 
+        $("#pre7").click(function(){      
+            $("#p7").slideToggle(500);
+        }); 
+        $("#pre8").click(function(){      
+            $("#p8").slideToggle(500);
+        });        
+    });
+    </script>
+</body>
+</html>

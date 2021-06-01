@@ -1,3 +1,4 @@
+
 const subCategoria= localStorage.getItem("subCategoria");
 console.log(subCategoria)
 
@@ -65,3 +66,16 @@ function comprobarDisponible(producto){
    return 'prodDisponible'
 
 }
+
+//CODIGO PARA  HACER UN PAGINADOR
+
+function *crearPaginador(total){
+  for(let i=1;i<=total;i++){
+      yield i;
+      
+  }
+}
+
+
+const pag=crearPaginador(10);
+console.log(pag)

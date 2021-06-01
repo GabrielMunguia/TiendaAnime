@@ -1,0 +1,43 @@
+
+.preguntas{
+
+    min-height: 35em;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+   
+}
+.preguntas>div:first-child{
+    border: 1px solid black;
+}
+.preguntas>div{
+ 
+   min-height: 22em;
+    width: 50%;
+    margin-left: 25%;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px;
+ 
+   
+
+    color: rgb(39, 124, 202);
+}
+.preguntas>div>div{
+   margin-bottom: 1em;
+}
+.preguntas p{
+
+   
+    width: 50%;
+     color: rgb(105, 105, 105);
+
+
+    padding: 15px;
+    word-spacing: 5px;
+    letter-spacing: 0.7;
+}

@@ -643,6 +643,13 @@ hr {
 }
 
 
+@keyframes efectoPago {
+    from {opacity: 0%;transform: translateY(-10%);}
+    to {opacity: 100%;}
+}
+
+
+
 
 
 
@@ -668,7 +675,9 @@ hr {
     .sinProductos>div{
         margin-top: 10em;
     }
-    
+    .carrito-detalles table img{
+        padding: 0;
+    }
     
     
     .sinProductos>div:first-child{
@@ -750,13 +759,12 @@ hr {
         align-items: center;
      
      }
+
     
     
  
  
 }
-
-
 
 
 

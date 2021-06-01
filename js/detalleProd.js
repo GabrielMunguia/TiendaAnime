@@ -6,8 +6,10 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 function maximizarImg(){
     const expandirBtn=document.querySelector('#expandirImg');
-
-    
+    const img = document.querySelector('#prod-img');
+    img.addEventListener('click',()=>{
+        expandirBtn.click();
+    })    
     const imgGrande=document.createElement('div');
 
     expandirBtn.addEventListener('click',()=>{

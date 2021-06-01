@@ -2,7 +2,7 @@
 const btnPagar = document.querySelector('#pagar');
 
 const carritoLista = document.querySelector('.carrito-detalles');
-
+let msjError=[];
 let totalPagar=0;
 
 
@@ -621,13 +621,26 @@ function validarFormulario(e) {
     const telefonoInput=document.querySelector('#telefono');
     const terminosYCondiciones=document.querySelector('#terminos').checked;
     validarPago();
-    
+    msjError=[];
    if(!validarNombre()||
       !validacionCorreo(correoInput.value)||
       !validarEntrega()||
       !validarNumero(telefonoInput.value)||
       !validarPago()||!terminosYCondiciones){
-       mostrarError(`Todos los campos son obligatorios <br> No paso la validacion`)
+      let msj;
+      console.log(msjError)
+        if(msjError.length>0){
+            msj=`Todos los campos son obligatorios <br><br>El formulario contiene los siguientes errores <br><br>`;
+            msjError.forEach(error=>{
+                msj+=`${error} <br>`
+            })
+
+        }
+        else{
+            msj=`Todos los campos son obligatorios`
+        }
+        console.log(msj)
+       mostrarError(msj)
        return;
    }
    totalPagar=document.querySelector("#tabla-carrito > tfoot > tr.tfoot-tr-1 > td:nth-child(2) > div > p:nth-child(3) > span").textContent
@@ -652,7 +665,7 @@ function mostrarError(mensaje){
   
     setTimeout(()=>{
         errorDiv.remove();
-    },3000)
+    },5000)
   }
   
 }
@@ -662,7 +675,7 @@ function mostrarError(mensaje){
 function validarNombre(){
     const nombreInput = document.querySelector('#nombre');
     if(nombreInput.value==''||nombreInput.value==' '){
-   
+  
         return false;
     }
   
@@ -673,7 +686,7 @@ function validarNumero(numero){
   
     if(numero.length>=8){
         if(isNaN(numero)||!Number(numero)){
-      
+          msjError.push('El numero ingresado no es valido');
             return false;
         }else if(numero%1==0){
            
@@ -681,6 +694,7 @@ function validarNumero(numero){
             }
 
     }
+    msjError.push('El numero ingresado tiene que ser mayor  a 8 caracteres');
     return false;
  
  
@@ -692,6 +706,7 @@ function validacionCorreo(correo){
    if(expReg.test(correo)){
        return true;
    }
+   msjError.push('El correo ingresado no es valido')
    return false;
 }
 
@@ -701,6 +716,7 @@ function validarEntrega(){
     const domicilioInput=document.querySelector('#domicilio').checked;
   
     if(!sucursalInput&&!domicilioInput){
+      
         return false;
     }
 
@@ -731,6 +747,7 @@ function validarPago(){
     const tranferenciaInput=document.querySelector('#transfer').checked;
     if(!targetaInput&&!tranferenciaInput){
         console.log('hoas')
+
         return false;
     }
     if(targetaInput){
@@ -742,6 +759,8 @@ function validarPago(){
            numTarjeta.length<8||cvcTarjeta.length<3||
            cvcTarjeta.length<3
         ){
+
+            msjError.push('Los datos de la targeta son invalidos')
             return false
         }
         return true;
@@ -759,6 +778,7 @@ function validarPago(){
         if(!cuscatlan&&!americaCentral&&!agricola){
             return false;
         }else if(titularTransferencia==''||concepto==''||numReferencia.length<1||monto<1){
+               msjError.push('Los datos de la transferencia no son validos')
                return false;
         }
         return true;
@@ -778,7 +798,8 @@ function procesarPago(){
     const procesandoPago=document.querySelector('#pago');
     procesandoPago.classList.add('procesandoPago');
     procesandoPago.innerHTML=`<div> <img src="/assets/img/iconos/img-loading.gif" alt=""></div>`
-  
+    const numFactura=Math.floor(Math.random() *9999);
+    const numOrden=Math.floor(Math.random() *9999);
     setTimeout(()=>{
        procesandoPago.classList.remove('procesandoPago');
        procesandoPago.classList.add('pagoRealizado');
@@ -789,16 +810,17 @@ function procesarPago(){
        <div>  <span>SU PAGO SE HA COMPLETADO CORRECTAMENTE</span> </div>   
     </div>
     <div>
-        <p id='NumeroOrdern'><b>Numero de Orden # :</b>   <span>3496123</span></p>   
+        <p id='NumeroOrdern'><b>Numero de Orden # :</b>   <span>${numOrden}</span></p>   
         <p id='IDOrganización'><b>ID  de Organizacion :</b>   <span>Geek-Store</span></p>           
-        <p id='Nro.Factura'><b>Numero  de Factura :</b>   <span>1</span></p>           
-        <p id='Importe'><b>Monto total a pagar:</b>   <span>$ ${totalPagar}</span></p>                    
+        <p id='Nro.Factura'><b>Numero  de Factura :</b>   <span>${numFactura}</span></p>           
+        <p id='Importe'><b>Monto Total &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp :</b>   <span>$ ${totalPagar}</span></p>                    
     </div>
 
     <div>
         <p>A la brevedad recibira su comprobante de pago</p>
         <a href="/index.html">Volver al inicio</a>
     </div>`;
+    procesandoPago.style.animation = "efectoPago 1s";
 
 
     //Elimino todos los productos almacenados
