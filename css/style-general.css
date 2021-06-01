@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
  
+ 
 }
 @font-face {
     font-family: Nans;
@@ -25,7 +26,7 @@ header {
     transition: height 0.3s;
     align-items: center;
     /* flex-wrap: wrap; */
-    z-index: 22;
+    z-index: 2222;
 }
 
 .envios {
@@ -156,7 +157,7 @@ header {
     margin: 2em;
     margin-top: 3.7em;
     min-width: 10em;
-    z-index: 121231;
+    z-index: 10000;
     position: absolute;
     flex-direction: column;
    
@@ -243,7 +244,7 @@ header {
 }
 
 .contenedorCarrito {
-    z-index: 999999;
+    z-index: 90;
     margin-top: 1em;
     display: flex;
     flex-direction: column;
@@ -512,8 +513,22 @@ footer a:hover {
 .Alerta img {
     height: 2em;
 }
+@media (max-width: 1366px) {
+    .logo{
+        width: 15%;
 
+    }
+  .busqueda{
+    
+      width: 30%;
+  }
+
+}
 @media (max-width: 1024px) {
+    .imgProd{
+     
+       justify-content: center;
+    }
     .contenedorLista {
         position: absolute;
         overflow: hidden;
@@ -573,7 +588,7 @@ footer a:hover {
         justify-content: center;
     }
     .menu {
-        z-index: 122;
+        z-index: 122000;
         transform: translateX(-100%);
         transition: 0.3s;
         padding: 0;
@@ -583,6 +598,7 @@ footer a:hover {
         transform: translateX(0);
     }
     .menu ul {
+        z-index: 121412;
         margin-top: 1em;
         margin-left: 1;
         height: auto;
@@ -601,6 +617,7 @@ footer a:hover {
         align-items: flex-start;
     }
     .menu ul ul li a {
+        z-index: 1241421;
         flex-direction: column;
         align-items: center;
         width: 10em;

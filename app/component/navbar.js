@@ -9,7 +9,7 @@ menu.innerHTML = ` <div class="envios">
 <div class='busquedaCarrito'>
 
   <div class='logo'>
-     <a class="logo-a" href="/index.html"><img src="/assets/img/logo/logov2.png" alt=""></a>
+     <a class="logo-a" href="/index.html"><img src="/assets/img/logo/logo_Oscuro.png" alt=""></a>
   </div>
 
   

@@ -2,7 +2,7 @@ const footer= document.querySelector('#Footer');
 footer.innerHTML=`
 <footer class="contenedor-footer">
         <div class="logo-footer">
-            <a href="#"><img src="/assets/img/logo/logo-tienda.png" alt=""></a>
+            <a href="#"><img src="/assets/img/logo/logo_Claro.png" alt=""></a>
       </div>
         <ul class="r-footer">
             <li>

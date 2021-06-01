@@ -1,10 +1,9 @@
 
-
-
 const btnPagar = document.querySelector('#pagar');
 
 const carritoLista = document.querySelector('.carrito-detalles');
 
+let totalPagar=0;
 
 
 //compruebo si el carrito esta vacio
@@ -631,7 +630,9 @@ function validarFormulario(e) {
        mostrarError(`Todos los campos son obligatorios <br> No paso la validacion`)
        return;
    }
+   totalPagar=document.querySelector("#tabla-carrito > tfoot > tr.tfoot-tr-1 > td:nth-child(2) > div > p:nth-child(3) > span").textContent
    procesarPago();
+
    console.log('paso la prueba')
  
 
@@ -788,10 +789,10 @@ function procesarPago(){
        <div>  <span>SU PAGO SE HA COMPLETADO CORRECTAMENTE</span> </div>   
     </div>
     <div>
-        <p id='NumeroOrdern'><b>Numero de Orden :</b>   <span>3496123</span></p>   
-        <p id='IDOrganización'><b>ID Organizacion :</b>   <span>Geek-Store</span></p>           
-        <p id='Nro.Factura'><b>Numero  Factura :</b>   <span>1</span></p>           
-        <p id='Importe'><b>Numero    Importe :</b>   <span>1234</span></p>                    
+        <p id='NumeroOrdern'><b>Numero de Orden # :</b>   <span>3496123</span></p>   
+        <p id='IDOrganización'><b>ID  de Organizacion :</b>   <span>Geek-Store</span></p>           
+        <p id='Nro.Factura'><b>Numero  de Factura :</b>   <span>1</span></p>           
+        <p id='Importe'><b>Monto total a pagar:</b>   <span>$ ${totalPagar}</span></p>                    
     </div>
 
     <div>
@@ -806,13 +807,9 @@ function procesarPago(){
     
     },3000)
  
-
-  
-  
-   
-
- 
 }
+
+
 
 
 
