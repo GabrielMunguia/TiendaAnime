@@ -26,7 +26,7 @@
 .contenedor-inicio img {
     height: 100%;
     width: 100%;
-    background-color: red;
+  
     border-radius: 6px;
 }
 
@@ -38,5 +38,15 @@
 @media (max-width: 1024px) {
     .contenedor-inicio>div {
         width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .contenedor-inicio>div{
+        height: 10em;
+    }
+    .contenedor-inicio img {
+        background-color: red;
+        height: 10em;
     }
 }

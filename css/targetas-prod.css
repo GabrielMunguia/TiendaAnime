@@ -223,6 +223,18 @@ main {
     ;
 }
 
+@media (max-width: 300px) {
+    .filtro-ordenar>div:first-child{
+       margin-right: 0;
+       width:5em;
+
+    }
+    .rutas{
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
 @media (max-width: 1366px) {
     .grid-container {
         width: 70%;

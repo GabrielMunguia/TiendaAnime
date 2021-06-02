@@ -693,83 +693,10 @@ hr {
 }
 
 
-@media screen and (max-width: 768px) {
-
-
-   
-
-    #formaEntrega{
-      
-        width: 21.1em;
-    }
- 
-    #formulario{
-        width: 100%;
-    }
-    .datosTarjeta{
-        width:100%;
-    }
-    .contenedoropcion {
-       
-   
-     
-        flex-direction: column;
-        width: 70%;
-    }
-   
-    .infoTransferencia > div {
-       
-       width: 19em;
-        display: flex;
-        flex-direction: column;
-        
-    }
-    .infoTransferencia div input{
-    
-        width: 100%;
-    }
-
-    .datosTarjeta{
-        
-       width: 100%;
-    }
-
-    .subcontenedorform{
-        flex-direction: column
-        ;
-    }
-
-    .pagoRealizado>div:nth-child(2) p span{
-        margin-left: 10%;
-        font-weight:normal;
-        
-   
-   }
-   .pagoRealizado>div:nth-child(2) p span{
-    margin-left: 10%;
-  
-    font-weight:normal
-
-}
-
-   .pagoRealizado>div:nth-child(3) p{
-     text-align: center;
-    }
-    .sinProductos>div:first-child  {
-        align-items: center;
-     
-     }
-
-    
-    
- 
- 
-}
-
-
-
-
 @media (max-width: 1024px) {
+    .carrito-detalles table img{
+        padding: 0;
+    }
 
     #infoPago{
        
@@ -881,3 +808,108 @@ hr {
    
    
  }
+
+ 
+
+@media screen and (max-width: 769px) {
+
+
+    
+
+    #formaEntrega{
+      
+        width: 21.1em;
+    }
+ 
+    #formulario{
+        width: 100%;
+    }
+    .datosTarjeta{
+        width:100%;
+    }
+    .contenedoropcion {
+       
+   
+     
+        flex-direction: column;
+        width: 70%;
+    }
+   
+    .infoTransferencia > div {
+       
+       width: 19em;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .infoTransferencia div input{
+    
+        width: 100%;
+    }
+
+    .datosTarjeta{
+        
+       width: 100%;
+    }
+
+    .subcontenedorform{
+        flex-direction: column
+        ;
+    }
+
+    .pagoRealizado>div:nth-child(2) p span{
+        margin-left: 10%;
+        font-weight:normal;
+        
+   
+   }
+   .pagoRealizado>div:nth-child(2) p span{
+    margin-left: 10%;
+  
+    font-weight:normal
+
+}
+
+   .pagoRealizado>div:nth-child(3) p{
+     text-align: center;
+    }
+    .sinProductos>div:first-child  {
+        align-items: center;
+     
+     }
+    
+
+    
+    
+ 
+ 
+}
+
+
+
+
+ @media screen and (max-width: 300px) {
+    .contenedorform {
+        padding: 0;
+    
+    }
+    .advertencia{
+        width: 90%;
+    }
+    .datosTarjeta >div input {
+  
+        width: 14em;
+    }
+    #pago > div:nth-child(2) p span{
+
+        margin-left: 40%;
+    }
+    .pagoRealizado{
+        width: 100%;
+        margin-left: 0;
+        border: none;
+       
+    }
+  
+    
+}

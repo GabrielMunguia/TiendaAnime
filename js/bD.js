@@ -6,7 +6,7 @@ const productos = [{
         cantidad: 13,
         categoria: 'anillos',
         subcategoria: 'videojuegos',
-        img: '/assets/img/prueba.png',
+        img: '/assets/img/productos/accesorios/anillos/ANILLO-HYRULE.png',
     }, {
         id: 2,
         titulo: 'Anillo Konoha - Naruto',
@@ -49,7 +49,7 @@ const productos = [{
     },
     {
         id: 6,
-        titulo: 'Anillo Alas de la Libertad - Shingeki No Kyojin',
+        titulo: 'Alas de la Libertad - Shingeki No Kyojin',
         descripcio: 'Anillo de acero inoxidable - unisex',
         precio: 8,
         cantidad: 17,

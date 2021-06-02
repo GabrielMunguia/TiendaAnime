@@ -126,7 +126,7 @@
 @media (max-width: 1024px) {
     .Contactenos{
         
-     
+ 
         width: 100%;
         margin-left: 0%;
         margin-right: 0;
@@ -134,12 +134,60 @@
         flex-direction: column;
         align-items: flex-start;
     }
+    .Contactenos>div:first-child{
+     
+        width: 100%;
+    }
     
-    .infoTienda > div p{
+    .infoTienda>div p{
         width: 20em;
+      
        
     }
     .formularioTienda{
         width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .infoTienda > div p{
+
+        width: 20em;
+       text-align: center;
+       
+    }
+    .imgFormulario img{
+        width: 5em;
+        margin-right: 2em;
+    }
+    .formularioTienda{
+        width: 100%;
+    }
+   
+}
+
+@media (max-width: 500px) {
+    .infoTienda > div p{
+        width: 10em;
+       text-align: center;
+       
+    }
+    .imgFormulario img{
+        width: 5em;
+        margin-right: 2em;
+    }
+    .formularioTienda{
+        width: 100%;
+    }
+   
+}
+
+@media (max-width: 300px) {
+    .Contactenos{
+       padding: 0;
+    }
+    .imgFormulario img{
+        width: 5em;
+        margin-right: 1px;
     }
 }

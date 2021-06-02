@@ -41,3 +41,17 @@
     word-spacing: 5px;
     letter-spacing: 0.7;
 }
+
+@media (max-width: 1024px) {
+    .preguntas>div:first-child{
+        border: none;
+    }
+    .preguntas>div{
+        
+        margin-left: 0;
+        width: 100%;
+    }
+    .preguntas p{
+        width: 90%;
+    }
+}

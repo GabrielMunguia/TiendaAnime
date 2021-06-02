@@ -21,7 +21,7 @@ menu.innerHTML = ` <div class="envios">
   </div>
   <div class="contenedorCarrito">
   <div id='carritoCantidad'></div>
-  <a href='/html/carrito.html'><img id='carritoImg' src="/assets/img/carrito.svg" alt=""></a>
+  <a href='/html/carrito.html'><img id='carritoImg' src="/assets/img/iconos/carrito.svg" alt=""></a>
 
   <div class="contenedorLista">
     <table id="listaProductos">
@@ -55,7 +55,7 @@ menu.innerHTML = ` <div class="envios">
 
 <div class='btn-Menu'>
 <div>
-  <img id='img-menuMovil' src="/assets/img/menu.png" alt="">
+  <img id='img-menuMovil' src="/assets/img/iconos/menu.png" alt="">
 </div>
 
 </div>

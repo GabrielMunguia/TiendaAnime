@@ -18,3 +18,13 @@
     justify-content: center;
 }
 
+@media (max-width: 1024px) {
+
+    .infoTexto{
+        margin-left: 0%;
+        width: 100%;
+        border: none;
+        padding: 15px;
+    }
+}
+
