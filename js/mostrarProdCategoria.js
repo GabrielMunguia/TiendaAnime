@@ -1,8 +1,10 @@
 const categoria = document.querySelector('.grid-container').attributes[1].value;
-
+const nombreCategoria=document.querySelector("body > main > div.filtro-ordenar > div:nth-child(1) > h3");
+nombreCategoria.textContent=`${categoria.toUpperCase()}`;
 productos.forEach((producto) => {
 
     if (producto.categoria == categoria) {
+      
 
 
 
