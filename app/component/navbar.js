@@ -68,17 +68,17 @@ menu.innerHTML = ` <div class="envios">
 
 
   <li class="submenu">
-    <a class="link" href="accesorios.html">ACCESORIOS <span class="icon-down-open"></span></a>
+    <a class="link mostraTodosProd" href="/html/prodCatPrincipal.html">ACCESORIOS <span class="icon-down-open"></span></a>
     <ul class="subMenu-M">
-      <li><a href="/html/llaveros.html ">LLAVEROS </a></li>
-      <li><a href="/html/billeteras.html">BILLETERAS</a></li>
-      <li><a href="/html/anillos.html">ANILLOS</a></li>
-      <li><a href="/html/collares.html">COLLARES</a></li>
-      <li><a href="/html/relojes.html">RELOJES</a></li>
+      <li><a class="link" href="/html/llaveros.html ">LLAVEROS </a></li>
+      <li><a class="link" href="/html/billeteras.html">BILLETERAS</a></li>
+      <li><a class="link" href="/html/anillos.html">ANILLOS</a></li>
+      <li><a class="link" href="/html/collares.html">COLLARES</a></li>
+      <li><a  class="link" href="/html/relojes.html">RELOJES</a></li>
     </ul>
   </li>
   <li class="submenu">
-    <a class="link" href="#">COLLECTIBLES <span class="icon-down-open"></span></a>
+    <a class="link  mostraTodosProd" href="/html/prodCatPrincipal.html">COLLECTIBLES <span class="icon-down-open"></span></a>
     <ul class="subMenu-M">
       <li><a href="/html/bandai.html">Bandai Banpresto</a></li>
       <li><a href="/html/funko.html">Funko pop</a></li>
@@ -86,15 +86,15 @@ menu.innerHTML = ` <div class="envios">
     </ul>
   </li>
   <li class="submenu">
-    <a class="link" href="llaveros.html">HOGAR <span class="icon-down-open"></span></a>
-    <ul>
+    <a class="link  mostraTodosProd" href="/html/prodCatPrincipal.html">HOGAR <span class="icon-down-open"></span></a>
+    <ul class="subMenu-M">
       <li><a href="/html/tazas.html">Tazas</a></li>
       <li><a href="/html/lamparas.html">Lamparas</a></li>
 
     </ul>
   </li>
   <li class="submenu">
-  <a class="link" href="#">Ropa<span class="icon-down-open"></span></a>
+  <a class="link  mostraTodosProd" href="/html/prodCatPrincipal.html">ROPA<span class="icon-down-open"></span></a>
   <ul class="subMenu-M">
     <li><a href="/html/camisas.html">Camisas</a></li>
     <li><a href="/html/sudaderas.html">Sudaderas</a></li>
@@ -102,18 +102,12 @@ menu.innerHTML = ` <div class="envios">
   </ul>
 </li>
  
-  <li class="link" class="submenu" ubmenu">
-    <a href="#">PELICULAS Y SERIES <span class="icon-down-open"></span></a>
-    <ul class="subMenu-M">
-      <li><a href="#">sub-Item 1</a></li>
-      <li><a href="#">sub-Item 2</a></li>
-      <li><a href="#">sub-Item 3</a></li>
-      <li><a href="#">sub-Item 4</a></li>
-      <li><a href="#">sub-Item 5</a></li>
-    </ul>
+  <li class="link">
+    <a href="/html/peliculasYseries.html">PELICULAS Y SERIES</span></a>
+
   </li>
   <li>
-  <a class="link" href="#">JUEGOS DE VIDEO </a>
+  <a class="link" href="/html/juegosVideo.html">JUEGOS DE VIDEO </a>
 </li>
  
 </ul>
@@ -175,3 +169,34 @@ function mostrarAlertaBusqueda(msg) {
     }, 1500);
 
 }
+
+// esta parte del codigo nos sirve para mostrar todos los productos
+//de aquellas categorias que tienen sub menu 
+//Ejemplo  ropa->camisas->sudaderas
+
+const cat=document.querySelectorAll('.mostraTodosProd')
+
+cat.forEach(link=>{
+  link.addEventListener('click',(e)=>{
+  
+    if(e.target.classList.contains('icon-down-open')){
+      e.preventDefault();
+      return
+    }
+   
+     localStorage.setItem('catPrincipal',e.target.textContent);
+
+  })
+  
+})
+
+// ESTA PARTE HACE CASI LO MISMO QUE ARRIBA PERO CON LAS RUTAS
+
+const ruta=document.querySelector('#catPrincRuta')
+ruta.addEventListener('click',(e)=>{
+  localStorage.setItem('catPrincipal',ruta.textContent);
+})
+
+
+
+

@@ -23,5 +23,19 @@ function mostrarMenu(){
     
     
 }
+//El siguiente codigo hacer que al tener el menu movil se despliegue al darle click
 
+subMenu.forEach(menu=>{
+     menu.addEventListener('click',(e)=>{
+       
+          if(e.target.classList.contains('link')){
+              console.log('link')
+          }else{
+              const sub= menu.querySelector('.subMenu-M');
+              sub.classList.toggle('menuDespliegue');
+              sub.style.animation = "menuMovil 1s";
 
+             
+          }
+     })
+})
