@@ -1,128 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pagar</title>
-    <link rel="shortcut icon" href="/assets/img/iconos/geekparadise.ico">
+    <link rel="shortcut icon" href="/assets/img/iconos/geekparadise.ico" />
     <link rel="stylesheet" href="css/style-general.css" />
-    <link rel="stylesheet" href="/css/carrito.css">
-    <link rel="stylesheet" href="/css/style-general.css">
-    <link rel="stylesheet" href="/css/fontello.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/css/carrito.css" />
+    <link rel="stylesheet" href="/css/style-general.css" />
+    <link rel="stylesheet" href="/css/fontello.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <div id="pago"></div>
 
-    <div id='header'></div>
-    <div id='pago'></div>
-
-  
-    
-    <div id='carritoUpdate'></div>
+    <div id="carritoUpdate"></div>
     <div class="carrito-detalles">
- 
+      <table id="tabla-carrito">
+        <thead>
+          <tr>
+            <td colspan="5">
+              <div><span>Mi carrito</span></div>
+            </td>
+          </tr>
 
-        
-        
-        <table id="tabla-carrito">
-           
-            <thead>
-                <tr >
-                    <td colspan="5" ><div><span>Mi carrito</span></div></td>
-                </tr>
-               
-                <tr>
-                    <td>Detalle</td>
-                
-                    <th>Precio</th>
-                    <th>Cantidad</th>
-                    <th>Sub Total</th>
-                    <th><img src="/assets/img/trash.svg" alt=""></th>
-                    
-                </tr>
-                
-               
-            </thead>
+          <tr>
+            <td>Detalle</td>
 
-            
-           
-            <tbody>
-                <tr>
-                    <td>
-                        <div class="carrito-detalle-img">
-                         <img src="/assets/img/accesorios/anillos/ANILLO-KONOHA 7.99 (2).png" alt="">
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Sub Total</th>
+            <th><img src="/assets/img/trash.svg" alt="" /></th>
+          </tr>
+        </thead>
 
-                        </div>
-                        <div class="carrito-detalle-descripcion">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laborum
+        <tbody>
+          <tr>
+            <td>
+              <div class="carrito-detalle-img">
+                <img
+                  src="/assets/img/accesorios/anillos/ANILLO-KONOHA 7.99 (2).png"
+                  alt=""
+                />
+              </div>
+              <div class="carrito-detalle-descripcion">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos laborum
+              </div>
+            </td>
 
-                        </div>
+            <th>$9.99</th>
+            <th>2</th>
+            <th>$19.99</th>
+            <th></th>
+          </tr>
+        </tbody>
 
-                    </td>
-                
-                    <th>$9.99</th>
-                    <th>2</th>
-                    <th>$19.99</th>
-                    <th></th>
-                  
-                </tr>
-               
-                   
-
-              
-
-            
-            </tbody>
-
-            <tfoot>
-             <tr class="tfoot-tr-1">
-                <td colspan="3"></td>
-                <td colspan="2" >
-                  <div>
-                    <p>Sub Total : $ <span></span> </p>
-                    <p>Costo envio : <span></span></p>
-                    <p>Total $ <span></span></p>
-
-                
-                  </div>
-                </td>
-                
-             </tr>
-             <tr>
-            
-                <td colspan="5" >
-        
-                    <div class="pagar">
-                       <button id='pagar' type="submit"><span>Procesar Pago</span></button>
-                    </div>
-
-                
-                  
-                </td>
-                
-             </tr>
-            </tfoot>
-            
-        </table>
-     
-
-    
-       
-       
+        <tfoot>
+          <tr class="tfoot-tr-1">
+            <td colspan="3"></td>
+            <td colspan="2">
+              <div>
+                <p>Sub Total : $ <span></span></p>
+                <p>Costo envio : <span></span></p>
+                <p>Total $ <span></span></p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5">
+              <div class="pagar">
+                <button id="pagar" type="submit">
+                  <span>Procesar Pago</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
     </div>
-   
-   
-   
 
-    
-    
-    <div id='Footer'></div>
+    <div id="Footer"></div>
 
     <script src="/app/component/navbar.js"></script>
     <script src="/app/component/footer.js"></script>
     <script src="/js/carritoDetalle.js"></script>
     <script src="/js/productos.js"></script>
     <script src="/js/menuMovil.js"></script>
-    
-</body>
+  </body>
 </html>

@@ -1,30 +1,29 @@
-.infoTexto{
+.infoTexto {
     border: 1px solid black;
     padding: 15px;
     margin-top: 1em;
     margin-bottom: 4em;
     width: 50%;
     min-height: 32em;
-    line-height :2em;
+    line-height: 2em;
     margin-left: 25%;
 }
-.infoTexto span{
+
+.infoTexto span {
     font-weight: bold;
 }
-.infoTexto h1{
-  
+
+.infoTexto h1 {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 @media (max-width: 1024px) {
-
-    .infoTexto{
+    .infoTexto {
         margin-left: 0%;
         width: 100%;
         border: none;
         padding: 15px;
     }
 }
-

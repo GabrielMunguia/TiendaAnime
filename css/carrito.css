@@ -150,7 +150,6 @@ tfoot tr td div p span {
     height: 3.5em;
     background-color: red;
     border-radius: 5px;
-   
 }
 
 .pagar span {
@@ -191,12 +190,11 @@ tfoot tr td div p span {
     font-weight: bolder;
 }
 
-.seleccionado{
+.seleccionado {
     background-color: #337ab7;
     border-radius: 5px;
     color: white;
 }
-
 
 /*Update carrito */
 
@@ -229,30 +227,25 @@ tfoot tr td div p span {
     border: 1px solid rgba(204, 204, 204, 0.568);
     border-bottom-width: 2px;
     outline: none;
- 
 }
-.infoTransferencia{
+
+.infoTransferencia {
     display: flex;
     flex-direction: column;
-
-    
 }
 
-.infoTransferencia >div{
+.infoTransferencia>div {
     margin-top: 1px;
     display: flex;
- 
-   
 }
 
-.infoTransferencia >div div{
-  
+.infoTransferencia>div div {
     display: flex;
     flex-direction: column;
-    
 }
-.infoTransferencia input{
-    border:1px solid black;
+
+.infoTransferencia input {
+    border: 1px solid black;
     border-radius: 5px;
     outline: none;
     width: 30em;
@@ -260,23 +253,18 @@ tfoot tr td div p span {
     height: 2.6em;
 }
 
-
 .items input[type=tel] {
     margin-top: 5px;
     margin-bottom: 5px;
     height: 2.6em;
     width: 50%;
- 
     border-radius: 5px;
     border: 1px solid #ccc;
     border-bottom-width: 2px;
     outline: none;
-
 }
 
-.items input[type=text]:focus,
-[type=email]:focus,
-[type=tel]:focus {
+.items input[type=text]:focus, [type=email]:focus, [type=tel]:focus {
     border-color: dodgerBlue;
 }
 
@@ -294,12 +282,10 @@ fieldset div {
 }
 
 .contenedoropcion {
-  
     display: flex;
     width: 40%;
     justify-content: space-between;
 }
-
 
 span.requerido {
     font-weight: bold;
@@ -313,609 +299,474 @@ hr {
     background-image: linear-gradient(to right, #103c6e, #3d85c4);
 }
 
-
-.advertencia{
+.advertencia {
     padding: 14px;
     border: 1px solid blue;
     display: flex;
     flex-direction: column;
-    
     background-color: #3379b777;
     color: rgb(9, 9, 82);
-  
 }
-.advertencia h4,p{
+
+.advertencia h4, p {
     margin-bottom: 0.1em;
 }
 
-.datosTarjeta{
- 
- 
-    display: flex;
-    flex-direction: column;
-    
-}
-.datosTarjeta >:first-child{
-  
+.datosTarjeta {
     display: flex;
     flex-direction: column;
 }
-#comprobarTerminos{
+
+.datosTarjeta>:first-child {
+    display: flex;
+    flex-direction: column;
+}
+
+#comprobarTerminos {
     margin-bottom: 2em;
 }
-.datosTarjeta input{
 
+.datosTarjeta input {
     border-radius: 5px;
     margin-left: 1em;
-  
     outline: none;
-    border:1px solid black
+    border: 1px solid black
 }
-.datosTarjeta >:first-child input{
+
+.datosTarjeta>:first-child input {
     margin-top: 1em;
     display: flex;
     flex-direction: column;
 }
-#formulario{
+
+#formulario {
     overflow: hidden;
-    border:1px solid rgba(0, 0, 0, 0.075);
+    border: 1px solid rgba(0, 0, 0, 0.075);
     padding: 10px;
     font-size: 15px;
 }
-#formulario > div :focus{
-    border :1px solid royalblue;
-   
-    box-shadow: 0px -2px 11px 0px rgba(65,105,225,0.69);
+
+#formulario>div :focus {
+    border: 1px solid royalblue;
+    box-shadow: 0px -2px 11px 0px rgba(65, 105, 225, 0.69);
 }
 
-.datosTarjeta>:nth-child(2){
- 
-    
+.datosTarjeta>:nth-child(2) {
     display: flex;
-    
 }
 
-
-.datosTarjeta input{
+.datosTarjeta input {
     padding: 10px;
     width: 20em;
     height: 2.6em;
 }
 
-.opcionesEntrega{
+.opcionesEntrega {
     display: flex;
     flex-direction: column;
 }
-.opcionesEntrega >div{
+
+.opcionesEntrega>div {
     display: flex;
 }
 
-.opcionesEntrega select{
-   
+.opcionesEntrega select {
     width: 30em;
     height: 2.3em;
     outline: none;
     border-radius: 5px;
-
 }
 
-
-
-.opcionesEntrega textarea{
- 
+.opcionesEntrega textarea {
     width: 30em;
     min-height: 10em;
     resize: none;
     outline: none;
 }
 
-.transferencia{
+.transferencia {
     display: flex;
-    
 }
 
-
-.transferencia input{
+.transferencia input {
     margin-left: 1em;
-
     width: auto;
     height: auto;
-
 }
-.transferencia>div{
-   
+
+.transferencia>div {
     width: 30%;
-    
-   
     margin-right: 1em;
 }
 
-.AlertaDatos{
+.AlertaDatos {
     width: 100%;
     position: relative;
-    top:-7em;
+    top: -7em;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: top 3s;
- 
-   
 }
-.AlertaDatos >div{
+
+.AlertaDatos>div {
     font-size: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: rgb(209, 72, 72);
-    color:white;
+    color: white;
     border-radius: 6px;
     min-height: 3em;
     width: 50%;
     text-align: center;
-
-  
- 
-   
 }
 
-
-.pagoRealizado{
+.pagoRealizado {
     margin-top: 2em;
     margin-bottom: 2em;
-   
-   width: 40%;
-   margin-left: 30%;
+    width: 40%;
+    margin-left: 30%;
     min-height: 30em;
     border: 1px solid black;
     border-radius: 5px;
-   transition: all 2s;
-
-    
+    transition: all 2s;
 }
 
-
-
-
-.pagoRealizado >div:first-child div span{
-    text-align: center;       
- }
-
-.pagoRealizado >div:first-child{
-     height: 20%;
-     background-color: royalblue;
-     display: flex;
-     color: white;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     font-size: 1.5em;
-     padding: 14px;
-
+.pagoRealizado>div:first-child div span {
+    text-align: center;
 }
-.pagoRealizado >div:first-child div{
-   display: flex;
-   justify-content: center;  
-  
+
+.pagoRealizado>div:first-child {
+    height: 20%;
+    background-color: royalblue;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 14px;
 }
-.pagoRealizado>div img{
- 
+
+.pagoRealizado>div:first-child div {
+    display: flex;
+    justify-content: center;
+}
+
+.pagoRealizado>div img {
     width: 10%;
     margin-bottom: 10px;
 }
-.pagoRealizado>div:nth-child(2){
-   
+
+.pagoRealizado>div:nth-child(2) {
     color: rgb(63, 63, 63);
     min-height: 14em;
     display: flex;
     flex-direction: column;
-    justify-content:space-around;
+    justify-content: space-around;
     font-size: 1.2em;
-
 }
 
-.pagoRealizado>div:nth-child(2) p{
+.pagoRealizado>div:nth-child(2) p {
     margin-left: 1em;
     font-weight: bold;
 }
 
-.pagoRealizado>div:nth-child(2) p span{
-     margin-left: 40%;
-     font-weight:normal
-
-
+.pagoRealizado>div:nth-child(2) p span {
+    margin-left: 40%;
+    font-weight: normal
 }
 
-.pagoRealizado>div:nth-child(3){
+.pagoRealizado>div:nth-child(3) {
     font-size: 1.2em;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.pagoRealizado>div:nth-child(3) p{
+
+.pagoRealizado>div:nth-child(3) p {
     color: rgb(63, 63, 63);
     margin-bottom: 1em;
-
-
 }
 
-.pagoRealizado>div:nth-child(3) a{
+.pagoRealizado>div:nth-child(3) a {
     outline: none;
     width: 10em;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     background-color: royalblue;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 1em;
-
 }
 
-.procesandoPago{
+.procesandoPago {
     margin-top: 2em;
     margin-bottom: 2em;
-
-   width: 40%;
-   margin-left: 30%;
+    width: 40%;
+    margin-left: 30%;
     min-height: 30em;
-
     border-radius: 5px;
-   display: flex;
-   align-items: center;
-  
-
-
+    display: flex;
+    align-items: center;
 }
-.procesandoPago>div img:hover{
+
+.procesandoPago>div img:hover {
     background-color: red;
     transform: translateY(-0%);
     opacity: 10;
     transition: all 2s;
 }
-.procesandoPago>div{
+
+.procesandoPago>div {
     display: flex;
     height: 50%;
     width: 100%;
-
     align-content: center;
     justify-content: center;
     transition: all 2s;
-    
-
 }
-.procesandoPago img{
-   
+
+.procesandoPago img {
     width: 100%;
     border: 1px solid rgb(141, 141, 141);
     border-radius: 5px;
-    
 }
 
-
-
-
-.sinProductos{
+.sinProductos {
     min-height: 33em;
     display: flex;
     flex-direction: column;
-
     align-items: center;
-  
-
-
 }
-.sinProductos>div{
+
+.sinProductos>div {
     margin-top: 9em;
 }
 
-
-
-.sinProductos>div:first-child{
+.sinProductos>div:first-child {
     border-bottom: 2px solid rgba(148, 148, 148, 0.425);
-    
     padding: 10px;
     width: 25%;
 }
-.sinProductos>div:last-child{
+
+.sinProductos>div:last-child {
     margin-top: 2em;
     width: 25%;
     display: flex;
     justify-content: flex-end;
-
-
-    
 }
-.sinProductos>div:last-child a{
+
+.sinProductos>div:last-child a {
     text-decoration: none;
     background-color: royalblue;
-    color:white;
+    color: white;
     border-radius: 5px;
     padding: 10px;
     font-size: 1.2em;
-    
 }
+
 .sinProductos>div:first-child span {
     font-size: 2em;
-
 }
-
-
 
 @keyframes efectoPago {
-    from {opacity: 0%;transform: translateY(-10%);}
-    to {opacity: 100%;}
+    from {
+        opacity: 0%;
+        transform: translateY(-10%);
+    }
+    to {
+        opacity: 100%;
+    }
 }
-
-
-
-
-
 
 @media screen and (max-width: 600px) {
-    #infoPago{
+    #infoPago {
         width: 22em;
     }
-   
-  #formulario{
-      font-size: 12px;
-  }
-  .carrito-detalles{
-      font-size: 10px;
-  }
-   
-    .infoTransferencia input{
-       width: 19em;
+    #formulario {
+        font-size: 12px;
     }
-    .datosTarjeta >div input{
+    .carrito-detalles {
+        font-size: 10px;
+    }
+    .infoTransferencia input {
         width: 19em;
-
     }
-    .sinProductos>div{
+    .datosTarjeta>div input {
+        width: 19em;
+    }
+    .sinProductos>div {
         margin-top: 10em;
     }
-    .carrito-detalles table img{
+    .carrito-detalles table img {
         padding: 0;
     }
-    
-    
-    .sinProductos>div:first-child{
-     
+    .sinProductos>div:first-child {
         width: 80%;
     }
-    .sinProductos>div:last-child{
-    
-       width: 80%;
-   }
-    
-
+    .sinProductos>div:last-child {
+        width: 80%;
+    }
 }
-
 
 @media (max-width: 1024px) {
-    .carrito-detalles table img{
+    .carrito-detalles table img {
         padding: 0;
     }
-
-    #infoPago{
-       
+    #infoPago {
         width: 100%;
     }
-     #formaEntrega{
-        
-         width: 100%;
-     }
-     
-     .infoTransferencia input{
-         width: 23em;
-     }
-     .transferencia{
-        flex-direction: column;
-         
-     }
-     .datosTarjeta div{
-         flex-direction: column;
-        
-     }
-     .datosTarjeta >:nth-child(3){
-        
-         display: flex;
-        flex-direction: column;
-     }
-     .datosTarjeta div input{
-         margin-top: 1em;
-         
-     }
-     .datosTarjeta input{
-         width: 30em;
-         
-     }
-     .carrito-detalles table td {
-         font-weight: bold;
-         text-align: center;
-         /* background-color: red; */
-         width: 13em;
-     }
-     .opcionesEntrega >div{
-         flex-direction: column;
-     }
- 
-  
-     .opcionesEntrega{
-         width: 100%;
-         padding: 0;
-        
-     }
-     .opcionesEntrega >div{
-     
-         width: 100%;
-     }
-     .opcionesEntrega div select{
-       
-         width: 100%;
-        
-     }
-     .opcionesEntrega div textarea {
-       
-         width: 100%;
-        
-     }
-     #carritoActualizado div{
-         padding: 0;
-     }
-    
-     tfoot tr td div {
-         font-size: 12px;
-     }
- 
-     .transferencia input{
-         margin-left: 0em;
-         width: 1em;
-       
-         height: auto;
-     
-     }
-     .transferencia>div{
-       
-        display: flex;
-        flex-direction: row;;
-        
-         width: 100%;
-         display: flex;
-         margin-top: 1em;
-         margin-right: 0em;
-     }
-     .transferencia label{
-      
-         width: 3m;
-     }
-     .carrito-detalles{
-         width: 100%;
-     }
-
-     .pagoRealizado{
-        width: 70%;
-       margin-left: 15%;
+    #formaEntrega {
+        width: 100%;
     }
-    .procesandoPago{
+    .infoTransferencia input {
+        width: 23em;
+    }
+    .transferencia {
+        flex-direction: column;
+    }
+    .datosTarjeta div {
+        flex-direction: column;
+    }
+    .datosTarjeta>:nth-child(3) {
+        display: flex;
+        flex-direction: column;
+    }
+    .datosTarjeta div input {
+        margin-top: 1em;
+    }
+    .datosTarjeta input {
+        width: 30em;
+    }
+    .carrito-detalles table td {
+        font-weight: bold;
+        text-align: center;
+        /* background-color: red; */
+        width: 13em;
+    }
+    .opcionesEntrega>div {
+        flex-direction: column;
+    }
+    .opcionesEntrega {
+        width: 100%;
+        padding: 0;
+    }
+    .opcionesEntrega>div {
+        width: 100%;
+    }
+    .opcionesEntrega div select {
+        width: 100%;
+    }
+    .opcionesEntrega div textarea {
+        width: 100%;
+    }
+    #carritoActualizado div {
+        padding: 0;
+    }
+    tfoot tr td div {
+        font-size: 12px;
+    }
+    .transferencia input {
+        margin-left: 0em;
+        width: 1em;
+        height: auto;
+    }
+    .transferencia>div {
+        display: flex;
+        flex-direction: row;
+        ;
+        width: 100%;
+        display: flex;
+        margin-top: 1em;
+        margin-right: 0em;
+    }
+    .transferencia label {
+        width: 3m;
+    }
+    .carrito-detalles {
+        width: 100%;
+    }
+    .pagoRealizado {
+        width: 70%;
+        margin-left: 15%;
+    }
+    .procesandoPago {
         width: 80%;
         margin-left: 10%;
     }
- 
-  .AlertaDatos{
-      margin-top: 6em;
-      width: 200%;
-  }
- 
-   
-   
- }
-
- 
+    .AlertaDatos {
+        margin-top: 6em;
+        width: 200%;
+    }
+}
 
 @media screen and (max-width: 769px) {
-
-
-    
-
-    #formaEntrega{
-      
+    #formaEntrega {
         width: 21.1em;
     }
- 
-    #formulario{
+    #formulario {
         width: 100%;
     }
-    .datosTarjeta{
-        width:100%;
+    .datosTarjeta {
+        width: 100%;
     }
     .contenedoropcion {
-       
-   
-     
         flex-direction: column;
         width: 70%;
     }
-   
-    .infoTransferencia > div {
-       
-       width: 19em;
+    .infoTransferencia>div {
+        width: 19em;
         display: flex;
         flex-direction: column;
-        
     }
-    .infoTransferencia div input{
-    
+    .infoTransferencia div input {
         width: 100%;
     }
-
-    .datosTarjeta{
-        
-       width: 100%;
+    .datosTarjeta {
+        width: 100%;
     }
-
-    .subcontenedorform{
-        flex-direction: column
-        ;
+    .subcontenedorform {
+        flex-direction: column;
     }
-
-    .pagoRealizado>div:nth-child(2) p span{
+    .pagoRealizado>div:nth-child(2) p span {
         margin-left: 10%;
-        font-weight:normal;
-        
-   
-   }
-   .pagoRealizado>div:nth-child(2) p span{
-    margin-left: 10%;
-  
-    font-weight:normal
-
-}
-
-   .pagoRealizado>div:nth-child(3) p{
-     text-align: center;
+        font-weight: normal;
     }
-    .sinProductos>div:first-child  {
+    .pagoRealizado>div:nth-child(2) p span {
+        margin-left: 10%;
+        font-weight: normal
+    }
+    .pagoRealizado>div:nth-child(3) p {
+        text-align: center;
+    }
+    .sinProductos>div:first-child {
         align-items: center;
-     
-     }
-    
-
-    
-    
- 
- 
+    }
 }
 
-
-
-
- @media screen and (max-width: 320px) {
+@media screen and (max-width: 320px) {
     .contenedorform {
         padding: 0;
-    
     }
-    .advertencia{
+    .advertencia {
         width: 90%;
     }
-    .datosTarjeta >div input {
-  
+    .datosTarjeta>div input {
         width: 14em;
     }
-    #pago > div:nth-child(2) p span{
-
+    #pago>div:nth-child(2) p span {
         margin-left: 40%;
     }
-    .pagoRealizado{
+    .pagoRealizado {
         width: 100%;
         margin-left: 0;
         border: none;
-       
     }
-  
-    
 }

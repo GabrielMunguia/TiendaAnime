@@ -1,4 +1,3 @@
-
 button {
     border: 0px;
     outline: none;
@@ -7,7 +6,6 @@ button {
 main {
     display: flex;
 }
-
 
 .filtro {
     margin-top: 2em;
@@ -54,14 +52,12 @@ main {
 
 .filtro-ordenar>:first-child {
     padding: 10px;
-  
     width: 14em;
     margin-left: 20%;
     display: flex;
 }
 
 .filtro-ordenar>:first-child h3 {
-
     padding: 3px;
     border-bottom: 3px solid royalblue;
 }
@@ -226,16 +222,15 @@ main {
 }
 
 @media (max-width: 300px) {
-    .filtro-ordenar>div:first-child{
-       margin-right: 0;
-       width:5em;
-
+    .filtro-ordenar>div:first-child {
+        margin-right: 0;
+        width: 5em;
     }
-    .rutas{
+    .rutas {
         font-size: 14px;
         text-align: center;
     }
-    .filtro-ordenar H3{
+    .filtro-ordenar H3 {
         font-size: 15px;
     }
 }

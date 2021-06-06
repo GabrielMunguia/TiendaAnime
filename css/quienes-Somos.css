@@ -16,11 +16,7 @@ body {
     min-height: 45em;
 }
 
-
-
-
 .texto-anime {
-
     padding: 1em;
     position: relative;
     width: 51em;
@@ -35,18 +31,11 @@ body {
     align-items: center;
     justify-content: center;
     top: 2em;
-
-
-
 }
 
-.texto-anime h2,
-p {
+.texto-anime h2, p {
     font-size: 18px;
     color: white;
-
-
-
 }
 
 .texto-anime h2 {
@@ -62,10 +51,7 @@ p {
     height: 5em;
     bottom: 0;
     height: 7em;
-
-
 }
-
 
 @media (max-width: 1024px) {
     .logo-tienda {
@@ -73,38 +59,30 @@ p {
         height: 10em;
         top: -2em;
     }
-
     .container {
         min-height: 40em;
         background-position-y: 2em;
     }
-
     .texto-anime {
         top: -1em;
         width: 80%
     }
-
 }
-
 
 @media screen and (max-width: 768px) {
-  .texto-anime{
-
-      width: 100%;
-  }
-
+    .texto-anime {
+        width: 100%;
+    }
 }
-
 
 @media screen and (max-width: 1366px) {
-    
-.container{
-    background-position-y: 0em;
+    .container {
+        background-position-y: 0em;
+    }
 }
 
-}
 @media screen and (max-width: 420px) {
-    .texto-anime{
+    .texto-anime {
         margin-top: 3em;
     }
 }
