@@ -1,7 +1,7 @@
 
 const subCategoria= localStorage.getItem("subCategoria");
 console.log(subCategoria)
-
+//Productos es nuestra base de datos
 productos.forEach((producto)=>{
 
     if(producto.subcategoria==subCategoria){
@@ -43,16 +43,17 @@ productos.forEach((producto)=>{
   
 })
 
-//verifico si la subcategoria es cf para cambiar el dato
+
 const subTitulo=document.querySelector("body > main > div.filtro-ordenar > div:nth-child(1) > h3");
 const ubicacion= document.querySelector('#ubicacion');
+//verifico si la subcategoria es cf para cambiar el dato
 if(subCategoria=='cf'){
    
 subTitulo.textContent='Ficcion';
 ubicacion.textContent='FICCION';
 }
 else{
-    subTitulo.textContent=subCategoria;
+    subTitulo.textContent=subCategoria.toUpperCase();
     ubicacion.textContent=`${subCategoria.toUpperCase()}`;
     
 }
@@ -67,15 +68,3 @@ function comprobarDisponible(producto){
 
 }
 
-//CODIGO PARA  HACER UN PAGINADOR
-
-function *crearPaginador(total){
-  for(let i=1;i<=total;i++){
-      yield i;
-      
-  }
-}
-
-
-const pag=crearPaginador(10);
-console.log(pag)

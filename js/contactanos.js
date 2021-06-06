@@ -14,7 +14,6 @@
        const nombre =document.querySelector("#nombreForm").value;
        const correo=document.querySelector('#correoForm').value;
        const mensaje=document.querySelector('#mensajeForm').value;
-       console.log(typeof(nombre))
        if(nombre.length<2 || !validarCorreo(correo)||mensaje.length<2){
           mostrarAlerta('Los datos ingresados son muy cortos')
           return;
@@ -30,11 +29,15 @@
    }
    
    function validarCorreo(correo){
-       const regExp= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-       if(regExp.test(correo)){
-           return true;
-       }
-       return false;
+   
+        const arroba='@';
+        const punto='.';
+        if(correo.indexOf(arroba)!=-1 && correo.indexOf(punto)!=-1){
+            return true;
+        }
+     
+        return false;
+     
    };
    
    function mostrarAlerta(mensaje){

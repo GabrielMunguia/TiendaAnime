@@ -702,10 +702,12 @@ function validarNumero(numero){
 }
 
 function validacionCorreo(correo){
-   const expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-   if(expReg.test(correo)){
-       return true;
-   }
+    const arroba='@';
+    const punto='.';
+    if(correo.indexOf(arroba)!=-1 && correo.indexOf(punto)!=-1){
+        return true;
+    }
+    
    msjError.push('El correo ingresado no es valido')
    return false;
 }
@@ -798,8 +800,8 @@ function procesarPago(){
     const procesandoPago=document.querySelector('#pago');
     procesandoPago.classList.add('procesandoPago');
     procesandoPago.innerHTML=`<div> <img src="/assets/img/iconos/img-loading.gif" alt=""></div>`
-    const numFactura=Math.floor(Math.random() *9999);
-    const numOrden=Math.floor(Math.random() *9999);
+    const numFactura=Math.floor(Math.random() *900);
+    const numOrden=Math.floor(Math.random() *900);
     setTimeout(()=>{
        procesandoPago.classList.remove('procesandoPago');
        procesandoPago.classList.add('pagoRealizado');
@@ -813,7 +815,7 @@ function procesarPago(){
         <p id='NumeroOrdern'><b>Numero de Orden # :</b>   <span>${numOrden}</span></p>   
         <p id='IDOrganización'><b>ID  de Organizacion :</b>   <span>Geek-Store</span></p>           
         <p id='Nro.Factura'><b>Numero  de Factura :</b>   <span>${numFactura}</span></p>           
-        <p id='Importe'><b>Monto Total &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp :</b>   <span>$ ${totalPagar}</span></p>                    
+        <p id='Importe'><b>Monto Total &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp :</b>   <span>$${totalPagar}</span></p>                    
     </div>
 
     <div>

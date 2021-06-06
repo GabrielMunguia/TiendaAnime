@@ -23,10 +23,10 @@ footer.innerHTML=`
             <li>
                 <h2>Síganos en</h2>
                 <ul>
-                    <li> <img src="/assets/img/iconos/facebook.png" alt=""><a href="#"> Facebook</a></li>
-                    <li> <img src="/assets/img/iconos/twitter.png" alt=""><a href="#"> Twitter</a></li>
-                    <li> <img src="/assets/img/iconos/instagram.png" alt=""><a href="#"> Instagram</a></li>
-                    <li> <img src="/assets/img/iconos/whatsapp.png" alt=""><a href="https://api.whatsapp.com/send?phone=50360457714&text=GeekParadise%0ATu%20tienda%20preferida%20%20~(%5E-%5E)~"> Whatsapp</a></li>
+                    <li> <img src="/assets/img/iconos/facebook.png" alt=""><a href="https://www.facebook.com/"  target="_blank"> Facebook</a></li>
+                    <li> <img src="/assets/img/iconos/twitter.png" alt=""><a href="https://twitter.com/"  target="_blank"> Twitter</a></li>
+                    <li> <img src="/assets/img/iconos/instagram.png" alt=""><a href="https://www.instagram.com/"  target="_blank"> Instagram</a></li>
+                    <li> <img src="/assets/img/iconos/whatsapp.png" alt=""><a href="https://api.whatsapp.com/send?phone=50360457714&text=GeekParadise%0ATu%20tienda%20preferida%20%20~(%5E-%5E)~" target="_blank"> Whatsapp</a></li>
                 </ul>
             </li>
         </ul>

@@ -1,18 +1,16 @@
+@font-face {
+    font-family: osw;
+    src: url('/assets/fuentes/Oswald-Regular.ttf');
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: osw, Helvetica, sans-serif;
  
- 
 }
-@font-face {
-    font-family: Nans;
-    src: url('/assets/fuentes/Champagne.ttf');
-}
-@font-face {
-    font-family: modern;
-    src: url('/assets/fuentes/modern\ M.ttf');
-}
+
+
 
 
 header {
@@ -42,7 +40,7 @@ header {
 }
 
 .envios a {
-    font-family: Nans, Helvetica, sans-serif;
+   
     height: 100%;
     margin: 0;
     font-size: 14px;

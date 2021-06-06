@@ -14,7 +14,6 @@ maximo.textContent = inputMaximo.value;
 let listaProd;
 document.addEventListener("DOMContentLoaded", () => {
     listaProd = [...document.querySelectorAll('.grid-item')]
-
     generarValorMaximoInputs();
     ordenarBtn.addEventListener('change', ordenar)
     ordenar();
@@ -25,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function generarValorMaximoInputs() {
     let maximo = 0;
-
     listaProd.forEach(prod => {
         let valor = parseInt(prod.querySelector('.prod-detalles-precio').firstElementChild.textContent.replace('$', ''));
         if (valor > maximo) {
@@ -45,6 +43,7 @@ inputMinimo.addEventListener('input', () => {
 
 
 })
+
 inputMaximo.addEventListener('input', () => {
 
     maximo.textContent = inputMaximo.value;

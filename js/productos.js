@@ -64,7 +64,10 @@ function leerProducto(producto) {
 
 
     //si se encuentra solo modifico su cantidad y la aumento en uno
+    //Esta funcion es valida para donde estan las tarjetas de productos 
+    // al darle click en agregar al carrito  solo las aumenta en 1
     if (existe) {
+        // map  nos devuelve un arreglo partiendo del original
         const lstProductos = listaProductos.map((prod) => {
 
             if (prod.id == productoDetalle.id) {
@@ -295,7 +298,10 @@ modificarCantidadCarrito();
 
 
 
+
 const btnCarrito = document.querySelector('#carritoImg');
+
+//El siguiente evento nos sirve para actualizar los datos al pasar el mouse sobre la imagen del carrito
 
 btnCarrito.addEventListener('mouseenter', (e) => {
     agregarProductos();
@@ -319,7 +325,8 @@ if (carritoDetalle) {
 
 
 }
-
+//Esta funcion nos sirve para eliminar un producto de la lista
+//nos crea un nuevo arreglo sin el producto
 function agregarEliminarLink() {
     const eliminarLink = document.querySelectorAll('.eliminarProd2')
     eliminarLink.forEach((eliminar) => {
@@ -351,7 +358,7 @@ function agregarEliminarLink() {
 
 
 
-
+//Este evento nos redirecciona a la pagina de carrito
 btnCarrito.addEventListener('click', (e) => {
     console.log('click')
     location = "/html/carrito.html";
@@ -387,7 +394,7 @@ function detalleProducto() {
 
 //EL SIGUIENTE CODIGO SIRVE EN EL PARA EL APARTADO DE DETALLES , POR EL MOMENTO LO EH DEJADO ASI 
 //SI EL TIEMPO NOS FAVORECE  PASARE EL PROYECTO A MODULOS PARA PODER REUTILIZAR EL CODIGO Y SEPARAR MAS LAS FUNCIONES SEGUN SE NECESITEN
-
+//Se Hace la validacion para no ejecutar el codigo si no se encuentra en dicha pagina
 const validarPaginaDetalle = document.querySelector('.pagDetalles');
 if (validarPaginaDetalle) {
     // Muestro los datos del local Storage al html
@@ -459,7 +466,8 @@ if (validarPaginaDetalle) {
 
 
 
-//calculo el   total de los productos
+//En esta parte calculo el total a pagar de los productos
+//esto se muestra en el detalle del carrito
 function calcularTotal() {
 
     // comprobarProductosCarrito()

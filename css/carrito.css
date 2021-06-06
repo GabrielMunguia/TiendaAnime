@@ -136,6 +136,7 @@ tfoot tr td div p span {
     display: flex;
     background-color: white;
     align-items: flex-end;
+    box-shadow: none;
 }
 
 .pagar button {
@@ -149,6 +150,7 @@ tfoot tr td div p span {
     height: 3.5em;
     background-color: red;
     border-radius: 5px;
+   
 }
 
 .pagar span {
@@ -643,6 +645,7 @@ hr {
 }
 
 
+
 @keyframes efectoPago {
     from {opacity: 0%;transform: translateY(-10%);}
     to {opacity: 100%;}
@@ -803,7 +806,10 @@ hr {
         margin-left: 10%;
     }
  
-  
+  .AlertaDatos{
+      margin-top: 6em;
+      width: 200%;
+  }
  
    
    
@@ -888,7 +894,7 @@ hr {
 
 
 
- @media screen and (max-width: 300px) {
+ @media screen and (max-width: 320px) {
     .contenedorform {
         padding: 0;
     
