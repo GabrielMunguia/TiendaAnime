@@ -1149,7 +1149,7 @@ const productos = [{
         precio: 70,
         cantidad: 15,
         categoria: 'juegos',
-        subcategoria: '',
+        subcategoria: 'videojuegos',
         img: '/assets/img/productos/juegos/juego-resident.png',
     },
     {
@@ -1159,7 +1159,7 @@ const productos = [{
         precio: 60,
         cantidad: 7,
         categoria: 'juegos',
-        subcategoria: '',
+        subcategoria: 'videojuegos',
         img: '/assets/img/productos/juegos/juego-spiderman.png',
     },
     {
@@ -1169,7 +1169,7 @@ const productos = [{
         precio: 50,
         cantidad: 4,
         categoria: 'juegos',
-        subcategoria: '',
+        subcategoria: 'videojuegos',
         img: '/assets/img/productos/juegos/juego-ssbu.png',
     },
     {
@@ -1179,7 +1179,7 @@ const productos = [{
         precio: 60,
         cantidad: 8,
         categoria: 'juegos',
-        subcategoria: '',
+        subcategoria: 'videojuegos',
         img: '/assets/img/productos/juegos/juego-tlou2.png',
     },
     {
@@ -1189,7 +1189,7 @@ const productos = [{
         precio: 50,
         cantidad: 4,
         categoria: 'juegos',
-        subcategoria: '',
+        subcategoria: 'videojuegos',
         img: '/assets/img/productos/juegos/juego-zeldaBOTW.png',
     },
     {

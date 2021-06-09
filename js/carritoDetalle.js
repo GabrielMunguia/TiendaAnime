@@ -126,7 +126,7 @@ function pagarProd(e) {
         <div id='comprobarTerminos'>
         <input required type="checkbox" id="terminos" >
 
-        <label for="terminos">Acepto los términos y condiciones de pago, envío y garantías al realizas la compra <span class="requerido" >*</span></label>   
+        <label for="terminos"><a href='/html/terminos.html' target='_blank' >Acepto los términos y condiciones de pago, envío y garantías al realizas la compra </a> <span class="requerido" >*</span></label>   
         
 
         

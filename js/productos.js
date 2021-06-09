@@ -235,7 +235,7 @@ function borrarDatosAntiguos() {
 // detecto si la cantidad del producto se modifico desde el carrito
 
 let inputCarrito;
-
+//Esta funcion  me retorna el arreglo de inputs actualizado
 function actualizarDatos() {
     inputCarrito = document.querySelectorAll('.inputCarritoCantidad')
     return inputCarrito
